@@ -1,14 +1,12 @@
-ul {
+.aba {
+  background-color: #B0C4DE;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0; 
   overflow: hidden;
-  background-color: #B0C4DE;
-  height: 58px;
 }
-
-li {
-  float: right;
+li{
+	float: right;
 }
 
 li a {
@@ -16,14 +14,17 @@ li a {
   font-size: 25px;
   display: block;
   color: white;
-  text-align: center;
+  text-align: right;
   padding: 16px;
   text-decoration: none;
   border-radius: 20px;
-}
+  float: right;
+} 
 
 li a:hover {
   background-color: #95adcc;
   transition: 0.5s;
-}
+}  
+
+
 
