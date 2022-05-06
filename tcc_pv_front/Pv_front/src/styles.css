@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B0C4DE;
+  height: 58px;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+li a:hover {
+  background-color: #95adcc;
+  transition: 0.5s;
+}
+
