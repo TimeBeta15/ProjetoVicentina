@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\api\\aulainterface\\AMS_Interface_22\\AMS_Interface_22.csproj": {}
+  },
+  "projects": {
+    "E:\\api\\aulainterface\\AMS_Interface_22\\AMS_Interface_22.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\api\\aulainterface\\AMS_Interface_22\\AMS_Interface_22.csproj",
+        "projectName": "AMS_Interface_22",
+        "projectPath": "E:\\api\\aulainterface\\AMS_Interface_22\\AMS_Interface_22.csproj",
+        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
+        "outputPath": "E:\\api\\aulainterface\\AMS_Interface_22\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
