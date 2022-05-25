@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	text-align: center;
+	background-color: #9370DB;
+	color: white;
+	font-weight: 500;
+	min-height: 100vh;
+}
+
+main {
+	padding-top: 10%;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.tela {
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 15px;
+	height: auto;
+	width: 450px;
+}
+
+main form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+main h1 {
+	margin-bottom: 2rem;
+}
+
+main label {
+	display: flex;
+	flex-direction: column;
+}
+
+main input {
+	background-color: #0000;
+	width: 300px;
+	height: 50px;
+	padding: 0 0.5rem;
+	margin-top: 1rem;
+	outline: none;
+	font-size: 1rem;
+	border: 1px solid #FFFF;
+	border-radius: 8px;
+}
+
+.btn_enviar {
+	cursor: pointer;
+	width: 50%;
+	margin-top: rem;
+	border: none;
+	border-radius: 32px;
+	background: #8a2be2;
+	color: white;
+	font-size: 1.1rem;
+	transition: all .4s ease-in-out;
+}
+
+.btn_enviar:hover {
+	background-color: #7711D6;
+}
