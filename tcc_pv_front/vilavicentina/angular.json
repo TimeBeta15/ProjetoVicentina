@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Pv_front": {
+    "vilavicentina": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pv-front",
+            "outputPath": "dist/vilavicentina",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +23,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -68,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Pv_front:build:production"
+              "browserTarget": "vilavicentina:build:production"
             },
             "development": {
-              "browserTarget": "Pv_front:build:development"
+              "browserTarget": "vilavicentina:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Pv_front:build"
+            "browserTarget": "vilavicentina:build"
           }
         },
         "test": {
@@ -102,5 +99,7 @@
       }
     }
   },
-  "defaultProject": "Pv_front"
+  "cli": {
+    "analytics": "03a3c21a-20cf-43c5-b641-e97fdc322c78"
+  }
 }
