@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Programmers\\Desktop\\TCC\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj": {}
+    "e:\\terceirao\\tcc_projeto\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Programmers\\Desktop\\TCC\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj": {
+    "e:\\terceirao\\tcc_projeto\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Programmers\\Desktop\\TCC\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj",
+        "projectUniqueName": "e:\\terceirao\\tcc_projeto\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj",
         "projectName": "TCC_PV_contexto",
-        "projectPath": "C:\\Users\\Programmers\\Desktop\\TCC\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj",
-        "packagesPath": "C:\\Users\\Programmers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Programmers\\Desktop\\TCC\\ProjetoVicentina\\TCC_PV_contexto\\obj\\",
+        "projectPath": "e:\\terceirao\\tcc_projeto\\ProjetoVicentina\\TCC_PV_contexto\\TCC_PV_contexto.csproj",
+        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
+        "outputPath": "e:\\terceirao\\tcc_projeto\\ProjetoVicentina\\TCC_PV_contexto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Programmers\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -37,6 +37,24 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

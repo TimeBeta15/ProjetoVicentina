@@ -32,3 +32,4 @@ public class IRepository<T> : serviceBase<T> where T : class
         {
             return (await this.context.SaveChangesAsync()) > 0;
         }
+    }

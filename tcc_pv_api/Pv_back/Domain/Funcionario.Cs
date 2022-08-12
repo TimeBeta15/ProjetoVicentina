@@ -1,11 +1,11 @@
-public class Pessoa
+public class Funcionario
 {
     public int Id { get; set; } // Código da Pessoa
 
     public string Nome { get; set; } // Nome da Pessoa
 
     public DateTime Nascimento { get; set; } // Data de Nascimento
-
+q
     public bool Vacina { get; set; } // Se tomou vacina se sim, qual?
 
     public bool Comorbidade { get; set; } // Se tem comorbidade se sim, qual?

@@ -4,9 +4,7 @@ public class Produto
 
     public string Nome { get; set; } // Nome do Produto
 
-    public decimal Valor { get; set; } // Valor do Produto
-
-    public bool Estoque { get; set; } // Verificar se tem Estoque do Produto
+    public bool Quuantidade { get; set; } // Verifica a quantidade do Produto
 
     public bool Validade { get; set; } // Verificar se está vencido
 

@@ -2,17 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 using tcc_pv_api.interfaces;
 
 namespace tcc_pv_api.Controllers
-
 {
-    [Route("api/[controller]")]
+     [Route("api/[controller]")]
     [ApiController]
-
-    public class PessoaController : ControllerBase
+    public class DoadorController : ControllerBase
     {
         
 
     }
-
-
 }
-
