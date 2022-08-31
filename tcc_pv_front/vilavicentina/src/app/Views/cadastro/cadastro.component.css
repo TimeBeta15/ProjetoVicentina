@@ -3,11 +3,8 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: 0%;
   font-family: 'poppins';
-}
-
-body{
-  background-color: #F0d3CE;
 }
 
 header{
@@ -22,12 +19,13 @@ header{
   display: flex;
   justify-content: center;
   flex-direction: row;
-font-family:var(--fonte-padrao);
+  font-family:var(--fonte-padrao);
+  padding: 3px
 }
 
 .list a {
   display: block;
- letter-spacing: 1px;
+  letter-spacing: 1px;
   color: #F0d3CE;
   padding: 14px 16px;
   text-decoration: none;
@@ -51,27 +49,32 @@ font-family:var(--fonte-padrao);
 }
 
 h1{
-  text-align: center;
+  font-size: 20px;
+  padding: 14px 16px;
+  color: #552323;
 }
 
-p{
-  text-align: center;
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #953C3C;
+    justify-content: ce;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    box-shadow: 8px 3px 10px rgba(0, 0, 105, 0.288);
+    border-radius: 7px;
 }
 
-main{
-  background-color: rgba(255, 255, 255, 0.24);
-  border-radius: 6px;
-  width: 600px;
-  margin-top: 200px;
-  box-shadow: #953C3C;
-  float: left;
-}
-
-.image{
-  z-index:1;
-  position:absolute;
-  right: 80px;
-  top: 115px;
+.form{
+    background:#F0deC3;
+    width: 50%;
+    height: 70%;
+    margin:0 auto ;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 50px;
+    z-index:2;
 }
 
 .circle{
@@ -80,6 +83,6 @@ main{
   left: 0;
   width: 100%;
   height: 100%;
-  background: #953C3C;
+  background: #953c3cb3;
   clip-path: circle(600px at right 800px);
 }

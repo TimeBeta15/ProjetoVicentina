@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-</head>
-<body>
-  <header>
-    <ul class="list">
-      <li><a routerLink="cadastro" class="center">Cadastro</a></li>
-              <li><a href="html/controle.html" class="center">Controle Financeiro</a></li>
-              <li><a href="html/estoque.html" class="center">Estoque</a></li>
-              <li><a href="html/visitas.html" class="center">Visitas</a></li>
-              <li><a href="html/doacoes.html" class="center">Doações</a></li>
-       <li><a style="right: 0px; position: fixed;">Vila Vicentina</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    ;
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <header>
+      <ul class="list">
+        <li><a routerLink="cadastro" class="center">Cadastro</a></li>
+        <li>
+          <a routerLink="financeiro" class="center">Movimentação Financeira</a>
+        </li>
+        <li><a routerLink="visitas" class="center">Visitas</a></li>
+        <li><a routerLink="estoque" class="center">Estoque</a></li>
+        <li><a routerLink="doacoes" class="center">Doações</a></li>
+        <li><a style="right: 0px; position: fixed">Vila Vicentina</a></li>
       </ul>
-</header>
-</body>
+    </header>
+    <div class="form">
+      <form action="" method="post">
+        <h1>Cadastro De Idosos:</h1>
+        <label for="nome">Nome:</label>
+        <input type="text" size="40" placeholder="Nome Completo" />
+
+        <label for="cpf">CPF:</label>
+        <input type="text" placeholder="Digite o CPF" />
+
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="Digite o E-mail" />
+
+        <label for="date">Data:</label>
+        <input type="date" placeholder="Digite o CPF" />
+
+        <label for="Nome">Nome Responsável:</label>
+        <input type="text" size="40" placeholder="Digite o Nome" />
+        <h1>Endereço:</h1>
+        <br />
+
+        <label for="endereço">Rua:</label>
+        <input type="text" size="40" placeholder="Digite a Rua" />
+
+        <label for="numero">Número:</label>
+        <input type="number" size="40" placeholder="Digite o Número da Casa" />
+
+        <div class="d-grid gap-2 d-md-block">
+          <button type="button" class="btn btn-primary btn-lg">
+            Large button
+          </button>
+          <button type="button" class="btn btn-secondary btn-lg">
+            Large button
+          </button>
+        </div>
+        <div class="circle"></div>
+      </form>
+    </div>
+    <script type='text/javascript'>document.addEventListener('DOMContentLoaded', function () {window.setTimeout(document.querySelector('svg').classList.add('animated'),1000);})</script>
+  </body>
 </html>

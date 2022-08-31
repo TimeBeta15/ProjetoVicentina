@@ -9,7 +9,7 @@ export class EstoqueComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

@@ -1,0 +1,7 @@
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.csproj.AssemblyReference.cache
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.GeneratedMSBuildEditorConfig.editorconfig
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.AssemblyInfoInputs.cache
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.AssemblyInfo.cs
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.csproj.CoreCompileInputs.cache
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.MvcApplicationPartsAssemblyInfo.cs
+D:\terceirao\tcc_projeto\ProjetoVicentina\Tcc-api\obj\Debug\net6.0\Tcc-api.MvcApplicationPartsAssemblyInfo.cache
