@@ -23,7 +23,6 @@ header{
   display: flex;
   justify-content: center;
   flex-direction: row;
-  font-family:var(--fonte-padrao);
   padding: 3px
 }
 
@@ -63,7 +62,7 @@ ul{
     list-style-type: none;
     overflow: hidden;
     background-color: #953C3C;
-    justify-content: ce;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     padding: 3px;
@@ -71,9 +70,27 @@ ul{
     border-radius: 7px;
 }
 
-.tabela{
-  color: #fff;
-  background-color: #953C3C;
+.container{
+    color: #fff;
+    background-color: #953C3C;
+    padding: 100px;
+    margin: 100px;
+    width: 100%;
+    border-radius: 20px;
+    
 }
-
-
+.tabela2{
+    width: 100%;
+}
+.tabela1{
+    width: 100%;
+    border-bottom: 1px solid #ffff;
+}
+.valorlinha{
+  width: 100%;
+  border-bottom: 1px solid #ffff;
+}
+.nomelinha{
+  width: 100%;
+  border-bottom: 1px solid #ffff;
+}

@@ -22,6 +22,47 @@
         <li><a routerLink="doacoes" class="center">Doações</a></li>
         <li><a style="right: 0px; position: fixed">Vila Vicentina</a></li>
       </ul>
+
     </header>
+    <div class="container">
+	
+      <div class="row">
+        
+      <form class="tabela1">
+        <fieldset>
+          <div class="nomelinha">
+          <legend>Nome</legend>
+          </div>
+          <br>
+          <input type="text" class="form-control" name="" id="item">
+          
+          <br>
+          <div class="valorlinha">
+          <legend>Valor Doado</legend>
+          </div>
+          <br>
+          <input type="number" class="form-control" id="quantity" name="">
+          
+        <br>
+        <button type="button" id="insert" class="btn btn-success">Inserir</button>
+      
+        <button type="button" id="create" class="btn btn-success">Criar Tabela</button>
+      
+        <button type="button" id="list" class="btn btn-success">Atualizar</button>
+        <p><small><b>Nota:</b> A tabela deve ser criada primeiro antes de algo ser inserido</small></p>
+        </fieldset>
+      </form>
+      
+      <br>
+      <div class="tabela2"><br>
+        <h4>Tabela</h4>
+        <table class="table table-bordered table-hover" id="itemlist">
+          teste
+        </table>
+      </div>
+      
+      </div>
+      
+      </div>
     </body>
 </html>
