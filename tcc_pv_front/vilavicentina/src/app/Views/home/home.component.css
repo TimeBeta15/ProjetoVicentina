@@ -10,7 +10,7 @@ body{
   background-color: #F0d3CE;
 }
 
-header{
+.menu{
   box-shadow: 8px 3px 10px rgba(0, 0, 105, 0.288);
   border-radius: 7px;
 }
@@ -35,7 +35,7 @@ header{
   position: relative;
 }
 
-.center::after{
+.guia::after{
   content: '';
   height: 3px;
   width: 100%;
@@ -47,7 +47,7 @@ header{
   transition: 0.3s;
   border-radius: 50px;
 }
-.center:hover::after{
+.guia:hover::after{
   transform: scale(1,1);
 }
 
