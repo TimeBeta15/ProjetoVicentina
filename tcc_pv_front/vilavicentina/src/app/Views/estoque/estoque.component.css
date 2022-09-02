@@ -11,51 +11,6 @@ body{
   height: 100vh;
 }
 
-header{
-  box-shadow: 8px 3px 10px rgba(0, 0, 105, 0.288);
-  border-radius: 7px;
-}
-
-.list {
-  list-style-type: none;
-  overflow: hidden;
-  background-color: #953C3C;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  font-family:var(--fonte-padrao);
-  padding: 3px;
-}
-
-.list a {
-  display: block;
-  letter-spacing: 1px;
-  color: #F0d3CE;
-  padding: 14px 16px;
-  text-decoration: none;
-  position: relative;
-}
-
-.center::after{
-  content: '';
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  background: #F0d3CE;
-  left: 0;
-  bottom: 10px;
-  transform: scale(0,1.5);
-  transition: 0.3s;
-  border-radius: 50px;
-}
-.center:hover::after{
-  transform: scale(1,1);
-}
-
-h1{
-  text-align: center;
-}
-
 .card-info{
   display: list-item;
   padding: 10px;
@@ -103,6 +58,7 @@ h1{
 
 .vovozinha{
   width: 60%;
+  display: inline-block;
 }
 
 .container{
@@ -110,5 +66,26 @@ h1{
   height: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.container{
+  color: rgb(0, 0, 0);
+  background-color: #953c3c96;
+  padding: 100px;
+  margin: 100px;
+  width: 100%;
+  border-radius: 20px;
+  position:center;
+}
+
+.croche{
+width: 60%;
+}
+
+.forms{
+  display: center;
+  background-color: #935151;
+  border-radius: 20px;
+  color: #F0d3CE;
 }
 
