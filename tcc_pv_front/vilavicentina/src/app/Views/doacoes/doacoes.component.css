@@ -26,6 +26,7 @@ body{
 .tabela1{
     width: 100%;
     border-bottom: 1px solid #ffff;
+
 }
 .valorlinha{
   width: 100%;
@@ -57,4 +58,13 @@ body{
   height: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.teste1{
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.teste2{
+  padding: 3px;
 }

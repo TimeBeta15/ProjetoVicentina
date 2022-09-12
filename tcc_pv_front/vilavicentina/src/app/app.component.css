@@ -13,6 +13,7 @@ body{
 .menu{
   box-shadow: 8px 3px 10px rgba(0, 0, 105, 0.288);
   border-radius: 7px;
+
 }
 
 .list {
@@ -22,11 +23,19 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: row;
-  font-family:var(--fonte-padrao);
   padding: 3px
 }
 
-.list a {
+/*.list a {
+  display: block;
+  letter-spacing: 1px;
+  color: #F0d3CE;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: relative;
+}*/
+
+.testea{
   display: block;
   letter-spacing: 1px;
   color: #F0d3CE;
