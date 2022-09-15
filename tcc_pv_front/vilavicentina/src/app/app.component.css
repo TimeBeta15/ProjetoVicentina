@@ -10,7 +10,7 @@ body{
   background-color: white;
 }
 
-.menu{
+.dp-menu{
   box-shadow: 8px 3px 10px rgba(0, 0, 105, 0.288);
   border-radius: 7px;
 
@@ -18,7 +18,6 @@ body{
 
 .list {
   list-style-type: none;
-  overflow: hidden;
   background-color: #953C3C;
   display: flex;
   justify-content: center;
@@ -26,16 +25,7 @@ body{
   padding: 3px
 }
 
-/*.list a {
-  display: block;
-  letter-spacing: 1px;
-  color: #F0d3CE;
-  padding: 14px 16px;
-  text-decoration: none;
-  position: relative;
-}*/
-
-.testea{
+.lia{
   display: block;
   letter-spacing: 1px;
   color: #F0d3CE;
@@ -58,4 +48,40 @@ body{
 }
 .guia:hover::after{
   transform: scale(1,1);
+}
+
+.dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dp-menu ul {
+    background-color: #953C3C;
+    z-index: 2;
+}
+
+.dp-menu ul li {
+    display: inline;
+    position: relative;
+}
+
+/*sub menu*/
+.dp-menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+	
+}
+
+.dp-menu ul li:hover ul {
+    display: block;
+	
+}
+
+.dp-menu ul ul {
+    width: 150px;
+}
+
+.dp-menu ul ul li a {
+    display: block;
 }
