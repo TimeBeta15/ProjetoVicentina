@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <nav class="dp-menu">
+  <ul class="list">
+    <li style="left: 5px; top: 2px; position: absolute; display: block;">
+    <a routerLink=""><img routerLink="" src="assets\church.ico" /></a></li>
+  <li><a routerLink="cadastro" class="guia lia" style="color: #F0d3CE">Cadastro</a>
+    <ul>
+      <li><a routerLink="residente" class="guia lia">Residentes</a></li>
+      <li><a routerLink="quarto" class="guia lia">Quartos</a></li>
+      <li><a routerLink="doador" class="guia lia">Doadores</a></li>
+      <li><a routerLink="produto" class="guia lia">Produtos</a></li>
+      <li><a routerLink="fornecedor" class="guia lia">Fornecedores</a></li>
+    </ul>
+  </li>
+  <li><a routerLink="financeiro" class="guia lia">Movimentação Financeira</a></li>
+      <li><a routerLink="estoque" class="guia lia" style="color: #F0d3CE;">Estoque</a>
+        <ul>
+          <li><a routerLink="eprodutos" class="guia lia">Entrada de Produtos</a></li>
+          <li><a routerLink="sprodutos" class="guia lia">Saída de Produtos</a></li>
+        </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,44 @@
+@charset "UTF=8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0%;
+  font-family: 'poppins';
+}
+
+.container{
+  color: rgb(0, 0, 0);
+  background-color: #953c3c96;
+  padding: 100px;
+  margin: 100px;
+  width: 100%;
+  border-radius: 20px;
+
+}
+.tabela2{
+  width: 100%;
+}
+.tabela1{
+  width: 100%;
+  border-bottom: 1px solid #ffff;
+}
+.valorlinha{
+width: 100%;
+border-bottom: 1px solid #ffff;
+}
+.nomelinha{
+width: 100%;
+border-bottom: 1px solid #ffff;
+}
+
+.croche{
+width: 60%;
+}
+
+.container{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: space-between;
+}
