@@ -1,0 +1,12 @@
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\bin\Debug\net6.0\domain.deps.json
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\bin\Debug\net6.0\domain.dll
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\bin\Debug\net6.0\domain.pdb
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.csproj.AssemblyReference.cache
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.AssemblyInfoInputs.cache
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.AssemblyInfo.cs
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.csproj.CoreCompileInputs.cache
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.dll
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\refint\domain.dll
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\domain.pdb
+D:\terceirao\tcc_projeto\ProjetoVicentina\domain\obj\Debug\net6.0\ref\domain.dll
