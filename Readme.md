@@ -1,5 +1,5 @@
 Projeto TCC - Projeto Vicentina / 3°AMS Turma A
-## Projeto feito em necessidade do Asilo Vila Vicentina ##
+## Projeto feito em necessidade do Asilo Vila Vicentina e TCC ##
 ##########################################################
 
 *? Commands Git ?*
