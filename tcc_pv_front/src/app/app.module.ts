@@ -8,6 +8,7 @@ import { CadastroComponent } from './Views/cadastro/cadastro.component';
 import { EstoqueComponent } from './Views/estoque/estoque.component';
 import { FinanceiroComponent } from './Views/financeiro/financeiro.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModaltesteComponent } from './Views/modalteste/modalteste.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     CadastroComponent,
     EstoqueComponent,
-    FinanceiroComponent
+    FinanceiroComponent,
+    ModaltesteComponent
   ],
   imports: [
     BrowserModule,
