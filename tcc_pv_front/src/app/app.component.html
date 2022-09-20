@@ -18,21 +18,39 @@
   <li><a routerLink="cadastro" class="guia lia" style="color: #F0d3CE">Cadastro</a>
     <ul>
       <li><a routerLink="residente" class="guia lia">Residentes</a></li>
-      <li><a routerLink="quarto" class="guia lia">Quartos</a></li>
-      <li><a routerLink="doador" class="guia lia">Doadores</a></li>
-      <li><a routerLink="produto" class="guia lia">Produtos</a></li>
-      <li><a routerLink="fornecedor" class="guia lia">Fornecedores</a></li>
+      <li><a routerLink="quarto" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Quartos</a></li>
+      <li><a routerLink="doador" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Doadores</a></li>
+      <li><a routerLink="produto" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Produtos</a></li>
+      <li><a routerLink="fornecedor" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Fornecedores</a></li>
     </ul>
   </li>
   <li><a routerLink="financeiro" class="guia lia">Movimentação Financeira</a></li>
       <li><a routerLink="estoque" class="guia lia" style="color: #F0d3CE;">Estoque</a>
         <ul>
-          <li><a routerLink="eprodutos" class="guia lia">Entrada de Produtos</a></li>
-          <li><a routerLink="sprodutos" class="guia lia">Saída de Produtos</a></li>
+          <li><a routerLink="eprodutos" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Entrada de Produtos</a></li>
+          <li><a routerLink="sprodutos" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Saída de Produtos</a></li>
         </ul>
         </li>
     </ul>
 </nav>
+
+  <!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de Quartos </h5>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="txtDesc" id="" class="DescCat" placeholder="Descrição:">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 
