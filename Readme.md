@@ -26,7 +26,8 @@ $ git push origin main $           // Enviar Arquivos do Standing ao GitHub. ## 
 
 %% Comandos para Nova Branch %%
 
-$ git checkout -b "<Nome Branch>" $ // Criar Nova Branch.
+$ git checkout -b "<Nome Branch>" $ // Criar Nova Branch e alterar imediatamente.
+$ git branch "<Nome Branch>" $     // Criar Nova Branch.
 $ git checkout <Nome Branch> $     // Alterar Branch.
 $ git add .$                       // Adicionar/Mandar arquivos em Standing.
 $ git commit -m "<Nome Commit>" $  // Fazer commit.
