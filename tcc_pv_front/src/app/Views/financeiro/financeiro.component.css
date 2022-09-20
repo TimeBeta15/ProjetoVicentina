@@ -3,26 +3,31 @@
   margin-top: 35px;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .buttons{
   justify-content: center;
   flex-direction: column;
   margin-top: 40px;
+
 }
 
 .titulo{
   color: #d87171;
+
 }
 
 table{
   border-collapse: collapse;
   width: 100%;
   margin-top: 50px;
+
 }
 
 thead{
   background-color: #ada9a9;
+
 }
 
 .titulo_tabela {
@@ -30,12 +35,15 @@ thead{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 8px;
+
 }
 
 td{
   padding: 8px;
+
 }
 
 tr{
   border-bottom: 2px solid rgba(95, 94, 94, 0.5);
+
 }
