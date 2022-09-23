@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\terceirao\\tcc_projeto\\ProjetoVicentina\\domain\\domain.csproj",
-      "projectName": "domain",
-      "projectPath": "d:\\terceirao\\tcc_projeto\\ProjetoVicentina\\domain\\domain.csproj",
+      "projectUniqueName": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj",
+      "projectName": "Domain",
+      "projectPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Fatec\\.nuget\\packages\\",
-      "outputPath": "d:\\terceirao\\tcc_projeto\\ProjetoVicentina\\domain\\obj\\",
+      "outputPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fatec\\AppData\\Roaming\\NuGet\\NuGet.Config"

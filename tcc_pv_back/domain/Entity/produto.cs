@@ -1,13 +1,12 @@
-namespace domain
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Domain.Entity
 {
-    public class produto
+    public class Produto : EntityBase
     {
-        public int Id { get; set; } // Código do Produto
-
-        public string Nome { get; set; } // Nome do Produto
-
-        public int Quantidade { get; set; } // Verifica a quantidade do Produto
-
-        public bool Validade { get; set; } // Verificar se está vencido
+        
     }
 }
