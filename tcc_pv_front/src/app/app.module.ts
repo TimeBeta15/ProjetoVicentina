@@ -9,7 +9,9 @@ import { EstoqueComponent } from './Views/estoque/estoque.component';
 import { FinanceiroComponent } from './Views/financeiro/financeiro.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
-import { ConsultaComponent } from './Views/consulta/consulta.component';
+import { ConsultacadastroComponent } from './Views/consultacadastro/consultacadastro.component';
+import { ConsultaestoqueComponent } from './Views/consultaestoque/consultaestoque.component';
+import { ConsultafinanceiroComponent } from './Views/consultafinanceiro/consultafinanceiro.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ConsultaComponent } from './Views/consulta/consulta.component';
     EstoqueComponent,
     FinanceiroComponent,
     MovimentacaoComponent,
-    ConsultaComponent,
+    ConsultacadastroComponent,
+    ConsultaestoqueComponent,
+    ConsultafinanceiroComponent,
   ],
   imports: [
     BrowserModule,

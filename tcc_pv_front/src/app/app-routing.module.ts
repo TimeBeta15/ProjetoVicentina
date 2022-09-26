@@ -6,13 +6,22 @@ import { FinanceiroComponent } from './Views/financeiro/financeiro.component';
 import { ResidenteComponent } from './Views/residente/residente.component';
 import { HomeComponent } from './Views/home/home.component';
 import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
+import { ConsultacadastroComponent } from './Views/consultacadastro/consultacadastro.component';
+import { ConsultafinanceiroComponent } from './Views/consultafinanceiro/consultafinanceiro.component';
+import { ConsultaestoqueComponent } from './Views/consultaestoque/consultaestoque.component';
+import { Tabela_caixaComponent } from './Views/financeiro/tabelas/tabela_caixa/tabela_caixa.component';
 
 const routes: Routes = [{path:'',component: HomeComponent,},
 {path:'cadastro',component: CadastroComponent,},
 {path:'financeiro',component: FinanceiroComponent,},
 {path:'estoque',component: EstoqueComponent,},
 {path:'residente',component: ResidenteComponent,},
-{path:'movimentacao',component: MovimentacaoComponent},]
+{path:'movimentacao',component: MovimentacaoComponent},
+{path:'consultacadastro',component: ConsultacadastroComponent},
+{path:'consultafinanceiro',component:ConsultafinanceiroComponent},
+{path:'consultaestoque',component: ConsultaestoqueComponent},
+{path:'tabela_caixa',component: Tabela_caixaComponent},]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
