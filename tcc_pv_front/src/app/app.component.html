@@ -14,31 +14,31 @@
   <nav class="dp-menu">
   <ul class="list">
     <li style="left: 5px; top: 2px; position: absolute; display: block;">
-    <a routerLink=""><img routerLink="#" src="assets\church.ico" /></a></li>
+    <a routerLink=""><img src="assets\church.ico" /></a></li>
   <li><a class="guia lia" style="color: #F0d3CE">Cadastro</a>
     <ul>
-      <li><a routerLink="residente" class="guia lia">Residentes</a></li>
-      <li><a routerLink="#" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Quartos</a></li>
-      <li><a routerLink="#" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Doadores</a></li>
-      <li><a routerLink="fornecedor" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Fornecedores</a></li>
+      <li><a routerLink="residente" class="guia lia" data-bs-toggle="modal" data-bs-target="#residenteModal">Residentes</a></li>
+      <li><a routerLink="#" class="guia lia"data-bs-toggle="modal" data-bs-target="#quartosModal">Quartos</a></li>
+      <li><a routerLink="#" class="guia lia"data-bs-toggle="modal" data-bs-target="#doadoresModal">Doadores</a></li>
+      <li><a routerLink="fornecedor" class="guia lia"data-bs-toggle="modal" data-bs-target="#fornecedoresModal">Fornecedores</a></li>
     </ul>
   </li>
-  <li><a routerLink="#" class="guia lia">Movimentação Financeira</a>
+  <li><a class="guia lia">Movimentação Financeira</a>
   <ul>
-    <li><a routerLink="caixa" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Caixa</a></li>
-    <li><a routerLink="contacapital" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Conta Capital</a></li>
-    <li><a routerLink="contacorrente" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Conta Corrente</a></li>
-    <li><a routerLink="emendaimpositiva" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Emenda Impositiva</a></li>
-    <li><a routerLink="emendaparlamentar" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Emenda Parlamentar</a></li>
-    <li><a routerLink="verbaestadual" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Verba Estadual</a></li>
-    <li><a routerLink="verbamunicipal" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Verba Municipal</a></li>
+    <li><a routerLink="tabela_caixa" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Caixa</a></li>
+    <li><a routerLink="tabela_contacapital" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Conta Capital</a></li>
+    <li><a routerLink="tabela_contacorrente" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Conta Corrente</a></li>
+    <li><a routerLink="tabela_emendaimpositiva" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Emenda Impositiva</a></li>
+    <li><a routerLink="tabela_emendaparlamentar" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Emenda Parlamentar</a></li>
+    <li><a routerLink="tabela_verbaestadual" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Verba Estadual</a></li>
+    <li><a routerLink="tabela_verbamunicipal" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Verba Municipal</a></li>
   </ul></li>
-      <li><a routerLink="#" class="guia lia" style="color: #F0d3CE;">Estoque</a>
+      <li><a class="guia lia" style="color: #F0d3CE;">Estoque</a>
         <ul>
-          <li><a routerLink="eprodutos" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Entrada de Produtos</a></li>
-          <li><a routerLink="sprodutos" class="guia lia"data-bs-toggle="modal" data-bs-target="#exampleModal">Saída de Produtos</a></li>
+          <li><a routerLink="eprodutos" class="guia lia"data-bs-toggle="modal" data-bs-target="#entradaprodutosModal">Entrada de Produtos</a></li>
+          <li><a routerLink="sprodutos" class="guia lia"data-bs-toggle="modal" data-bs-target="#saidaprodutosModal">Saída de Produtos</a></li>
         </ul>
-        </li> <li><a routerLink="#" class="guia lia">Consulta</a>
+        </li> <li><a class="guia lia">Consulta</a>
           <ul>
             <li><a routerLink="consultacadastro" class="guia lia">Cadastro</a></li>
             <li><a routerLink="consultafinanceiro" class="guia lia">Movimentção Financeira</a></li>
@@ -47,8 +47,30 @@
     </ul>
 </nav>
 
-  <!-- Modal -->
-<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modais -->
+<!-- Modal Residentes -->
+<div class="modal fade " id="residenteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de Residentes </h5>
+      </div>
+      <div class="modal-body">
+          <legend>Data</legend>
+            <br>
+        <input type="date" class="form-control ifont" id="resdate" required>
+            <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Quartos -->
+<div class="modal fade " id="quartosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -64,6 +86,108 @@
     </div>
   </div>
 </div>
+
+<!-- Modal Doadores -->
+<div class="modal fade " id="doadoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de Doadores </h5>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="txtDesc" id="" class="DescCat" placeholder="Descrição:">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Fornecedores -->
+<div class="modal fade " id="fornecedoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de Fornecedores </h5>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="txtDesc" id="" class="DescCat" placeholder="Descrição:">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Entrada de produtos -->
+<div class="modal fade " id="entradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Entrada de produtos </h5>
+      </div>
+      <div class="modal-body">
+          <legend>Data</legend>
+        <br>
+          <input type="date" class="form-control ifont" id="enprodate" required>
+        <br>
+          <legend>Nome</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="enpronome" required>
+        <br>
+          <legend>Quantidade</legend>
+        <br>
+        <input type="number" class="form-control ifont" id="enproquant" required>
+          <br>
+          <legend>Validade</legend>
+        <br>
+        <input type="date" class="form-control ifont" id="enprovalidade" required>
+        <br>
+          <legend>Categoria</legend>
+        <br>
+          <select name="enprocate" class="form-control ifont" required>
+          <option>Enfermagem</option>
+          <option>Alimentos</option>
+          <option>Higiene</option>
+          <option>Doações</option>
+          </select>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Saída de produtos -->
+<div class="modal fade " id="saidaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Saída de produtos</h5>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="txtDesc" id="" class="DescCat" placeholder="Descrição:">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 </body>
 </html>
 

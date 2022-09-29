@@ -23,6 +23,7 @@ body{
   justify-content: center;
   flex-direction: row;
   padding: 3px;
+  cursor: default;
 }
 
 .lia{
@@ -33,6 +34,7 @@ body{
   text-decoration: none;
   position: relative;
 }
+
 
 .guia::after{
   content: '';
@@ -93,7 +95,7 @@ body{
     position: absolute;
     top: 30%;
     left: 30%;
-    
+
   }
 
   .modal-dialog .modal-content{
@@ -158,4 +160,14 @@ body{
     font-size: 20px;
     line-height: 40px;
     border-radius: 10px;
+  }
+
+  textarea{
+    resize: none;
+  }
+
+  .ifont{
+    color: black;
+    font-weight: bold;
+    text-align: center;
   }
