@@ -16,6 +16,12 @@ import { Tabela_emendaimpositivaComponent } from './Views/tabela_emendaimpositiv
 import { Tabela_contacorrenteComponent } from './Views/tabela_contacorrente/tabela_contacorrente.component';
 import { Tabela_contacapitalComponent } from './Views/tabela_contacapital/tabela_contacapital.component';
 import { Tabela_caixaComponent } from './Views/tabela_caixa/tabela_caixa.component';
+import { TabelaQuartosComponent } from './Views/tabela-quartos/tabela-quartos.component';
+import { TabelaDoadoresComponent } from './Views/tabela-doadores/tabela-doadores.component';
+import { TabelaFornecedoresComponent } from './Views/tabela-fornecedores/tabela-fornecedores.component';
+import { TabelaEntradadeprodutoComponent } from './Views/tabela-entradadeproduto/tabela-entradadeproduto.component';
+import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tabela-saidadeproduto.component';
+import { ResidentesComponent } from './Views/residentes/residentes.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +39,12 @@ import { Tabela_caixaComponent } from './Views/tabela_caixa/tabela_caixa.compone
     Tabela_emendaparlamentarComponent,
     Tabela_verbaestadualComponent,
     Tabela_verbamunicipalComponent,
+    TabelaQuartosComponent,
+    TabelaDoadoresComponent,
+    TabelaFornecedoresComponent,
+    TabelaEntradadeprodutoComponent,
+    TabelaSaidadeprodutoComponent,
+    ResidentesComponent,
 
 
   ],

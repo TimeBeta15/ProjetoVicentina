@@ -160,9 +160,3 @@ tr{
 .edit:hover{
   background-color: #c0c0c0;
 }
-
-.edit:active{
-  background-color: #a8a8a8;
-  box-shadow: 0 2px #666;
-  transform: translateY(1px)
-}

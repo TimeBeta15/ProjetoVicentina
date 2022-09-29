@@ -14,6 +14,11 @@ import { Tabela_contacapitalComponent } from './Views/tabela_contacapital/tabela
 import { ConsultacadastroComponent } from './Views/consultacadastro/consultacadastro.component';
 import { ConsultafinanceiroComponent } from './Views/consultafinanceiro/consultafinanceiro.component';
 import { ConsultaestoqueComponent } from './Views/consultaestoque/consultaestoque.component';
+import { TabelaDoadoresComponent } from './Views/tabela-doadores/tabela-doadores.component';
+import { TabelaEntradadeprodutoComponent } from './Views/tabela-entradadeproduto/tabela-entradadeproduto.component';
+import { TabelaFornecedoresComponent } from './Views/tabela-fornecedores/tabela-fornecedores.component';
+import { TabelaQuartosComponent } from './Views/tabela-quartos/tabela-quartos.component';
+import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tabela-saidadeproduto.component';
 
 
 const routes: Routes = [
@@ -31,7 +36,11 @@ const routes: Routes = [
   {path:'tabela_emendaparlamentar', component: Tabela_emendaparlamentarComponent},
   {path:'tabela_verbaestadual', component: Tabela_verbaestadualComponent},
   {path:'tabela_verbamunicipal', component: Tabela_verbamunicipalComponent},
-
+  {path:'tabela_doadores', component: TabelaDoadoresComponent},
+  {path:'tabela_entradadeproduto', component: TabelaEntradadeprodutoComponent},
+  {path:'tabela_fornecedores', component: TabelaFornecedoresComponent},
+  {path:'tabela_quartos', component: TabelaQuartosComponent},
+  {path:'tabela_saidadeproduto', component: TabelaSaidadeprodutoComponent},
 ]
 
 
