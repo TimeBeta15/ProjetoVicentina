@@ -15,49 +15,13 @@ body{
   border-radius: 7px;
 }
 
-.list {
-  list-style-type: none;
-  overflow: hidden;
-  background-color: #953C3C;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  font-family:var(--fonte-padrao);
-  padding: 3px
-}
-
-.list a {
-  display: block;
-  letter-spacing: 1px;
-  color: #F0d3CE;
-  padding: 14px 16px;
-  text-decoration: none;
-  position: relative;
-}
-
-.guia::after{
-  content: '';
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  background: #F0d3CE;
-  left: 0;
-  bottom: 10px;
-  transform: scale(0,1.5);
-  transition: 0.3s;
-  border-radius: 50px;
-}
-.guia:hover::after{
-  transform: scale(1,1);
-}
-
 h1{
   text-align: center;
   margin-left: 50px;
 }
 
 p{
-  text-align: center;
+  text-align: left;
   margin-left: 50px;
 }
 
