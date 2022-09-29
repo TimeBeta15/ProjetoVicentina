@@ -4,9 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Views/home/home.component';
-import { CadastroComponent } from './Views/cadastro/cadastro.component';
 import { EstoqueComponent } from './Views/estoque/estoque.component';
-import { FinanceiroComponent } from './Views/financeiro/financeiro.component';
 import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
 import { ConsultacadastroComponent } from './Views/consultacadastro/consultacadastro.component';
 import { ConsultaestoqueComponent } from './Views/consultaestoque/consultaestoque.component';
@@ -23,9 +21,7 @@ import { Tabela_caixaComponent } from './Views/tabela_caixa/tabela_caixa.compone
   declarations: [
     AppComponent,
     HomeComponent,
-    CadastroComponent,
     EstoqueComponent,
-    FinanceiroComponent,
     MovimentacaoComponent,
     ConsultacadastroComponent,
     ConsultaestoqueComponent,
