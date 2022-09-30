@@ -10,10 +10,10 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Type to Search..."
+          placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#entradaprodutosModal">
+      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#fornecedoresModal">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -70,38 +70,42 @@
       </tbody>
     </table>
 
-    <!-- Modal Fornecedores -->
-<div class="modal fade " id="entradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal Fornecedores -->
+<div class="modal fade " id="fornecedoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Caixa</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Fornecedor</h5>
       </div>
       <div class="modal-body">
           <legend>Data</legend>
         <br>
-          <input type="date" class="form-control ifont" id="enprodate" required>
+          <input type="date" class="form-control ifont" id="forndate" required>
         <br>
           <legend>Nome</legend>
         <br>
-        <input type="text" class="form-control ifont" id="enpronome" required>
+        <input type="text" class="form-control ifont" id="fornnome" required>
         <br>
-          <legend>Quantidade</legend>
+          <legend>Telefone</legend>
         <br>
-        <input type="number" class="form-control ifont" id="enproquant" required>
+        <input type="text" class="form-control ifont" id="forntel" required>
           <br>
-          <legend>Validade</legend>
+          <legend>Nome do Produto</legend>
         <br>
-        <input type="date" class="form-control ifont" id="enprovalidade" required>
+        <input type="text" class="form-control ifont" id="fornnomeprod" required>
         <br>
           <legend>Categoria</legend>
         <br>
-          <select name="enprocate" class="form-control ifont" required>
-          <option>Enfermagem</option>
-          <option>Alimentos</option>
+          <select name="forncat" class="form-control ifont" required>
+          <option>Alimento</option>
           <option>Higiene</option>
-          <option>Doações</option>
+          <option>Enfermagem</option>
+          <option>Doação</option>
           </select>
+        <br>
+          <legend>Quantidade</legend>
+        <br>
+          <input type="number" class="form-control ifont" id="fornquant" required>
         <br>
       </div>
       <div class="modal-footer">
