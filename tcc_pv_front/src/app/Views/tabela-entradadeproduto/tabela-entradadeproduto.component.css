@@ -160,3 +160,8 @@ tr{
 .edit:hover{
   background-color: #c0c0c0;
 }
+
+.ifont{
+  color: black;
+  text-align: center;
+}
