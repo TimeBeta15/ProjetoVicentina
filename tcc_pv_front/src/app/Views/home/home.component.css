@@ -21,8 +21,10 @@ h1{
 }
 
 p{
+  font-size: 18px;
   text-align: left;
   margin-left: 50px;
+  text-align: justify;
 }
 
 main{
