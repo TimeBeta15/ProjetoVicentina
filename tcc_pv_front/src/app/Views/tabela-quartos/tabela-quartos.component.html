@@ -10,10 +10,10 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Type to Search..."
+          placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#entradaprodutosModal">
+      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#quartosModal">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -57,38 +57,25 @@
       </tbody>
     </table>
 
-    <!-- Modal Entrada de caixa -->
-<div class="modal fade " id="entradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <!-- Modal Cadastro de Quartos -->
+<div class="modal fade" id="quartosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Caixa</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Quarto</h5>
       </div>
       <div class="modal-body">
           <legend>Data</legend>
         <br>
-          <input type="date" class="form-control ifont" id="enprodate" required>
+          <input type="date" class="form-control ifont" id="quartdate" required>
         <br>
-          <legend>Nome</legend>
+          <legend>Nome do Residente</legend>
         <br>
-        <input type="text" class="form-control ifont" id="enpronome" required>
+        <input type="text" class="form-control ifont" id="quartnomeres" required>
         <br>
-          <legend>Quantidade</legend>
+          <legend>Número do Quarto</legend>
         <br>
-        <input type="number" class="form-control ifont" id="enproquant" required>
-          <br>
-          <legend>Validade</legend>
-        <br>
-        <input type="date" class="form-control ifont" id="enprovalidade" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="enprocate" class="form-control ifont" required>
-          <option>Enfermagem</option>
-          <option>Alimentos</option>
-          <option>Higiene</option>
-          <option>Doações</option>
-          </select>
+        <input type="number" class="form-control ifont" id="quartnum" required>
         <br>
       </div>
       <div class="modal-footer">
