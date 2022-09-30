@@ -10,10 +10,10 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Type to Search..."
+          placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#entradaprodutosModal">
+      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#doadoresModal">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -63,37 +63,37 @@
     </table>
 
     <!-- Modal Doadores-->
-<div class="modal fade " id="entradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade " id="doadoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Caixa</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Doador</h5>
       </div>
       <div class="modal-body">
           <legend>Data</legend>
         <br>
-          <input type="date" class="form-control ifont" id="enprodate" required>
+          <input type="date" class="form-control ifont" id="doadate" required>
         <br>
           <legend>Nome</legend>
         <br>
-        <input type="text" class="form-control ifont" id="enpronome" required>
+        <input type="text" class="form-control ifont" id="doanome" required>
         <br>
-          <legend>Quantidade</legend>
+          <legend>Telefone</legend>
         <br>
-        <input type="number" class="form-control ifont" id="enproquant" required>
+        <input type="text" class="form-control ifont" id="doatel" required>
           <br>
-          <legend>Validade</legend>
+          <legend>Forma de Doação</legend>
         <br>
-        <input type="date" class="form-control ifont" id="enprovalidade" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="enprocate" class="form-control ifont" required>
-          <option>Enfermagem</option>
-          <option>Alimentos</option>
-          <option>Higiene</option>
-          <option>Doações</option>
+          <select name="doaforma" class="form-control ifont" required>
+          <option>Pix</option>
+          <option>Boleto</option>
+          <option>Dinheiro</option>
+          <option>Cartão</option>
           </select>
+        <br>
+         <legend>Valor de Doação</legend>
+        <br>
+          <input type="number" class="form-control ifont" id="doaval" required>
         <br>
       </div>
       <div class="modal-footer">

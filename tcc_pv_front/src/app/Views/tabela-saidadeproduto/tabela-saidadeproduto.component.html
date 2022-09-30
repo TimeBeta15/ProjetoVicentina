@@ -10,10 +10,10 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Type to Search..."
+          placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#entradaprodutosModal">
+      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#saidaprodutosModal">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -54,38 +54,21 @@
       </tbody>
     </table>
 
-    <!-- Modal Entrada de caixa -->
-<div class="modal fade " id="entradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Saída de produtos -->
+<div class="modal fade " id="saidaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Caixa</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Saída de Produtos</h5>
       </div>
       <div class="modal-body">
           <legend>Data</legend>
         <br>
-          <input type="date" class="form-control ifont" id="enprodate" required>
+          <input type="date" class="form-control ifont" id="saiprodate" required>
         <br>
-          <legend>Nome</legend>
+          <legend>Descrição</legend>
         <br>
-        <input type="text" class="form-control ifont" id="enpronome" required>
-        <br>
-          <legend>Quantidade</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="enproquant" required>
-          <br>
-          <legend>Validade</legend>
-        <br>
-        <input type="date" class="form-control ifont" id="enprovalidade" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="enprocate" class="form-control ifont" required>
-          <option>Enfermagem</option>
-          <option>Alimentos</option>
-          <option>Higiene</option>
-          <option>Doações</option>
-          </select>
+        <input type="text" class="form-control ifont" id="saiprodesc" required>
         <br>
       </div>
       <div class="modal-footer">

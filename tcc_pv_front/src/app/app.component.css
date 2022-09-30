@@ -52,6 +52,8 @@ body{
   transform: scale(1,1);
 }
 
+/*menu dropbox*/
+
 .dp-menu ul {
     list-style-type: none;
     padding: 0;
@@ -82,12 +84,24 @@ body{
 }
 
 .dp-menu ul ul {
-    width: 150px;
+    width: auto;
+
 }
 
 .dp-menu ul ul li a {
     display: block;
+
 }
+
+/* fazer aqui */
+.dp-menu ul ul li a:focus ~.dp-menu ul ul{
+  display: block;
+  background-color: aqua;
+  /*visibility: hidden;*/
+  }
+
+
+/* modal */
 
 .modal-dialog{
     width: 100%;

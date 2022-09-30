@@ -10,10 +10,10 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Type to Search..."
+          placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar">
+      <button class="add" title="Adicionar" data-bs-toggle="modal" data-bs-target="#contcapModal">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -62,5 +62,43 @@
         </tr>
       </tbody>
     </table>
+
+        <!-- Modal Conta capital -->
+<div class="modal fade " id="contcapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Conta Capital</h5>
+      </div>
+      <div class="modal-body">
+          <legend>Data</legend>
+        <br>
+          <input type="date" class="form-control ifont" id="contcapdate" required>
+        <br>
+          <legend>Descrição</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="contcapdesc" required>
+        <br>
+          <legend>Entradas</legend>
+        <br>
+        <input type="number" class="form-control ifont" id="contcapent" required>
+          <br>
+          <legend>Saídas</legend>
+        <br>
+        <input type="number" class="form-control ifont" id="contcapsai" required>
+        <br>
+          <legend>Saldo</legend>
+        <br>
+        <input type="number" class="form-control ifont" id="contcapsal" required>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   </div>
 </div>
