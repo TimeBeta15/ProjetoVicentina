@@ -166,3 +166,8 @@ tr{
   box-shadow: 0 2px #666;
   transform: translateY(1px)
 }
+
+.ifont{
+  color: black;
+  text-align: center;
+}
