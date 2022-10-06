@@ -22,3 +22,15 @@ C:\Users\Fatec\Desktop\Tcc_atualizado21_09\ProjetoVicentina\tcc_pv_Back\Domain\o
 C:\Users\Fatec\Desktop\Tcc_atualizado21_09\ProjetoVicentina\tcc_pv_Back\Domain\obj\Debug\net6.0\refint\Domain.dll
 C:\Users\Fatec\Desktop\Tcc_atualizado21_09\ProjetoVicentina\tcc_pv_Back\Domain\obj\Debug\net6.0\Domain.pdb
 C:\Users\Fatec\Desktop\Tcc_atualizado21_09\ProjetoVicentina\tcc_pv_Back\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\Ester\Desktop\github_tcc\ProjetoVicentina\tcc_pv_back\Domain\obj\Debug\net6.0\ref\Domain.dll

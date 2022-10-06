@@ -22,6 +22,8 @@ import { TabelaFornecedoresComponent } from './Views/tabela-fornecedores/tabela-
 import { TabelaEntradadeprodutoComponent } from './Views/tabela-entradadeproduto/tabela-entradadeproduto.component';
 import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tabela-saidadeproduto.component';
 import { ResidentesComponent } from './Views/residentes/residentes.component';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,11 +49,15 @@ import { ResidentesComponent } from './Views/residentes/residentes.component';
     ResidentesComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

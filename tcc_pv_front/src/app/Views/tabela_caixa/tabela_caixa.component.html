@@ -34,13 +34,13 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
+      <tbody *ngIf="produtos && produtos.length">
+        <tr *ngFor="let produto of produtos" >
+          <td>{{produto.id}}</td>
+          <td>{{produto.description}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td class="edit">
             <button title="Editar">
               <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -77,7 +77,7 @@
         <br>
           <legend>Descrição</legend>
         <br>
-        <input type="text" class="form-control ifont" id="caidesc" required>
+        <input [(ngModel)]="desc" ngModel type="text" class="form-control ifont" id="caidesc" required>
         <br>
           <legend>Entradas</legend>
         <br>
@@ -94,7 +94,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-primary">Salvar</button>
+        <button type="button" class="salvar btn btn-primary" (click)="adicionarProduto()">Salvar</button>
       </div>
     </div>
   </div>

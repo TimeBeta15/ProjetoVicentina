@@ -2260,19 +2260,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fatec\\.nuget\\packages\\": {}
+    "C:\\Users\\Ester\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Service\\Service.csproj",
-      "packagesPath": "C:\\Users\\Fatec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Service\\obj\\",
+      "projectPath": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fatec\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2284,11 +2284,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj"
+            "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Infra.Data\\Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Infra.Data\\Infra.Data.csproj"
+            "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
             }
           }
         }
@@ -2318,7 +2318,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

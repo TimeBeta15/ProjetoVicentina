@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj": {
+    "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Fatec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fatec\\Desktop\\Tcc_atualizado21_09\\ProjetoVicentina\\tcc_pv_Back\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ester\\Desktop\\github_tcc\\ProjetoVicentina\\tcc_pv_back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fatec\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
