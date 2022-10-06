@@ -38,12 +38,12 @@
           <td>Ester</td>
           <td>Quarto 03</td>
           <td class="edit">
-            <button title="Editar">
+            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editquartosModal">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button title="Excluir">
+            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#delquartosModal">
               <i class="fa fa-minus" aria-hidden="true"></i>
             </button>
           </td>
@@ -79,11 +79,60 @@
         <br>
       </div>
       <div class="modal-footer">
-        <button type="button" class="fechar btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-primary">Salvar</button>
+        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-success">Salvar</button>
       </div>
     </div>
   </div>
 </div>
+
+  <!-- Modal Editar Quartos -->
+  <div class="modal fade" id="editquartosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Quarto</h5>
+        </div>
+        <div class="modal-body">
+            <legend>Data</legend>
+          <br>
+            <input type="date" class="form-control ifont" id="quartdate" required>
+          <br>
+            <legend>Nome do Residente</legend>
+          <br>
+          <input type="text" class="form-control ifont" id="quartnomeres" required>
+          <br>
+            <legend>Número do Quarto</legend>
+          <br>
+          <input type="number" class="form-control ifont" id="quartnum" required>
+          <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="salvar btn btn-success">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal Deletar Quartos -->
+   <div class="modal fade " id="delquartosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Deletar Quarto</h5>
+        </div>
+        <div class="modal-body">
+            <legend>Você tem certeza que deseja deletar?</legend>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
+          <button type="button" class="salvar btn btn-success">Sim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   </div>
 </div>
