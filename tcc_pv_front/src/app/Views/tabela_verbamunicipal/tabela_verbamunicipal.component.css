@@ -171,3 +171,8 @@ tr{
   color: black;
   text-align: center;
 }
+
+textarea{
+  resize: none;
+}
+
