@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Domain.Interfaces;
-using Domain.Model;
+using domain.Interfaces;
+using domain.Model;
 using Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
