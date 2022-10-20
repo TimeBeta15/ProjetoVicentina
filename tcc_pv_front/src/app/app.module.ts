@@ -24,6 +24,8 @@ import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tab
 import { ResidentesComponent } from './Views/residentes/residentes.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './Views/menu/menu.component';
+import { LoginComponent } from './Views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TabelaEntradadeprodutoComponent,
     TabelaSaidadeprodutoComponent,
     ResidentesComponent,
+    MenuComponent,
+    LoginComponent,
 
 
 

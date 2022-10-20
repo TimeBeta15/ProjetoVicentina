@@ -1,3 +1,4 @@
+import { LoginComponent } from './Views/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EstoqueComponent } from './Views/estoque/estoque.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:'tabela_fornecedores', component: TabelaFornecedoresComponent},
   {path:'tabela_quartos', component: TabelaQuartosComponent},
   {path:'tabela_saidadeproduto', component: TabelaSaidadeprodutoComponent},
+  {path:'login', component: LoginComponent},
 ]
 
 
