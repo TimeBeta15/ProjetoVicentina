@@ -26,24 +26,37 @@
   <li><a class="guia lia">Movimentação Financeira</a>
   <ul>
     <li><a routerLink="tabela_caixa" class="guia lia">Caixa</a></li>
-    <li><a routerLink="tabela_contacapital" class="guia lia">Conta Capital</a></li>
-    <li><a routerLink="tabela_contacorrente" class="guia lia">Conta Corrente</a></li>
-    <li><a routerLink="tabela_emendaimpositiva" class="guia lia">Emenda Impositiva</a></li>
-    <li><a routerLink="tabela_emendaparlamentar" class="guia lia">Emenda Parlamentar</a></li>
-    <li><a routerLink="tabela_verbaestadual" class="guia lia">Verba Estadual</a></li>
-    <li><a routerLink="tabela_verbamunicipal" class="guia lia">Verba Municipal</a></li>
+    <li class="subconta"><a class="guia lia">Conta <i class="fa fa-arrow-right" aria-hidden="true" style="float: right;"></i></a>
+      <div class="submenuconta">
+      <ul>
+        <li><a routerLink="tabela_contacapital" class="guia lia">Conta Capital</a></li>
+        <li><a routerLink="tabela_contacorrente" class="guia lia">Conta Corrente</a></li>
+      </ul>
+      </div>
+    </li>
+    <li class="subemen"><a class="guia lia">Emenda <i class="fa fa-arrow-right" aria-hidden="true" style="float: right;"></i></a>
+      <div class="submenuemen">
+      <ul>
+        <li><a routerLink="tabela_emendaimpositiva" class="guia lia">Emenda Impositiva</a></li>
+        <li><a routerLink="tabela_emendaparlamentar" class="guia lia">Emenda Parlamentar</a></li>
+      </ul>
+      </div>
+    </li>
+    <li class="subverb"><a class="guia lia">Verba<i class="fa fa-arrow-right" aria-hidden="true" style="padding-left: 50px;"></i></a>
+      <div class="submenuverb">
+      <ul>
+        <li><a routerLink="tabela_verbaestadual" class="guia lia">Verba Estadual</a></li>
+        <li><a routerLink="tabela_verbamunicipal" class="guia lia">Verba Municipal</a></li>
+      </ul>
+    </div>
+    </li>
   </ul></li>
       <li><a class="guia lia" style="color: #F0d3CE;">Estoque</a>
         <ul>
           <li><a routerLink="tabela_entradadeproduto" class="guia lia">Entrada de Produtos</a></li>
           <li><a routerLink="tabela_saidadeproduto" class="guia lia">Saída de Produtos</a></li>
         </ul>
-        </li> <!--<li><a class="guia lia">Consulta</a>
-          <ul>
-            <li><a routerLink="consultacadastro" class="guia lia">Cadastro</a></li>
-            <li><a routerLink="consultafinanceiro" class="guia lia">Movimentção Financeira</a></li>
-            <li><a routerLink="consultaestoque" class="guia lia">Estoque</a></li>
-          </ul>-->
+        </li>
     </ul>
 </nav>
 </body>

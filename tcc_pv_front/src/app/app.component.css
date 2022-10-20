@@ -75,32 +75,66 @@ body{
     display: none;
     left: 0;
     position: absolute;
-
 }
 
 .dp-menu ul li:hover ul {
     display: block;
-
 }
 
 .dp-menu ul ul {
     width: auto;
-
 }
 
 .dp-menu ul ul li a {
     display: block;
-
 }
 
-/* fazer aqui */
-.dp-menu ul ul li a:focus ~.dp-menu ul ul{
+/* sub menu conta */
+.submenuconta{
+  display: none;
+}
+
+.subconta:hover .submenuconta{
+  position: absolute;
   display: block;
-  background-color: aqua;
-  /*visibility: hidden;*/
-  }
+  margin-top: -40px;
+  margin-left: 140px;
+}
 
+.subconta{
+  cursor: pointer;
+}
 
+/* sub menu emenda */
+.submenuemen{
+  display: none;
+}
+
+.subemen:hover .submenuemen{
+  position: absolute;
+  display: block;
+  margin-top: -40px;
+  margin-left: 140px;
+}
+
+.subemen{
+  cursor: pointer;
+}
+/* sub menu verba */
+.submenuverb{
+  display: none;
+}
+
+.subverb:hover .submenuverb{
+  position: absolute;
+  display: block;
+  margin-top: -40px;
+  margin-left: 140px;
+}
+
+.subverb{
+  cursor: pointer;
+}
 /* modal */
 
 .modal-dialog{
