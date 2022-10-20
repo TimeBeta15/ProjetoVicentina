@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Domain;
-using Domain.Model;
-using Domain.Interfaces;
+
+
 using Microsoft.AspNetCore.Mvc;
 using Domain.Entity;
+using domain.Entity;
+using domain.Model;
 
 namespace Infra.Data.Mapping
 {
@@ -17,6 +19,7 @@ namespace Infra.Data.Mapping
         public AutoMapperProf()
         {
             CreateMap<Produto, ProdutoModel>().ReverseMap();
+            CreateMap<entradaProduto, entradaProdutoModel>().ReverseMap();
         }
     }
 }
