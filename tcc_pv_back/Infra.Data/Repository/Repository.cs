@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Domain.Interfaces;
+using domain.Interfaces;
 using Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 

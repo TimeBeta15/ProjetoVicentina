@@ -1,19 +1,20 @@
 using AutoMapper;
-using Domain;
-using Domain.Entity;
-using domain.Interfaces;
+using domain.Entity;
 using domain.Model;
+using domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
-    [Route("api/[controller]")]
+   
+    
+        [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoController : ControllerBase
+    public class EntradaProdutoController : ControllerBase
     {
-        public IBaseService<Produto> Service { get; }
+        public IBaseService<entradaProduto> Service { get; }
         public IMapper Mapper { get; }
-        public ProdutoController(IBaseService<Produto> service, IMapper mapper )
+        public EntradaProdutoController(IBaseService<entradaProduto> service, IMapper mapper )
         {
             this.Mapper = mapper;
             this.Service = service;
@@ -23,7 +24,7 @@ namespace Application.Controllers
         public async Task<IActionResult> Get(){
             try {
                 var entity = await this.Service.GetAll();
-                var results = this.Mapper.Map<ProdutoModel[]>(entity);
+                var results = this.Mapper.Map<entradaProdutoModel[]>(entity);
                 return Ok(results);
             }
             catch(System.Exception ex){
@@ -34,18 +35,18 @@ namespace Application.Controllers
         [HttpGet("{Id}")]
         public async Task<IActionResult>GetById(string Id){
             var entity = await this.Service.GetById(Id);
-            var results = this.Mapper.Map<ProdutoModel>(entity);
+            var results = this.Mapper.Map<entradaProdutoModel>(entity);
             return Ok(results);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(ProdutoModel produtoModel){
-            var prod1 = this.Mapper.Map<Produto>(produtoModel);
+        public async Task<IActionResult> Post(entradaProdutoModel entradaprodutoModel){
+            var entradaprod1 = this.Mapper.Map<entradaProduto>(entradaprodutoModel);
 
-            this.Service.Add(prod1);
+            this.Service.Add(entradaprod1);
 
             if(await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{produtoModel.id}", produtoModel);
+                return Created($"api/Produto/{entradaprodutoModel.id}", entradaprodutoModel);
             return BadRequest();
         }
 
@@ -61,7 +62,7 @@ namespace Application.Controllers
         }
 
          [HttpPut("{Id}")]
-         public async Task<IActionResult>Put(string Id, ProdutoModel model){
+         public async Task<IActionResult>Put(string Id, entradaProdutoModel model){
              var entity = await this.Service.GetById(Id);
 
              if(entity == null) return NotFound();
@@ -70,8 +71,8 @@ namespace Application.Controllers
 
              if(await this.Service.SaveChangesAsync())
 
-                 return Created($"api/Caregoria/{model.id}", this.Mapper.Map<ProdutoModel>(entity));
+                 return Created($"api/entradaproduto/{model.id}", this.Mapper.Map<entradaProdutoModel>(entity));
              return BadRequest();
          }
     }
-}
+    }

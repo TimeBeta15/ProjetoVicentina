@@ -1,4 +1,4 @@
-using Domain.Interfaces;
+using domain.Interfaces;
 using Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Service.BaseContainer;
