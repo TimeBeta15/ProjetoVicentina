@@ -1,19 +1,20 @@
 using AutoMapper;
-using Domain;
-using Domain.Entity;
-using domain.Interfaces;
+using domain.Entity;
 using domain.Model;
+using domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
+
+
     [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoController : ControllerBase
+    public class TabelaCaixaController : ControllerBase
     {
-        public IBaseService<Produto> Service { get; }
+        public IBaseService<tabelaCaixa> Service { get; }
         public IMapper Mapper { get; }
-        public ProdutoController(IBaseService<Produto> service, IMapper mapper)
+        public TabelaCaixaController(IBaseService<tabelaCaixa> service, IMapper mapper)
         {
             this.Mapper = mapper;
             this.Service = service;
@@ -25,7 +26,7 @@ namespace Application.Controllers
             try
             {
                 var entity = await this.Service.GetAll();
-                var results = this.Mapper.Map<ProdutoModel[]>(entity);
+                var results = this.Mapper.Map<tabelaCaixaModel[]>(entity);
                 return Ok(results);
             }
             catch (System.Exception ex)
@@ -38,19 +39,19 @@ namespace Application.Controllers
         public async Task<IActionResult> GetById(string Id)
         {
             var entity = await this.Service.GetById(Id);
-            var results = this.Mapper.Map<ProdutoModel>(entity);
+            var results = this.Mapper.Map<tabelaCaixaModel>(entity);
             return Ok(results);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(ProdutoModel produtoModel)
+        public async Task<IActionResult> Post(tabelaCaixaModel tabelaCaixaModel)
         {
-            var prod1 = this.Mapper.Map<Produto>(produtoModel);
+            var tabelacaixa1 = this.Mapper.Map<tabelaCaixa>(tabelaCaixaModel);
 
-            this.Service.Add(prod1);
+            this.Service.Add(tabelacaixa1);
 
             if (await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{produtoModel.id}", produtoModel);
+                return Created($"api/Produto/{tabelaCaixaModel.id}", tabelaCaixaModel);
             return BadRequest();
         }
 
@@ -67,7 +68,7 @@ namespace Application.Controllers
         }
 
         [HttpPut("{Id}")]
-        public async Task<IActionResult> Put(string Id, ProdutoModel model)
+        public async Task<IActionResult> Put(string Id, tabelaCaixaModel model)
         {
             var entity = await this.Service.GetById(Id);
 
@@ -77,7 +78,7 @@ namespace Application.Controllers
 
             if (await this.Service.SaveChangesAsync())
 
-                return Created($"api/Caregoria/{model.id}", this.Mapper.Map<ProdutoModel>(entity));
+                return Created($"api/tabelacaixa/{model.id}", this.Mapper.Map<tabelaCaixaModel>(entity));
             return BadRequest();
         }
     }
