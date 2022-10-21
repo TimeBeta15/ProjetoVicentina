@@ -3,6 +3,7 @@ using System;
 using Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221020151227_terceiroDB")]
+    partial class terceiroDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.9");
@@ -29,15 +31,6 @@ namespace Infra.Data.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<float>("Entrada")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Saida")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Valor")
-                        .HasColumnType("REAL");
 
                     b.Property<DateTime>("data")
                         .HasColumnType("TEXT");
@@ -70,15 +63,6 @@ namespace Infra.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<float>("Entrada")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Saida")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Valor")
-                        .HasColumnType("REAL");
-
                     b.Property<DateTime>("data")
                         .HasColumnType("TEXT");
 
@@ -110,15 +94,6 @@ namespace Infra.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<float>("Entrada")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Saida")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Valor")
-                        .HasColumnType("REAL");
-
                     b.Property<DateTime>("data")
                         .HasColumnType("TEXT");
 
@@ -135,46 +110,6 @@ namespace Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("saidaProduto");
-                });
-
-            modelBuilder.Entity("domain.Entity.tabelaCaixa", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Categoria")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<float>("Entrada")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Saida")
-                        .HasColumnType("REAL");
-
-                    b.Property<float>("Valor")
-                        .HasColumnType("REAL");
-
-                    b.Property<DateTime>("data")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("nome")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("quantidade")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("validade")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("tabelaCaixa");
                 });
 #pragma warning restore 612, 618
         }
