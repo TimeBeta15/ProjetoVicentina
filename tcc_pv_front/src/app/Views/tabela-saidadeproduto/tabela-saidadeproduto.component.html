@@ -31,10 +31,10 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>bolsonaro mito</td>
+      <tbody *ngIf="saidaproduto && saidaproduto.length">
+        <tr *ngFor="let saidaproduto of saidaproduto">
+          <td>{{SaidaProduto.data}}</td>
+          <td>{{SaidaProduto.description}}</td>
           <td class="edit" data-bs-toggle="modal" data-bs-target="#editsaidaprodutosModal">
             <button title="Editar">
               <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -49,7 +49,7 @@
 
         <tr>
           <td>07/01/2022</td>
-          <td>bolsonaro mito</td>
+          <td>bolsona</td>
         </tr>
       </tbody>
     </table>
@@ -68,12 +68,12 @@
         <br>
         <legend>Descrição</legend>
         <br>
-        <textarea cols="55" rows="5" class="form-control ifont" id="saiprodesc" required></textarea>
+        <textarea [(ngModel)]="desc" cols="55" rows="5" class="form-control ifont" id="saiprodesc" required></textarea>
         <br>
       </div>
       <div class="modal-footer">
         <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
+        <button type="button" class="salvar btn btn-success" (click)="adicionarSaidaProduto()">Salvar</button>
       </div>
     </div>
   </div>

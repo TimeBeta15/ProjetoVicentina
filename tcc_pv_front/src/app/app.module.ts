@@ -21,7 +21,6 @@ import { TabelaDoadoresComponent } from './Views/tabela-doadores/tabela-doadores
 import { TabelaFornecedoresComponent } from './Views/tabela-fornecedores/tabela-fornecedores.component';
 import { TabelaEntradadeprodutoComponent } from './Views/tabela-entradadeproduto/tabela-entradadeproduto.component';
 import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tabela-saidadeproduto.component';
-import { ResidentesComponent } from './Views/residentes/residentes.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -46,7 +45,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TabelaFornecedoresComponent,
     TabelaEntradadeprodutoComponent,
     TabelaSaidadeprodutoComponent,
-    ResidentesComponent,
+
 
 
 
