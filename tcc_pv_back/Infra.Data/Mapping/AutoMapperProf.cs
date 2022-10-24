@@ -22,6 +22,8 @@ namespace Infra.Data.Mapping
             CreateMap<entradaProduto, entradaProdutoModel>().ReverseMap();
             CreateMap<saidaProduto, saidaProdutoModel>().ReverseMap();
             CreateMap<tabelaCaixa, tabelaCaixaModel>().ReverseMap();
+            CreateMap<tabelaContaCapital, tabelaContaCapitalModel>().ReverseMap();
+            CreateMap<tabelaContaCorrente, tabelaContaCorrenteModel>().ReverseMap();
         }
     }
 }

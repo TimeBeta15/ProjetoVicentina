@@ -16,6 +16,8 @@ namespace Infra.Data.Context
         public DbSet<entradaProduto> entradaProduto { get; set; }
         public DbSet<saidaProduto> saidaProduto { get; set; }
         public DbSet<tabelaCaixa> tabelaCaixa { get; set; }
+        public DbSet<tabelaContaCapital> tabelaContaCapital { get; set; }
+        public DbSet<tabelaContaCorrente> tabelaContaCorrente { get; set; }
 
     }
 }
