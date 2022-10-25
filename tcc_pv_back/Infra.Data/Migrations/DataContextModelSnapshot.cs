@@ -256,6 +256,166 @@ namespace Infra.Data.Migrations
 
                     b.ToTable("tabelaContaCorrente");
                 });
+
+            modelBuilder.Entity("domain.Entity.tabelaEmendaImpositiva", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Entrada")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Saida")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Valor")
+                        .HasColumnType("REAL");
+
+                    b.Property<DateTime>("data")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("validade")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tabelaEmendaImpositiva");
+                });
+
+            modelBuilder.Entity("domain.Entity.tabelaEmendaParlamentar", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Entrada")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Saida")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Valor")
+                        .HasColumnType("REAL");
+
+                    b.Property<DateTime>("data")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("validade")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tabelaEmendaParlamentar");
+                });
+
+            modelBuilder.Entity("domain.Entity.tabelaVerbaEstadual", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Entrada")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Saida")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Valor")
+                        .HasColumnType("REAL");
+
+                    b.Property<DateTime>("data")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("validade")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tabelaVerbaEstadual");
+                });
+
+            modelBuilder.Entity("domain.Entity.tabelaVerbaMucinipal", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Entrada")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Saida")
+                        .HasColumnType("REAL");
+
+                    b.Property<float>("Valor")
+                        .HasColumnType("REAL");
+
+                    b.Property<DateTime>("data")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("validade")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tabelaVerbaMunicipal");
+                });
 #pragma warning restore 612, 618
         }
     }
