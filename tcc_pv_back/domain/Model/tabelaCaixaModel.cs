@@ -14,6 +14,4 @@ namespace domain.Model
 
         public float Valor { get; set; }
     }
-
-
 }

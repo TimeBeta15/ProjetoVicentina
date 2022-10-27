@@ -26,6 +26,7 @@ namespace Infra.Data.Mapping
             CreateMap<tabelaEmendaParlamentar, tabelaEmendaParlamentarModel>().ReverseMap();
             CreateMap<tabelaVerbaEstadual, tabelaVerbaEstadualModel>().ReverseMap();
             CreateMap<tabelaVerbaMucinipal, tabelaVerbaMunicipalModel>().ReverseMap();
+            
         }
     }
 }

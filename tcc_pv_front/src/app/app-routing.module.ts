@@ -2,7 +2,6 @@ import { LoginComponent } from './Views/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EstoqueComponent } from './Views/estoque/estoque.component';
-import { ResidenteComponent } from './Views/residente/residente.component';
 import { HomeComponent } from './Views/home/home.component';
 import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
 import { Tabela_caixaComponent } from './Views/tabela_caixa/tabela_caixa.component';
@@ -25,7 +24,6 @@ import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tab
 const routes: Routes = [
   {path:'', component: HomeComponent,},
   {path:'estoque' ,component: EstoqueComponent,},
-  {path:'residente', component: ResidenteComponent,},
   {path:'movimentacao', component: MovimentacaoComponent},
   {path:'consultacadastro', component: ConsultacadastroComponent},
   {path:'consultafinanceiro', component:ConsultafinanceiroComponent},
@@ -43,6 +41,7 @@ const routes: Routes = [
   {path:'tabela_quartos', component: TabelaQuartosComponent},
   {path:'tabela_saidadeproduto', component: TabelaSaidadeprodutoComponent},
   {path:'login', component: LoginComponent},
+
 ]
 
 

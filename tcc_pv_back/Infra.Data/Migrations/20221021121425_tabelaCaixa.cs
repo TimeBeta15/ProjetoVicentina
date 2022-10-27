@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infra.Data.Migrations
 {
+    
     public partial class tabelaCaixa : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

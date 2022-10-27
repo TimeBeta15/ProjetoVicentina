@@ -1,4 +1,7 @@
-export class SaidaProduto{
-    description:string = '';
-    data: string = '';
-} 
+export class SaidaProduto
+
+{
+  id:string='';
+  data: string = '';
+  description: string = '';
+}

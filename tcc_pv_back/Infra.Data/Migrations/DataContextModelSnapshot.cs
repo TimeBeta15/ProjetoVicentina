@@ -419,4 +419,5 @@ namespace Infra.Data.Migrations
 #pragma warning restore 612, 618
         }
     }
+    
 }

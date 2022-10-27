@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infra.Data.Migrations
 {
+    
     [DbContext(typeof(DataContext))]
     [Migration("20221025121524_tabelaEmendaImpositiva")]
     partial class tabelaEmendaImpositiva

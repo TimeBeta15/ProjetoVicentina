@@ -7,6 +7,7 @@ namespace Infra.Data.Migrations
 {
     public partial class tabelaEmendaImpositiva : Migration
     {
+        
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
