@@ -63,6 +63,7 @@
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
+    font-weight: 600;
 }
 
 .textfield > input{
@@ -102,4 +103,3 @@ a{
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #f0ffffde;
 }
-

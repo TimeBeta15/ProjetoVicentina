@@ -11,23 +11,19 @@ import { Tabela_emendaparlamentarComponent } from './Views/tabela_emendaparlamen
 import { Tabela_emendaimpositivaComponent } from './Views/tabela_emendaimpositiva/tabela_emendaimpositiva.component';
 import { Tabela_contacorrenteComponent } from './Views/tabela_contacorrente/tabela_contacorrente.component';
 import { Tabela_contacapitalComponent } from './Views/tabela_contacapital/tabela_contacapital.component';
-import { ConsultacadastroComponent } from './Views/consultacadastro/consultacadastro.component';
-import { ConsultafinanceiroComponent } from './Views/consultafinanceiro/consultafinanceiro.component';
-import { ConsultaestoqueComponent } from './Views/consultaestoque/consultaestoque.component';
 import { TabelaDoadoresComponent } from './Views/tabela-doadores/tabela-doadores.component';
 import { TabelaEntradadeprodutoComponent } from './Views/tabela-entradadeproduto/tabela-entradadeproduto.component';
 import { TabelaFornecedoresComponent } from './Views/tabela-fornecedores/tabela-fornecedores.component';
 import { TabelaQuartosComponent } from './Views/tabela-quartos/tabela-quartos.component';
 import { TabelaSaidadeprodutoComponent } from './Views/tabela-saidadeproduto/tabela-saidadeproduto.component';
+import { TabelaResidentesComponent } from './Views/tabela-residentes/tabela-residentes.component';
+import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component';
 
 
 const routes: Routes = [
   {path:'', component: HomeComponent,},
   {path:'estoque' ,component: EstoqueComponent,},
   {path:'movimentacao', component: MovimentacaoComponent},
-  {path:'consultacadastro', component: ConsultacadastroComponent},
-  {path:'consultafinanceiro', component:ConsultafinanceiroComponent},
-  {path:'consultaestoque', component: ConsultaestoqueComponent},
   {path:'tabela_caixa', component: Tabela_caixaComponent},
   {path:'tabela_contacapital', component: Tabela_contacapitalComponent},
   {path:'tabela_contacorrente', component: Tabela_contacorrenteComponent},
@@ -41,7 +37,8 @@ const routes: Routes = [
   {path:'tabela_quartos', component: TabelaQuartosComponent},
   {path:'tabela_saidadeproduto', component: TabelaSaidadeprodutoComponent},
   {path:'login', component: LoginComponent},
-
+  {path:'tabela_residentes', component: TabelaResidentesComponent},
+  {path:'cadastroadm', component: CadastroadmComponent},
 ]
 
 

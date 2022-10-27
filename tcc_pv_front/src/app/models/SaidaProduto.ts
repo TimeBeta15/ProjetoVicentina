@@ -1,7 +1,8 @@
 export class SaidaProduto
 
 {
-  id:string='';
+  id:string = '';
   data: string = '';
   description: string = '';
+
 }

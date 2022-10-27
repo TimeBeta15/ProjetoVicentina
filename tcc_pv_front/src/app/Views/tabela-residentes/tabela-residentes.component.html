@@ -1,0 +1,417 @@
+<app-menu></app-menu>
+<div class="container">
+  <h1 class="titulo">Controle de Residentes</h1>
+
+  <div class="subContainer">
+    <div class="container-buttons">
+      <div class="search-box">
+        <button class="btn-search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <input
+          type="text"
+          class="input-search"
+          placeholder="Digite para pesquisar..."
+        />
+      </div>
+      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#residentesModal">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="10" class="titulo_tabela">RESIDENTES</th>
+        </tr>
+
+        <tr>
+          <th>Data de Registro</th>
+          <th>Nome</th>
+          <th>Data de Nascimento</th>
+          <th>Gênero</th>
+          <th>Aposentado</th>
+          <th>Ver Mais</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>07/01/2022</td>
+          <td>Marcão</td>
+          <td>12/03/2001</td>
+          <td>Masculino</td>
+          <td>Sim</td>
+          <td class="showmore">
+            <button title="Ver mais" data-bs-toggle="modal" data-bs-target="#vermaisresidentesModal">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+          </td>
+          <td class="edit">
+            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editresidentesModal">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+          </td>
+          <td class="delete">
+            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#delresidentesModal">
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>07/01/2022</td>
+          <td>Marcão</td>
+          <td>12/03/2001</td>
+          <td>Masculino</td>
+          <td>Sim</td>
+      </tbody>
+    </table>
+
+        <!-- Modal Residentes -->
+<div class="modal fade " id="residentesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Fornecedor</h5>
+      </div>
+      <div class="modal-body">
+        <legend>Data</legend>
+          <br>
+			<input type="date" class="form-control ifont" id="forndate" required>
+          <br>
+			<legend>Nome</legend>
+          <br>
+			<input type="text" class="form-control ifont" id="fornnome" required>
+          <br>
+			<legend>Gênero</legend>
+          <br>
+			<select name="forngenero" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Masculino</option>
+				<option>Feminino</option>
+				<option>Outros</option>
+			</select>
+		  <br>
+			<legend>Data de Nascimento</legend>
+          <br>
+			<input type="date" class="form-control ifont" id="forndatanasc" required>
+		  <br>
+			<legend>Endereço</legend>
+          <br>
+			<input type="text" class="form-control ifont" id="fornendereco" required>
+          <br>
+			<legend>Aposentado</legend>
+          <br>
+			<select name="fornaposentado" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+		  <br>
+			<legend>Empréstimo no nome</legend>
+           <br>
+			<select name="fornemp" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+          <br>
+          <legend>Quem fez o empréstimo ?</legend>
+          <br>
+          <input type="text" class="form-control ifont" id="fornquememp">
+          <br>
+          <legend>Grau de Dependência</legend>
+          <br>
+		  <select name="forngrau" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Grau I</option>
+				<option>Grau II</option>
+				<option>Grau III</option>
+				<option>Indivíduo Autônomo</option>
+			</select>
+          <br>
+          <legend>Tem alguma deficiência ?</legend>
+          <br>
+			<select name="forndef" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+		  <br>
+          <legend>Qual / Quais ?</legend>
+          <input type="text" class="form-control ifont" id="forndefqual">
+        <br>
+          <legend>Tem alguma doença ?</legend>
+          <br>
+			<select name="forndoe" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+        <br>
+          <legend>Qual / Quais ?</legend>
+          <input type="text" class="form-control ifont" id="forndoequal">
+        <br>
+          <legend>Toma remédios controlados ?</legend>
+          <br>
+			<select name="fornrem" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+        <br>
+          <legend>Qual / Quais ?</legend>
+          <input type="text" class="form-control ifont" id="fornremqual">
+        <br>
+          <legend>Motivo da procura pelo acolhimento</legend>
+        <br>
+        <textarea cols="55" rows="5" class="form-control ifont" id="fornmotivaco" required></textarea>
+        <br>
+          <legend>Nome da pessoa que procurou a instituição</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="fornnomeprocura" required>
+        <br>
+          <legend>Grau de parentesco</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="forngrauparente" required>
+        <br>
+          <legend>Endereço</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="fornendprocura" required>
+        <br>
+          <legend>Telefone</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="forntelprocura" required>
+        <br>
+        <div class="modal-footer">
+        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-success">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+     <!-- Modal ver mais Residentes -->
+<div class="modal fade " id="vermaisresidentesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mais Informações</h5>
+      </div>
+      <div class="modal-body">
+			<legend>Endereço</legend>
+          <br>
+			<label class="ifont" for="fornendereco">---</label>
+		  <br>
+			<legend>Empréstimo no nome</legend>
+          <br>
+			<label class="ifont" for="fornemp">---</label>
+          <br>
+          <legend>Quem fez o empréstimo ?</legend>
+          <br>
+			<label class="ifont" for="fornquememp">---</label>
+		  <br>
+          <legend>Grau de Dependência</legend>
+          <br>
+			<label class="ifont" for="forngrau">---</label>
+          <br>
+          <legend>Tem alguma deficiência ?</legend>
+          <br>
+			<label class="ifont" for="forndef">---</label>
+		  <br>
+          <legend>Qual / Quais ?</legend>
+          <label class="ifont" for="forndefqual">---</label>
+        <br>
+          <legend>Tem alguma doença ?</legend>
+          <br>
+			<label class="ifont" for="forndoe">---</label>
+        <br>
+          <legend>Qual / Quais ?</legend>
+          <label class="ifont" for="forndoequal">---</label>
+        <br>
+          <legend>Toma remédios controlados ?</legend>
+          <br>
+			<label class="ifont" for="fornrem">---</label>
+        <br>
+          <legend>Qual / Quais ?</legend>
+          <label class="ifont" for="fornremqual">---</label>
+        <br>
+          <legend>Motivo da procura pelo acolhimento</legend>
+        <br>
+        <label class="ifont" for="fornmotivaco">---</label>
+        <br>
+          <legend>Nome da pessoa que procurou a instituição</legend>
+        <br>
+        <label class="ifont" for="fornnomeprocura">---</label>
+        <br>
+          <legend>Grau de parentesco</legend>
+        <br>
+        <label class="ifont" for="forngrauparente">---</label>
+        <br>
+          <legend>Endereço</legend>
+        <br>
+        <label class="ifont" for="fornendprocura">---</label>
+        <br>
+          <legend>Telefone</legend>
+        <br>
+        <label class="ifont" for="forntelprocura">---</label>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+     <!-- Modal editar Residentes -->
+<div class="modal fade " id="editresidentesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Residentes</h5>
+      </div>
+      <div class="modal-body">
+          <legend>Data</legend>
+          <br>
+			<input type="date" class="form-control ifont" id="forndate" required>
+          <br>
+			<legend>Nome</legend>
+          <br>
+			<input type="text" class="form-control ifont" id="fornnome" required>
+          <br>
+			<legend>Gênero</legend>
+          <br>
+			<select name="forngenero" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Masculino</option>
+				<option>Feminino</option>
+				<option>Outros</option>
+			</select>
+		  <br>
+			<legend>Data de Nascimento</legend>
+          <br>
+			<input type="date" class="form-control ifont" id="forndatanasc" required>
+		  <br>
+			<legend>Endereço</legend>
+          <br>
+			<input type="text" class="form-control ifont" id="fornendereco" required>
+          <br>
+			<legend>Aposentado</legend>
+          <br>
+			<select name="fornaposentado" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+		  <br>
+			<legend>Empréstimo no nome</legend>
+           <br>
+			<select name="fornemp" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+          <br>
+          <legend>Quem fez o empréstimo ?</legend>
+          <br>
+          <input type="text" class="form-control ifont" id="fornquememp">
+          <br>
+          <legend>Grau de Dependência</legend>
+          <br>
+		  <select name="forngrau" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Grau I</option>
+				<option>Grau II</option>
+				<option>Grau III</option>
+				<option>Indivíduo Autônomo </option>
+			</select>
+          <br>
+          <legend>Tem alguma deficiência ?</legend>
+          <br>
+			<select name="forndef" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+		  <br>
+          <legend>Qual / Quais ?</legend>
+          <input type="text" class="form-control ifont" id="forndefqual">
+        <br>
+          <legend>Tem alguma doença ?</legend>
+          <br>
+			<select name="forndoe" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+        <br>
+          <legend>Qual / Quais ?</legend>
+          <input type="text" class="form-control ifont" id="forndoequal">
+        <br>
+          <legend>Toma remédios controlados ?</legend>
+          <br>
+			<select name="fornrem" class="form-control ifont" required>
+				<option style="display:none"></option>
+				<option>Sim</option>
+				<option>Não</option>
+			</select>
+        <br>
+          <legend>Qual / Quais ?</legend>
+          <input type="text" class="form-control ifont" id="fornremqual">
+        <br>
+          <legend>Motivo da procura pelo acolhimento</legend>
+        <br>
+        <textarea cols="55" rows="5" class="form-control ifont" id="fornmotivaco" required></textarea>
+        <br>
+          <legend>Nome da pessoa que procurou a instituição</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="fornnomeprocura" required>
+        <br>
+          <legend>Grau de parentesco</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="forngrauparente" required>
+        <br>
+          <legend>Endereço</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="fornendprocura" required>
+        <br>
+          <legend>Telefone</legend>
+        <br>
+        <input type="text" class="form-control ifont" id="forntelprocura" required>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="salvar btn btn-success">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Modal deletar Residentes -->
+ <div class="modal fade " id="delresidentesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Deletar Residentes</h5>
+      </div>
+      <div class="modal-body">
+          <legend>Você tem certeza que deseja deletar?</legend>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
+        <button type="button" class="salvar btn btn-success">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

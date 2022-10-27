@@ -6,9 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Views/home/home.component';
 import { EstoqueComponent } from './Views/estoque/estoque.component';
 import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
-import { ConsultacadastroComponent } from './Views/consultacadastro/consultacadastro.component';
-import { ConsultaestoqueComponent } from './Views/consultaestoque/consultaestoque.component';
-import { ConsultafinanceiroComponent } from './Views/consultafinanceiro/consultafinanceiro.component';
 import { Tabela_verbamunicipalComponent } from './Views/tabela_verbamunicipal/tabela_verbamunicipal.component';
 import { Tabela_verbaestadualComponent } from './Views/tabela_verbaestadual/tabela_verbaestadual.component';
 import { Tabela_emendaparlamentarComponent } from './Views/tabela_emendaparlamentar/tabela_emendaparlamentar.component';
@@ -25,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './Views/menu/menu.component';
 import { LoginComponent } from './Views/login/login.component';
+import { TabelaResidentesComponent } from './Views/tabela-residentes/tabela-residentes.component';
+import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +31,6 @@ import { LoginComponent } from './Views/login/login.component';
     HomeComponent,
     EstoqueComponent,
     MovimentacaoComponent,
-    ConsultacadastroComponent,
-    ConsultaestoqueComponent,
-    ConsultafinanceiroComponent,
     Tabela_caixaComponent,
     Tabela_contacapitalComponent,
     Tabela_contacorrenteComponent,
@@ -49,6 +45,8 @@ import { LoginComponent } from './Views/login/login.component';
     TabelaSaidadeprodutoComponent,
     MenuComponent,
     LoginComponent,
+    TabelaResidentesComponent,
+    CadastroadmComponent,
 
 
 
