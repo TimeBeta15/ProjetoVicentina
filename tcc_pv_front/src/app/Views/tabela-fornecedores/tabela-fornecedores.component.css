@@ -1,13 +1,11 @@
-
-.container{
+.container {
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: column;
 }
 
-
-.titulo{
+.titulo {
   color: #d87171;
 }
 
@@ -15,15 +13,14 @@
   margin-top: 1em;
 }
 
-table{
+table {
   border-collapse: collapse;
   width: 100%;
   margin-top: 50px;
 }
 
-thead{
+thead {
   background-color: #d87171;
-
 }
 
 .titulo_tabela {
@@ -33,18 +30,15 @@ thead{
   padding: 8px;
   font-size: 22px;
   text-transform: uppercase;
-
 }
 
-td{
+td {
   padding: 8px;
-
 }
 
-tr{
+tr {
   border-bottom: 2px solid rgba(95, 94, 94, 0.5);
 }
-
 
 .container-buttons {
   width: 100%;
@@ -55,7 +49,7 @@ tr{
   margin-bottom: -30px;
 }
 
-.add{
+.add {
   height: 40px;
   width: 50px;
   background-color: #b04747;
@@ -72,12 +66,13 @@ tr{
   transform: translateY(2px);
 }
 
-.search-box{
+.search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
 }
-.input-search{
+
+.input-search {
   height: 40px;
   width: 40px;
   border-style: none;
@@ -86,18 +81,20 @@ tr{
   letter-spacing: 2px;
   outline: none;
   border-radius: 25px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: #b04747;
   padding-right: 40px;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
-.input-search::placeholder{
-  color:rgba(0, 0, 0, 0.5);
+
+.input-search::placeholder {
+  color: rgba(0, 0, 0, 0.5);
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 400;
 }
-.btn-search{
+
+.btn-search {
   width: 40px;
   height: 40px;
   border-style: none;
@@ -109,37 +106,40 @@ tr{
   position: absolute;
   top: 0px;
   right: 5px;
-  color:#ffffff ;
-  background-color:transparent;
+  color: #ffffff;
+  background-color: transparent;
   pointer-events: painted;
 }
-.btn-search:focus ~ .input-search{
+
+.btn-search:focus ~ .input-search {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid #000000;
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid #000000;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-.input-search:focus{
+
+.input-search:focus {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(0, 0, 0, 0.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
-.delete, .edit{
-  padding:0px;
+.delete,
+.edit {
+  padding: 0px;
 }
 
-.delete:hover{
+.delete:hover {
   background-color: #c0c0c0;
 }
 
-.delete:active{
+.delete:active {
   background-color: #a8a8a8;
   box-shadow: 0 2px #666;
-  transform: translateY(1px)
+  transform: translateY(1px);
 }
 
 .delete button {
@@ -158,17 +158,39 @@ tr{
   border: 0px;
 }
 
-.edit:hover{
+.edit:hover {
   background-color: #c0c0c0;
 }
 
-.edit:active{
+.edit:active {
   background-color: #a8a8a8;
   box-shadow: 0 2px #666;
-  transform: translateY(1px)
+  transform: translateY(1px);
 }
 
-.ifont{
+.ifont {
   color: black;
   text-align: center;
+}
+
+.modal-body,
+.modal-header,
+.modal-footer {
+  font-family: "poppins";
+  background-color: #ffffff;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #f0d3ce;
+  color: rgb(0, 0, 0);
+}
+
+.btn {
+  background-color: #b04747;
+  border: #b04747;
+}
+
+.btn:hover {
+  background-color: #7c2929e0;
 }

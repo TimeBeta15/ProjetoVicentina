@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar" data-bs-toggle="modal" data-bs-target="#verbesModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#verbesModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -37,123 +42,217 @@
 
       <tbody>
         <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td class="edit">
-            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editverbesModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editverbesModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#delverbesModal">
+            <button
+              title="Excluir"
+              data-bs-toggle="modal"
+              data-bs-target="#delverbesModal"
+            >
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
-        </tr>
       </tbody>
     </table>
 
-      <!-- Modal Verba Estadual -->
-<div class="modal fade " id="verbesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Verba Estadual</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="verbesdate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-          <textarea cols="55" rows="5" class="form-control ifont" id="verbedesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbesent" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbessai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbessal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-  </div>
-
-<!-- Modal Editar Verba Estadual -->
-<div class="modal fade " id="editverbesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Movimento de Verba Estadual</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="verbesdate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-          <textarea cols="55" rows="5" class="form-control ifont" id="verbedesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbesent" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbessai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbessal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- Modal Deletar Verba Estadual -->
-  <div class="modal fade " id="delverbesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Deletar Entrada de Verba Estadual</h5>
+    <!-- Modal Verba Estadual -->
+    <div
+      class="modal fade"
+      id="verbesModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastrar Movimento de Verba Estadual
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="verbesdate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="verbedesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbesent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbessai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbessal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
         </div>
-        <div class="modal-body">
+      </div>
+    </div>
+
+    <!-- Modal Editar Verba Estadual -->
+    <div
+      class="modal fade"
+      id="editverbesModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Editar Movimento de Verba Estadual
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="verbesdate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="verbedesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbesent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbessai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbessal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deletar Verba Estadual -->
+    <div
+      class="modal fade"
+      id="delverbesModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Deletar Entrada de Verba Estadual
+            </h5>
+          </div>
+          <div class="modal-body">
             <legend>Você tem certeza que deseja deletar?</legend>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-          <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>

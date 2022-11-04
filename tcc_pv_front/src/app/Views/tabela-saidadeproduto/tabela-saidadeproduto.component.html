@@ -42,17 +42,17 @@
           <td>{{ saidaprodutos.data }}</td>
           <td>{{ saidaprodutos.description }}</td>
           <td
-            class="edit"
+            class="add"
             data-bs-toggle="modal"
-            data-bs-target="#editsaidaprodutosModal"
+            data-bs-target="#saidaprodutosModal"
           >
-            <button title="Editar">
+            <button title="Editar" (click)="Alterar(saidaprodutos, saidaprodutosmodal)">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(saidaprodutos, del)"
               data-bs-toggle="modal"
               data-bs-target="#del"
             >
@@ -65,7 +65,7 @@
 
     <!-- Modal Saída de produtos -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="saidaprodutosModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -115,6 +115,10 @@
             >
               Salvar
             </button>
+            <button (click)=" alterarSaidaProduto(editar)">
+
+              editar
+            </button>
           </div>
         </div>
       </div>
@@ -123,7 +127,7 @@
     <!-- Modal Editar Saída de produtos -->
     <div
       class="modal fade"
-      id="editsaidaprodutosModal"
+      id="editsaidaprodutosModal" #confirm
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -147,7 +151,7 @@
             <br />
             <legend>Descrição</legend>
             <br />
-            <textarea
+            <textarea>
               cols="55"
               rows="5"
               class="form-control ifont"

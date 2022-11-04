@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8PE8wX88qur15HOXV1cX4AAXnQU22OVDQ7N+XDmw/+t6QlQQWPnGCF5oP9OS+GZI2WHpJtm/Nt1Qn2AvA5Ftfg==",
+  "dgSpecHash": "k0csGPSrJQa2Wo6gjnCertldqmPr48qjF3YpaqSEZA9hDoxG7Kpz9mb6ne46YyY2GkSr+iN24pA7RKKeOPHWIQ==",
   "success": true,
-  "projectFilePath": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
+  "projectFilePath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

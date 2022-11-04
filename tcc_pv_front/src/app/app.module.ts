@@ -4,8 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Views/home/home.component';
-import { EstoqueComponent } from './Views/estoque/estoque.component';
-import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
 import { Tabela_verbamunicipalComponent } from './Views/tabela_verbamunicipal/tabela_verbamunicipal.component';
 import { Tabela_verbaestadualComponent } from './Views/tabela_verbaestadual/tabela_verbaestadual.component';
 import { Tabela_emendaparlamentarComponent } from './Views/tabela_emendaparlamentar/tabela_emendaparlamentar.component';
@@ -29,8 +27,6 @@ import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component'
   declarations: [
     AppComponent,
     HomeComponent,
-    EstoqueComponent,
-    MovimentacaoComponent,
     Tabela_caixaComponent,
     Tabela_contacapitalComponent,
     Tabela_contacorrenteComponent,
@@ -47,10 +43,8 @@ import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component'
     LoginComponent,
     TabelaResidentesComponent,
     CadastroadmComponent,
-
-
-
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -59,7 +53,9 @@ import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component'
     FormsModule,
     ReactiveFormsModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

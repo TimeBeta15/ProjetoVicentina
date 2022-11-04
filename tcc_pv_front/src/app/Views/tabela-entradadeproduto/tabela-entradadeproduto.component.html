@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#entradaprodutosModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#entradaprodutosModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -43,128 +48,205 @@
           <td>23/09/22</td>
           <td>Alimento</td>
           <td class="edit">
-            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editentradaprodutosModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editentradaprodutosModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
-          <td class="delete" data-bs-toggle="modal" data-bs-target="#delentradaprodutosModal">
+          <td
+            class="delete"
+            data-bs-toggle="modal"
+            data-bs-target="#delentradaprodutosModal"
+          >
             <button title="Excluir">
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>Arroz</td>
-          <td>3</td>
-          <td>23/09/22</td>
-          <td>Alimento</td>
-        </tr>
       </tbody>
     </table>
 
     <!-- Modal Entrada de produto -->
-<div class="modal fade" id="entradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Produto</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="enprodate" required>
-        <br>
-          <legend>Nome</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="enpronome" required>
-        <br>
-          <legend>Quantidade</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="enproquant" required>
-          <br>
-          <legend>Validade</legend>
-        <br>
-        <input type="date" class="form-control ifont" id="enprovalidade" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="enprocate" class="form-control ifont" required>
-          <option>Enfermagem</option>
-          <option>Alimentos</option>
-          <option>Higiene</option>
-          <option>Doações</option>
-          </select>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Editar Entrada de produto -->
-<div class="modal fade" id="editentradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="enprodate" required>
-        <br>
-          <legend>Nome</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="enpronome" required>
-        <br>
-          <legend>Quantidade</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="enproquant" required>
-          <br>
-          <legend>Validade</legend>
-        <br>
-        <input type="date" class="form-control ifont" id="enprovalidade" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="enprocate" class="form-control ifont" required>
-          <option>Enfermagem</option>
-          <option>Alimentos</option>
-          <option>Higiene</option>
-          <option>Doações</option>
-          </select>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
+    <div
+      class="modal fade"
+      id="entradaprodutosModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastrar Produto
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="enprodate"
+              required
+            />
+            <br />
+            <legend>Nome</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="enpronome"
+              required
+            />
+            <br />
+            <legend>Quantidade</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="enproquant"
+              required
+            />
+            <br />
+            <legend>Validade</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="enprovalidade"
+              required
+            />
+            <br />
+            <legend>Categoria</legend>
+            <br />
+            <select name="enprocate" class="form-control ifont" required>
+              <option>Enfermagem</option>
+              <option>Alimentos</option>
+              <option>Higiene</option>
+              <option>Doações</option>
+            </select>
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Modal Deletar Entrada de produto -->
-<div class="modal fade " id="delentradaprodutosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deletar Produto</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Você tem certeza que deseja deletar?</legend>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-        <button type="button" class="salvar btn btn-success">Sim</button>
+    <!-- Modal Editar Entrada de produto -->
+    <div
+      class="modal fade"
+      id="editentradaprodutosModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="enprodate"
+              required
+            />
+            <br />
+            <legend>Nome</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="enpronome"
+              required
+            />
+            <br />
+            <legend>Quantidade</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="enproquant"
+              required
+            />
+            <br />
+            <legend>Validade</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="enprovalidade"
+              required
+            />
+            <br />
+            <legend>Categoria</legend>
+            <br />
+            <select name="enprocate" class="form-control ifont" required>
+              <option>Enfermagem</option>
+              <option>Alimentos</option>
+              <option>Higiene</option>
+              <option>Doações</option>
+            </select>
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
+    <!-- Modal Deletar Entrada de produto -->
+    <div
+      class="modal fade"
+      id="delentradaprodutosModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deletar Produto</h5>
+          </div>
+          <div class="modal-body">
+            <legend>Você tem certeza que deseja deletar?</legend>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -6,14 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
-
-
     [Route("api/[controller]")]
+
     [ApiController]
+
     public class TabelaEmendaParlamentarController : ControllerBase
     {
         public IBaseService<tabelaEmendaParlamentar> Service { get; }
+
         public IMapper Mapper { get; }
+
         public TabelaEmendaParlamentarController(IBaseService<tabelaEmendaParlamentar> service, IMapper mapper)
         {
             this.Mapper = mapper;
@@ -77,10 +79,8 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-
-                return Created($"api/tabelaemendaparlamentar/{model.id}", this.Mapper.Map<tabelaEmendaParlamentarModel>(entity));
+            return Created($"api/tabelaemendaparlamentar/{model.id}", this.Mapper.Map<tabelaEmendaParlamentarModel>(entity));
             return BadRequest();
         }
     }
 }
-

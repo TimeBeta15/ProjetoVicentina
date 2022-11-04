@@ -1,9 +1,8 @@
+
 import { LoginComponent } from './Views/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EstoqueComponent } from './Views/estoque/estoque.component';
 import { HomeComponent } from './Views/home/home.component';
-import { MovimentacaoComponent } from './Views/movimentacao/movimentacao.component';
 import { Tabela_caixaComponent } from './Views/tabela_caixa/tabela_caixa.component';
 import { Tabela_verbaestadualComponent } from './Views/tabela_verbaestadual/tabela_verbaestadual.component';
 import { Tabela_verbamunicipalComponent } from './Views/tabela_verbamunicipal/tabela_verbamunicipal.component';
@@ -22,8 +21,6 @@ import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component'
 
 const routes: Routes = [
   {path:'', component: HomeComponent,},
-  {path:'estoque' ,component: EstoqueComponent,},
-  {path:'movimentacao', component: MovimentacaoComponent},
   {path:'tabela_caixa', component: Tabela_caixaComponent},
   {path:'tabela_contacapital', component: Tabela_contacapitalComponent},
   {path:'tabela_contacorrente', component: Tabela_contacorrenteComponent},

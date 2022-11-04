@@ -1,16 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using domain.Interfaces;
 using Infra.Data.Context;
-using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Data.Repository
 {
+
     public class Repository<T> : IBaseRepository<T> where T : class
     {
         private readonly DataContext context;
+        
         public Repository(DataContext context)
         {
             this.context = context;

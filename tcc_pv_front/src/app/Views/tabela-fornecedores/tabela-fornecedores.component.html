@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#fornecedoresModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#fornecedoresModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -41,7 +46,7 @@
       <tbody>
         <tr>
           <td>07/01/2022</td>
-          <td>Ester</td>
+          <td>João</td>
           <td>992347896</td>
           <td>Feijão</td>
           <td>Alimento</td>
@@ -49,136 +54,227 @@
           <td></td>
           <td></td>
           <td class="edit">
-            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editfornecedoresModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editfornecedoresModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#delfornecedoresModal">
+            <button
+              title="Excluir"
+              data-bs-toggle="modal"
+              data-bs-target="#delfornecedoresModal"
+            >
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>Ester</td>
-          <td>992347896</td>
-          <td>Feijão</td>
-          <td>Alimento</td>
-          <td>5</td>
-        </tr>
       </tbody>
     </table>
 
-        <!-- Modal Fornecedores -->
-<div class="modal fade " id="fornecedoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Fornecedor</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="forndate" required>
-        <br>
-          <legend>Nome</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="fornnome" required>
-        <br>
-          <legend>Telefone</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="forntel" required>
-          <br>
-          <legend>Nome do Produto</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="fornnomeprod" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="forncat" class="form-control ifont" required>
-          <option>Alimento</option>
-          <option>Higiene</option>
-          <option>Enfermagem</option>
-          <option>Doação</option>
-          </select>
-        <br>
-          <legend>Quantidade</legend>
-        <br>
-          <input type="number" class="form-control ifont" id="fornquant" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
+    <!-- Modal Fornecedores -->
+    <div
+      class="modal fade"
+      id="fornecedoresModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastrar Fornecedor
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="forndate"
+              required
+            />
+            <br />
+            <legend>Nome</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="fornnome"
+              required
+            />
+            <br />
+            <legend>Telefone</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="forntel"
+              required
+            />
+            <br />
+            <legend>Nome do Produto</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="fornnomeprod"
+              required
+            />
+            <br />
+            <legend>Categoria</legend>
+            <br />
+            <select name="forncat" class="form-control ifont" required>
+              <option>Alimento</option>
+              <option>Higiene</option>
+              <option>Enfermagem</option>
+              <option>Doação</option>
+            </select>
+            <br />
+            <legend>Quantidade</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="fornquant"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-     <!-- Modal editar Fornecedores -->
-<div class="modal fade " id="editfornecedoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Fornecedor</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="forndate" required>
-        <br>
-          <legend>Nome</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="fornnome" required>
-        <br>
-          <legend>Telefone</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="forntel" required>
-          <br>
-          <legend>Nome do Produto</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="fornnomeprod" required>
-        <br>
-          <legend>Categoria</legend>
-        <br>
-          <select name="forncat" class="form-control ifont" required>
-          <option>Alimento</option>
-          <option>Higiene</option>
-          <option>Enfermagem</option>
-          <option>Doação</option>
-          </select>
-        <br>
-          <legend>Quantidade</legend>
-        <br>
-          <input type="number" class="form-control ifont" id="fornquant" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
+    <!-- Modal editar Fornecedores -->
+    <div
+      class="modal fade"
+      id="editfornecedoresModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Editar Fornecedor
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="forndate"
+              required
+            />
+            <br />
+            <legend>Nome</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="fornnome"
+              required
+            />
+            <br />
+            <legend>Telefone</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="forntel"
+              required
+            />
+            <br />
+            <legend>Nome do Produto</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="fornnomeprod"
+              required
+            />
+            <br />
+            <legend>Categoria</legend>
+            <br />
+            <select name="forncat" class="form-control ifont" required>
+              <option>Alimento</option>
+              <option>Higiene</option>
+              <option>Enfermagem</option>
+              <option>Doação</option>
+            </select>
+            <br />
+            <legend>Quantidade</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="fornquant"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
- <!-- Modal deletar Fornecedores -->
- <div class="modal fade " id="delfornecedoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deletar Fornecedor</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Você tem certeza que deseja deletar?</legend>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-        <button type="button" class="salvar btn btn-success">Sim</button>
+    <!-- Modal deletar Fornecedores -->
+    <div
+      class="modal fade"
+      id="delfornecedoresModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Deletar Fornecedor
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Você tem certeza que deseja deletar?</legend>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   </div>
 </div>

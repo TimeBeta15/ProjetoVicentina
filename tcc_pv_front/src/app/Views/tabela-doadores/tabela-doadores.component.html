@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <div class="container">
-  <h1 class="titulo"> Controle de Doadores</h1>
+  <h1 class="titulo">Controle de Doadores</h1>
 
   <div class="subContainer">
     <div class="container-buttons">
@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#doadoresModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#doadoresModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -43,128 +48,203 @@
           <td>Pix</td>
           <td>71R$</td>
           <td class="edit">
-            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editdoadoresModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editdoadoresModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#deldoadoresModal">
+            <button
+              title="Excluir"
+              data-bs-toggle="modal"
+              data-bs-target="#deldoadoresModal"
+            >
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>Ester</td>
-          <td>992610641</td>
-          <td>Pix</td>
-          <td>71R$</td>
       </tbody>
     </table>
 
     <!-- Modal Doadores-->
-<div class="modal fade " id="doadoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Doador</h5>
+    <div
+      class="modal fade"
+      id="doadoresModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cadastrar Doador</h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="doadate"
+              required
+            />
+            <br />
+            <legend>Nome</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="doanome"
+              required
+            />
+            <br />
+            <legend>Telefone</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="doatel"
+              required
+            />
+            <br />
+            <legend>Forma de Doação</legend>
+            <br />
+            <select name="doaforma" class="form-control ifont" required>
+              <option>Pix</option>
+              <option>Boleto</option>
+              <option>Dinheiro</option>
+              <option>Cartão</option>
+            </select>
+            <br />
+            <legend>Valor de Doação</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="doaval"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="doadate" required>
-        <br>
-          <legend>Nome</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="doanome" required>
-        <br>
-          <legend>Telefone</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="doatel" required>
-          <br>
-          <legend>Forma de Doação</legend>
-        <br>
-          <select name="doaforma" class="form-control ifont" required>
-          <option>Pix</option>
-          <option>Boleto</option>
-          <option>Dinheiro</option>
-          <option>Cartão</option>
-          </select>
-        <br>
-         <legend>Valor de Doação</legend>
-        <br>
-          <input type="number" class="form-control ifont" id="doaval" required>
-        <br>
+    </div>
+
+    <!-- Modal deletar Doadores-->
+    <div
+      class="modal fade"
+      id="deldoadoresModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deletar Doador</h5>
+          </div>
+          <div class="modal-body">
+            <legend>Você tem certeza que deseja deletar?</legend>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
+    </div>
+
+    <!-- Modal editar Doadores-->
+    <div
+      class="modal fade"
+      id="editdoadoresModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Doadores</h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="doadate"
+              required
+            />
+            <br />
+            <legend>Nome</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="doanome"
+              required
+            />
+            <br />
+            <legend>Telefone</legend>
+            <br />
+            <input
+              type="text"
+              class="form-control ifont"
+              id="doatel"
+              required
+            />
+            <br />
+            <legend>Forma de Doação</legend>
+            <br />
+            <select name="doaforma" class="form-control ifont" required>
+              <option>Pix</option>
+              <option>Boleto</option>
+              <option>Dinheiro</option>
+              <option>Cartão</option>
+            </select>
+            <br />
+            <legend>Valor de Doação</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="doaval"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- Modal deletar Doadores-->
-<div class="modal fade " id="deldoadoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deletar Doador</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Você tem certeza que deseja deletar?</legend>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-        <button type="button" class="salvar btn btn-success">Sim</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal editar Doadores-->
-<div class="modal fade " id="editdoadoresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Doadores</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="doadate" required>
-        <br>
-          <legend>Nome</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="doanome" required>
-        <br>
-          <legend>Telefone</legend>
-        <br>
-        <input type="text" class="form-control ifont" id="doatel" required>
-          <br>
-          <legend>Forma de Doação</legend>
-        <br>
-          <select name="doaforma" class="form-control ifont" required>
-          <option>Pix</option>
-          <option>Boleto</option>
-          <option>Dinheiro</option>
-          <option>Cartão</option>
-          </select>
-        <br>
-         <legend>Valor de Doação</legend>
-        <br>
-          <input type="number" class="form-control ifont" id="doaval" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-  </div>
-</div>
-

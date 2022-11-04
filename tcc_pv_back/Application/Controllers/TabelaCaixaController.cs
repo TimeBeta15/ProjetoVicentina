@@ -6,14 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
-
-
     [Route("api/[controller]")]
+
     [ApiController]
+
     public class TabelaCaixaController : ControllerBase
     {
         public IBaseService<tabelaCaixa> Service { get; }
+
         public IMapper Mapper { get; }
+
         public TabelaCaixaController(IBaseService<tabelaCaixa> service, IMapper mapper)
         {
             this.Mapper = mapper;
@@ -77,10 +79,8 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-
-                return Created($"api/tabelacaixa/{model.id}", this.Mapper.Map<tabelaCaixaModel>(entity));
+            return Created($"api/tabelacaixa/{model.id}", this.Mapper.Map<tabelaCaixaModel>(entity));
             return BadRequest();
         }
     }
 }
-

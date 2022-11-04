@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar" data-bs-toggle="modal" data-bs-target="#emenimpModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#emenimpModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -37,124 +42,217 @@
 
       <tbody>
         <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td class="edit">
-            <button title="Editar"  data-bs-toggle="modal" data-bs-target="#editemenimpModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editemenimpModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
-          <td class="delete"  data-bs-toggle="modal" data-bs-target="#delemenimpModal">
+          <td
+            class="delete"
+            data-bs-toggle="modal"
+            data-bs-target="#delemenimpModal"
+          >
             <button title="Excluir">
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
-        </tr>
       </tbody>
     </table>
 
-<!-- Modal Emenda Impositiva -->
-<div class="modal fade " id="emenimpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Emenda Impositiva</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="emenimpdate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-          <textarea cols="55" rows="5" class="form-control ifont" id="emenimpdesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="emenimpent" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="emenimpsai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="emenimpsal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Editar Emenda Impositiva -->
-<div class="modal fade " id="editemenimpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Movimento de Emenda Impositiva</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="emenimpdate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-          <textarea cols="55" rows="5" class="form-control ifont" id="emenimpdesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="emenimpent" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="emenimpsai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="emenimpsal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Deletar Emenda Impositiva -->
-<div class="modal fade " id="delemenimpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deletar Entrada de Emenda Impostiva</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Você tem certeza que deseja deletar?</legend>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-        <button type="button" class="salvar btn btn-success">Sim</button>
+    <!-- Modal Emenda Impositiva -->
+    <div
+      class="modal fade"
+      id="emenimpModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastrar Movimento de Emenda Impositiva
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="emenimpdate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="emenimpdesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="emenimpent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="emenimpsai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="emenimpsal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
+    <!-- Modal Editar Emenda Impositiva -->
+    <div
+      class="modal fade"
+      id="editemenimpModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Editar Movimento de Emenda Impositiva
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="emenimpdate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="emenimpdesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="emenimpent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="emenimpsai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="emenimpsal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deletar Emenda Impositiva -->
+    <div
+      class="modal fade"
+      id="delemenimpModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Deletar Entrada de Emenda Impostiva
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Você tem certeza que deseja deletar?</legend>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

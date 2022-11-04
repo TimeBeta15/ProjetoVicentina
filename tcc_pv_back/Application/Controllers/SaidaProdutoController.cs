@@ -6,14 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
-
-
     [Route("api/[controller]")]
+
     [ApiController]
+
     public class SaidaProdutoController : ControllerBase
     {
         public IBaseService<saidaProduto> Service { get; }
+
         public IMapper Mapper { get; }
+
         public SaidaProdutoController(IBaseService<saidaProduto> service, IMapper mapper)
         {
             this.Mapper = mapper;
@@ -29,7 +31,7 @@ namespace Application.Controllers
                 var results = this.Mapper.Map<saidaProdutoModel[]>(entity);
                 return Ok(results);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -77,8 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-
-                return Created($"api/saidaproduto/{model.id}", this.Mapper.Map<saidaProdutoModel>(entity));
+            return Created($"api/saidaproduto/{model.id}", this.Mapper.Map<saidaProdutoModel>(entity));
             return BadRequest();
         }
     }

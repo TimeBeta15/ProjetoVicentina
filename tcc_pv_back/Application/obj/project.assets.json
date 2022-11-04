@@ -3009,40 +3009,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {}
+    "C:\\Users\\Ester\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
+      "projectUniqueName": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\obj\\",
+      "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
+      "outputPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
+            "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+              "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
             },
-            "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
-              "projectPath": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
+            "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
+              "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
             },
-            "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {
-              "projectPath": "D:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj"
+            "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {
+              "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj"
             }
           }
         }
@@ -3105,7 +3103,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -6,14 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
-
-
     [Route("api/[controller]")]
+
     [ApiController]
+
     public class EntradaProdutoController : ControllerBase
     {
         public IBaseService<entradaProduto> Service { get; }
+
         public IMapper Mapper { get; }
+
         public EntradaProdutoController(IBaseService<entradaProduto> service, IMapper mapper)
         {
             this.Mapper = mapper;
@@ -77,8 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-
-                return Created($"api/entradaproduto/{model.id}", this.Mapper.Map<entradaProdutoModel>(entity));
+            return Created($"api/entradaproduto/{model.id}", this.Mapper.Map<entradaProdutoModel>(entity));
             return BadRequest();
         }
     }

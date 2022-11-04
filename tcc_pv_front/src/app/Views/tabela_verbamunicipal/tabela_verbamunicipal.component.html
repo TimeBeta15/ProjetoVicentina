@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar" data-bs-toggle="modal" data-bs-target="#verbmunModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#verbmunModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -37,123 +42,217 @@
 
       <tbody>
         <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td class="edit">
-            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editverbmunModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editverbmunModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#delverbmunModal">
+            <button
+              title="Excluir"
+              data-bs-toggle="modal"
+              data-bs-target="#delverbmunModal"
+            >
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
-        </tr>
       </tbody>
     </table>
 
-         <!-- Modal Verba Municipal -->
-<div class="modal fade " id="verbmunModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Verba Municipal</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="verbmundate" required>
-        <br>
-        <legend>Descrição</legend>
-        <br>
-          <textarea cols="55" rows="5" class="form-control ifont" id="verbmundesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbmunent" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbmunsai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbmunsal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-  </div>
-
- <!-- Modal Editar Verba Municipal -->
- <div class="modal fade " id="editverbmunModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Movimento de Verba Municipal</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="verbmundate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-          <textarea cols="55" rows="5" class="form-control ifont" id="verbmundesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbmunent" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbmunsai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="verbmunsal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
-      </div>
-    </div>
-  </div>
-  </div>
-
-   <!-- Modal Deletar Verba Municipal -->
-   <div class="modal fade " id="delverbmunModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Deletar Entrada de Verba Municipal</h5>
+    <!-- Modal Verba Municipal -->
+    <div
+      class="modal fade"
+      id="verbmunModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastrar Movimento de Verba Municipal
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="verbmundate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="verbmundesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbmunent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbmunsai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbmunsal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
         </div>
-        <div class="modal-body">
+      </div>
+    </div>
+
+    <!-- Modal Editar Verba Municipal -->
+    <div
+      class="modal fade"
+      id="editverbmunModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Editar Movimento de Verba Municipal
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="verbmundate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="verbmundesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbmunent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbmunsai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="verbmunsal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deletar Verba Municipal -->
+    <div
+      class="modal fade"
+      id="delverbmunModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Deletar Entrada de Verba Municipal
+            </h5>
+          </div>
+          <div class="modal-body">
             <legend>Você tem certeza que deseja deletar?</legend>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-          <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>

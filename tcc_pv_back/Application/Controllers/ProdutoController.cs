@@ -1,5 +1,4 @@
 using AutoMapper;
-using Domain;
 using Domain.Entity;
 using domain.Interfaces;
 using domain.Model;
@@ -8,11 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 namespace Application.Controllers
 {
     [Route("api/[controller]")]
+
     [ApiController]
+
     public class ProdutoController : ControllerBase
     {
         public IBaseService<Produto> Service { get; }
+
         public IMapper Mapper { get; }
+
         public ProdutoController(IBaseService<Produto> service, IMapper mapper)
         {
             this.Mapper = mapper;
@@ -76,8 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-
-                return Created($"api/Caregoria/{model.id}", this.Mapper.Map<ProdutoModel>(entity));
+            return Created($"api/Caregoria/{model.id}", this.Mapper.Map<ProdutoModel>(entity));
             return BadRequest();
         }
     }

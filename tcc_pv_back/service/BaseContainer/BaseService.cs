@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using domain.Interfaces;
-using domain.Model;
 using Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,14 +10,13 @@ namespace Service.BaseContainer
         private readonly DataContext context;
         public BaseService(DataContext context)
         {
-            this.context = context;    
+            this.context = context;
         }
 
         public void Add(T entity)
         {
             this.context.Add(entity);
         }
-
 
         public void Delete(T entity)
         {
@@ -34,7 +28,7 @@ namespace Service.BaseContainer
             return await this.context.Set<T>().ToListAsync();
         }
 
-        public async  Task<T> GetById(string id)
+        public async Task<T> GetById(string id)
         {
             return await this.context.Set<T>().FindAsync(id);
         }

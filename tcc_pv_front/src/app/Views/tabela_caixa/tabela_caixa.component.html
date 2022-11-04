@@ -14,7 +14,12 @@
           placeholder="Digite para pesquisar..."
         />
       </div>
-      <button class="add" title="Adicionar"data-bs-toggle="modal" data-bs-target="#caixaModal">
+      <button
+        class="add"
+        title="Adicionar"
+        data-bs-toggle="modal"
+        data-bs-target="#caixaModal"
+      >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </div>
@@ -36,124 +41,226 @@
       </thead>
 
       <tbody *ngIf="produtos && produtos.length">
-        <tr *ngFor="let produto of produtos" >
-          <td>{{produto.id}}</td>
-          <td>{{produto.description}}</td>
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.id }}</td>
+          <td>{{ produto.description }}</td>
           <td></td>
           <td></td>
           <td></td>
           <td class="edit">
-            <button title="Editar" data-bs-toggle="modal" data-bs-target="#editcaixaModal">
+            <button
+              title="Editar"
+              data-bs-toggle="modal"
+              data-bs-target="#editcaixaModal"
+            >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button title="Excluir" data-bs-toggle="modal" data-bs-target="#delcaixaModal">
+            <button
+              title="Excluir"
+              data-bs-toggle="modal"
+              data-bs-target="#delcaixaModal"
+            >
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
-        </tr>
-
-        <tr>
-          <td>07/01/2022</td>
-          <td>SALDO ANTERIOR</td>
-          <td>71.59</td>
-          <td>0</td>
-          <td>71.59</td>
         </tr>
       </tbody>
     </table>
 
     <!-- Modal caixa -->
-<div class="modal fade " id="caixaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Movimento de Caixa</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="caidate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-        <textarea [(ngModel)]="desc" cols="55" rows="5" class="form-control ifont" id="caidesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="caient" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="caisai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="caisal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success" (click)="adicionarProduto()">Salvar</button>
+    <div
+      class="modal fade"
+      id="caixaModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Cadastrar Movimento de Caixa
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="caidate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              [(ngModel)]="desc"
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="caidesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="caient"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="caisai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="caisal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button
+              type="button"
+              class="salvar btn btn-success"
+              (click)="adicionarProduto()"
+            >
+              Salvar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Modal editar caixa -->
-<div class="modal fade " id="editcaixaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Movimento de Caixa</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Data</legend>
-        <br>
-          <input type="date" class="form-control ifont" id="caidate" required>
-        <br>
-          <legend>Descrição</legend>
-        <br>
-        <textarea [(ngModel)]="desc" cols="55" rows="5" class="form-control ifont" id="caidesc" required></textarea>
-        <br>
-          <legend>Entradas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="caient" required>
-          <br>
-          <legend>Saídas</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="caisai" required>
-        <br>
-          <legend>Saldo</legend>
-        <br>
-        <input type="number" class="form-control ifont" id="caisal" required>
-        <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="salvar btn btn-success">Salvar</button>
+    <!-- Modal editar caixa -->
+    <div
+      class="modal fade"
+      id="editcaixaModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Editar Movimento de Caixa
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+              type="date"
+              class="form-control ifont"
+              id="caidate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+              [(ngModel)]="desc"
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="caidesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="caient"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="caisai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+              type="number"
+              class="form-control ifont"
+              id="caisal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Modal Deletar caixa -->
-<div class="modal fade " id="delcaixaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deletar Entrada de Caixa</h5>
-      </div>
-      <div class="modal-body">
-          <legend>Você tem certeza que deseja deletar?</legend>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fechar btn btn-danger" data-bs-dismiss="modal">Não</button>
-        <button type="button" class="salvar btn btn-success">Sim</button>
+    <!-- Modal Deletar caixa -->
+    <div
+      class="modal fade"
+      id="delcaixaModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Deletar Entrada de Caixa
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Você tem certeza que deseja deletar?</legend>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="salvar btn btn-success">Sim</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   </div>
 </div>
