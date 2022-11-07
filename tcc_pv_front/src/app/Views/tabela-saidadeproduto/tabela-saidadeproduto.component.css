@@ -1,3 +1,6 @@
+.titulo_tabela{
+  color: #f0d3ce;
+}
 .container {
   display: flex;
   text-align: center;
@@ -20,7 +23,7 @@ table {
 }
 
 thead {
-  background-color: #d87171;
+  background-color:#f0d3ce;
 }
 
 .titulo_tabela {
@@ -37,7 +40,7 @@ td {
 }
 
 tr {
-  border-bottom: 2px solid rgba(95, 94, 94, 0.5);
+  border-bottom: #d87171;
 }
 
 .container-buttons {
@@ -52,7 +55,6 @@ tr {
 .add {
   height: 40px;
   width: 50px;
-  background-color: #b04747;
   border-radius: 25px;
   border: 0px;
   padding: 8px;
@@ -192,8 +194,19 @@ textarea {
 .btn {
   background-color: #b04747;
   border: #b04747;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .btn:hover {
   background-color: #7c2929e0;
+}
+
+.modal-title{
+  font-weight: 600;
+}
+
+button{
+  background-color: transparent;
+  border: none;
 }

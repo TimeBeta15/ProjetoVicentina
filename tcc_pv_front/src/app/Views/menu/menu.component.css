@@ -29,6 +29,7 @@ body {
   padding: 14px 18px;
   text-decoration: none;
   position: relative;
+  font-weight: 600;
 }
 
 .guia::after {

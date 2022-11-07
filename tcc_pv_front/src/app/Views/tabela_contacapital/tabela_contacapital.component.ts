@@ -10,11 +10,16 @@ import { environment } from 'src/environments/environment';
 })
 export class Tabela_contacapitalComponent implements OnInit {
 contacapital: any;
-valor: any;
+
 description: any;
-entrada: any;
-saida: any;
+contacapitals: any;
+entrada!: number;
+saida!: number;
+ContaCapital!: ContaCapital
 data: any;
+delcontcapModal: any;
+contcapModal: any;
+valor = this.saida - this.entrada;
   constructor(private Http: HttpClient) { }
 
   ngOnInit(): void{
@@ -22,7 +27,7 @@ data: any;
   }
   getContaCapital()
   {
-    this.Http.get('https://localhost:7214/api/ContaCapital')
+    this.Http.get('https://localhost:7214/api/TabelaContaCapital')
     .subscribe(response =>{
       this.contacapital = response
     console.log(this.contacapital)});
@@ -31,7 +36,7 @@ data: any;
     var ContaCapital = { description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
 
 
-    this.Http.post('https://localhost:7214/api/ContaCapital',ContaCapital)
+    this.Http.post('https://localhost:7214/api/TabelaContaCapital',ContaCapital)
               .subscribe(
                 resultado => {
                   console.log(resultado)
@@ -47,11 +52,11 @@ data: any;
   }
   excluir(contacapital: ContaCapital,template:any){
     console.log(contacapital);
-    this.contacapital=contacapital;
+    this.ContaCapital=contacapital;
   }
   excluirSaidaProduto(template:any)
   {
-    this.Http.delete(`${environment.apibaseURL}api/SaidaProduto/${this.contacapital.id}`).subscribe
+    this.Http.delete(`${environment.apibaseURL}api/TabelaContaCapital/${this.ContaCapital.id}`).subscribe
     (() => { this.getContaCapital();
     let ref = document.getElementById('cancel')
   ref?.click();},
@@ -66,14 +71,14 @@ data: any;
   Alterar(contacapital: ContaCapital,template:any)
   {
   console.log(contacapital);
-  this.contacapital= contacapital;
+  this.ContaCapital= contacapital;
 }
 
-  alterarSaidaProduto(template:any) {
+  alterarContaCapital(template:any) {
     console.log(this.contacapital)
-    var saidaproduto = {id:this.contacapital.id, description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
+    var contacapitals = {id:this.ContaCapital.id, description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
 
-    this.Http.put(`${environment.apibaseURL}api/ContaCapital/${this.contacapital.id}`, this.contacapital)
+    this.Http.put(`${environment.apibaseURL}api/TabelaContaCapital/${contacapitals.id}`, contacapitals)
     .subscribe(
       resultado => {
         console.log(resultado)

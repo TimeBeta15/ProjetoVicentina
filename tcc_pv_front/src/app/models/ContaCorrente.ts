@@ -1,4 +1,4 @@
-export class ContaCapital
+export class ContaCorrente
 {
   id: string = '';
   data: string = '';

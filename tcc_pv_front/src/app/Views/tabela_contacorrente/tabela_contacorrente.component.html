@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <div class="container">
-  <h1 class="titulo">Movimento Conta Corrente</h1>
+  <h1 class="titulo">Movimento Conta Corente</h1>
 
   <div class="subContainer">
     <div class="container-buttons">
@@ -18,7 +18,7 @@
         class="add"
         title="Adicionar"
         data-bs-toggle="modal"
-        data-bs-target="#contcorModal"
+        data-bs-target="#contcorrenteModal"
       >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
@@ -26,7 +26,7 @@
     <table>
       <thead>
         <tr>
-          <th colspan="7" class="titulo_tabela">Conta Corrente</th>
+          <th colspan="7" class="titulo_tabela">Conta Capital</th>
         </tr>
 
         <tr>
@@ -40,39 +40,38 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="edit">
-            <button
-              title="Editar"
-              data-bs-toggle="modal"
-              data-bs-target="#editcontcorModal"
-            >
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </button>
-          </td>
+      <tbody *ngIf="contacorrente && contacorrente.length">
+        <tr *ngFor="let contacorrentel of contacorrente">
+          <td>{{ contacorrentel.data }}</td>
+          <td>{{ contacorrentel.description }}</td>
+          <td>{{ contacorrentel.entrada }}</td>
+          <td>{{ contacorrentel.saida }}</td>
+          <td>{{ contacorrentel.saida - contacorrentel.entrada }}</td>
+          <td
+          class="add"
+          data-bs-toggle="modal"
+          data-bs-target="#contcorrenteModal"
+        >
+          <button title="Editar" (click)="Alterar(contacorrentel, contcorModal)">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(contacorrentel, delcontcorModal)"
               data-bs-toggle="modal"
-              data-bs-target="#delcontcorModal"
-            >
-              <i class="fa fa-times-circle" aria-hidden="true"></i>
+              data-bs-target="#delcontcorrenteModal"
+          >
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
         </tr>
       </tbody>
     </table>
 
-    <!-- Modal Conta corrente -->
+    <!-- Modal Conta capital -->
     <div
-      class="modal fade"
-      id="contcorModal"
+      class="modal fade" #editar
+      id="contcorrenteModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -81,7 +80,93 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              Cadastrar Movimento de Conta Corrente
+              Cadastrar Movimento de Conta Capital
+            </h5>
+          </div>
+          <div class="modal-body">
+            <legend>Data</legend>
+            <br />
+            <input
+            [(ngModel)]="data"
+              type="date"
+              class="form-control ifont"
+              id="contcapdate"
+              required
+            />
+            <br />
+            <legend>Descrição</legend>
+            <br />
+            <textarea
+            [(ngModel)]="description"
+              cols="55"
+              rows="5"
+              class="form-control ifont"
+              id="contcapdesc"
+              required
+            ></textarea>
+            <br />
+            <legend>Entradas</legend>
+            <br />
+            <input
+            [(ngModel)]="entrada"
+              type="number"
+              class="form-control ifont"
+              id="contcapent"
+              required
+            />
+            <br />
+            <legend>Saídas</legend>
+            <br />
+            <input
+            [(ngModel)]="saida"
+              type="number"
+              class="form-control ifont"
+              id="contcapsai"
+              required
+            />
+            <br />
+            <legend>Saldo</legend>
+            <br />
+            <input
+            [(ngModel)]="valor"
+              type="number"
+              class="form-control ifont"
+              id="contcapsal"
+              required
+            />
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="fechar btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="salvar btn btn-success"    (click)="adicionarContaCorrente()">Salvar</button>
+          <button (click)=" alterarContaCapital(editar)">
+
+            editar
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Editar capital -->
+    <div
+      class="modal fade"
+      id="editcontcorrenteModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Editar Movimento de Conta Capital
             </h5>
           </div>
           <div class="modal-body">
@@ -90,7 +175,7 @@
             <input
               type="date"
               class="form-control ifont"
-              id="contcordate"
+              id="contcapdate"
               required
             />
             <br />
@@ -100,7 +185,7 @@
               cols="55"
               rows="5"
               class="form-control ifont"
-              id="contcordesc"
+              id="contcapdesc"
               required
             ></textarea>
             <br />
@@ -109,7 +194,7 @@
             <input
               type="number"
               class="form-control ifont"
-              id="contcorent"
+              id="contcapent"
               required
             />
             <br />
@@ -118,7 +203,7 @@
             <input
               type="number"
               class="form-control ifont"
-              id="contcorsai"
+              id="contcapsai"
               required
             />
             <br />
@@ -127,7 +212,7 @@
             <input
               type="number"
               class="form-control ifont"
-              id="contcorsal"
+              id="contcapsal"
               required
             />
             <br />
@@ -146,10 +231,10 @@
       </div>
     </div>
 
-    <!-- Modal Editar Conta corrente -->
+    <!-- Modal Deletar capital -->
     <div
-      class="modal fade"
-      id="editcontcorModal"
+      class="modal fade" #confirm
+      id="delcontcorrenteModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -158,84 +243,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              Editar Movimento de Conta Corrente
-            </h5>
-          </div>
-          <div class="modal-body">
-            <legend>Data</legend>
-            <br />
-            <input
-              type="date"
-              class="form-control ifont"
-              id="contcordate"
-              required
-            />
-            <br />
-            <legend>Descrição</legend>
-            <br />
-            <textarea
-              cols="55"
-              rows="5"
-              class="form-control ifont"
-              id="contcordesc"
-              required
-            ></textarea>
-            <br />
-            <legend>Entradas</legend>
-            <br />
-            <input
-              type="number"
-              class="form-control ifont"
-              id="contcorent"
-              required
-            />
-            <br />
-            <legend>Saídas</legend>
-            <br />
-            <input
-              type="number"
-              class="form-control ifont"
-              id="contcorsai"
-              required
-            />
-            <br />
-            <legend>Saldo</legend>
-            <br />
-            <input
-              type="number"
-              class="form-control ifont"
-              id="contcorsal"
-              required
-            />
-            <br />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="fechar btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Fechar
-            </button>
-            <button type="button" class="salvar btn btn-success">Salvar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Deletar Conta corrente -->
-    <div
-      class="modal fade"
-      id="delcontcorModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Deletar Entrada de Conta Corrente
+              Deletar Entrada de Conta Capital
             </h5>
           </div>
           <div class="modal-body">
@@ -249,7 +257,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success">Sim</button>
+            <button type="button" class="salvar btn btn-success" (click)=" excluirSaidacontcorre(confirm)">Sim</button>
           </div>
         </div>
       </div>
