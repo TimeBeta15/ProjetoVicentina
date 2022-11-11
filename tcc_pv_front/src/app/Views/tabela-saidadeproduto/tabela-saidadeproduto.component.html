@@ -82,7 +82,7 @@
             <legend>Data</legend>
             <br />
             <input
-              type=""
+              type="date"
               class="form-control ifont"
               id="saiprodate"
               required
@@ -110,7 +110,7 @@
             </button>
             <button
               type="button"
-              class="salvar btn btn-success"
+              class="salvar btn btn-success" data-bs-dismiss="modal"
               (click)="adicionarSaidaProduto()"
             >
               Salvar
@@ -143,7 +143,7 @@
             <legend>Data</legend>
             <br />
             <input
-              type=""
+              type="date"
               class="form-control ifont"
               id="saiprodate"
               required
@@ -168,7 +168,7 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
           </div>
         </div>
       </div>
@@ -200,7 +200,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success"(click)="excluirSaidaProduto(confirm)">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal"(click)="excluirSaidaProduto(confirm)">Sim</button>
           </div>
         </div>
       </div>

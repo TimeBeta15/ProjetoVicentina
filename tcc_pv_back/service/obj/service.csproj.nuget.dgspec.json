@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {}
+    "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {}
   },
   "projects": {
-    "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+    "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
-        "outputPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
+    "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj",
         "projectName": "Infra.Data",
-        "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj",
+        "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj",
         "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
-        "outputPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\obj\\",
+        "outputPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -79,8 +79,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
+              "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {
+    "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
-        "outputPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\obj\\",
+        "outputPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -166,11 +166,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
+              "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
               },
-              "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
-                "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
+              "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
               }
             }
           }

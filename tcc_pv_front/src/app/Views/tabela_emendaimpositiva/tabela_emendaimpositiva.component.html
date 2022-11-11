@@ -40,24 +40,24 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="edit">
-            <button
-              title="Editar"
-              data-bs-toggle="modal"
-              data-bs-target="#editemenimpModal"
-            >
+      <tbody *ngIf="emendaimpositiva && emendaimpositiva.length">
+        <tr *ngFor="let emendaimpositival of emendaimpositiva">
+          <td>{{ emendaimpositival.data }}</td>
+          <td>{{ emendaimpositival.description }}</td>
+          <td>{{ emendaimpositival.entrada }}</td>
+          <td>{{ emendaimpositival.saida }}</td>
+          <td>{{ emendaimpositival.saida - emendaimpositival.entrada }}</td>
+          <td
+            class="add"
+            data-bs-toggle="modal"
+            data-bs-target="#emenimpModal"
+          >
+            <button title="Editar" (click)="Alterar(emendaimpositival, emenimpModal)">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td
-            class="delete"
+            class="delete" (click)="excluir(emendaimpositival, delemenimpModal)"
             data-bs-toggle="modal"
             data-bs-target="#delemenimpModal"
           >
@@ -71,7 +71,7 @@
 
     <!-- Modal Emenda Impositiva -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="emenimpModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -88,6 +88,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="emenimpdate"
@@ -97,6 +98,7 @@
             <legend>Descrição</legend>
             <br />
             <textarea
+            [(ngModel)]="description"
               cols="55"
               rows="5"
               class="form-control ifont"
@@ -107,6 +109,7 @@
             <legend>Entradas</legend>
             <br />
             <input
+            [(ngModel)]="entrada"
               type="number"
               class="form-control ifont"
               id="emenimpent"
@@ -116,6 +119,7 @@
             <legend>Saídas</legend>
             <br />
             <input
+            [(ngModel)]="saida"
               type="number"
               class="form-control ifont"
               id="emenimpsai"
@@ -125,6 +129,7 @@
             <legend>Saldo</legend>
             <br />
             <input
+            [(ngModel)]="valor"
               type="number"
               class="form-control ifont"
               id="emenimpsal"
@@ -140,7 +145,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success">Salvar</button>
+            <button type="button" class="salvar btn btn-success" (click)="adicionarEmendaImpositiva()"> Salvar</button>
+            <button (click)="alterarEmendaImpositiva(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -217,7 +223,11 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success">Salvar</button>
+            <button type="button" class="salvar btn btn-success"    (click)="adicionarEmendaImpositiva()">Salvar</button>
+            <button (click)="   alterarEmendaImpositiva(editar)">
+
+              editar
+            </button>
           </div>
         </div>
       </div>
@@ -225,7 +235,7 @@
 
     <!-- Modal Deletar Emenda Impositiva -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delemenimpModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -249,7 +259,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success">Sim</button>
+            <button type="button" class="salvar btn btn-success" (click)=" excluirEmenda(confirm)">Sim</button>
           </div>
         </div>
       </div>

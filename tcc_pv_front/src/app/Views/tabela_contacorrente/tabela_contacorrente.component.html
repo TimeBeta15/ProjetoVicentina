@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <div class="container">
-  <h1 class="titulo">Movimento Conta Corente</h1>
+  <h1 class="titulo">Movimento Conta Corrente</h1>
 
   <div class="subContainer">
     <div class="container-buttons">
@@ -26,7 +26,7 @@
     <table>
       <thead>
         <tr>
-          <th colspan="7" class="titulo_tabela">Conta Capital</th>
+          <th colspan="7" class="titulo_tabela">Conta Corrente</th>
         </tr>
 
         <tr>
@@ -52,7 +52,7 @@
           data-bs-toggle="modal"
           data-bs-target="#contcorrenteModal"
         >
-          <button title="Editar" (click)="Alterar(contacorrentel, contcorModal)">
+          <button title="Editar" (click)="Alterar(contacorrentel, contcorrenteModal)">
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
           <td class="delete">
@@ -80,7 +80,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              Cadastrar Movimento de Conta Capital
+              Cadastrar Movimento de Conta Corrente
             </h5>
           </div>
           <div class="modal-body">
@@ -145,7 +145,7 @@
               Fechar
             </button>
             <button type="button" class="salvar btn btn-success"    (click)="adicionarContaCorrente()">Salvar</button>
-          <button (click)=" alterarContaCapital(editar)">
+          <button (click)="  alterarContaCorrente(editar)">
 
             editar
           </button>

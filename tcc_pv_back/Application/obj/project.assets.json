@@ -3014,11 +3014,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
+      "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
-      "outputPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Application\\obj\\",
+      "outputPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3033,14 +3033,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
+            "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj"
             },
-            "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
-              "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
+            "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Infra.Data\\Infra.Data.csproj"
             },
-            "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {
-              "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj"
+            "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Service\\Service.csproj"
             }
           }
         }

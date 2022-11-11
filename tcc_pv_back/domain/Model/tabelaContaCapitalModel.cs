@@ -4,7 +4,7 @@ namespace domain.Model
     {
         public string id { get; set; } = Guid.NewGuid().ToString();
 
-        public DateTime data { get; set; }
+        public string data { get; set; }
 
         public string Description { get; set; } = "";
 

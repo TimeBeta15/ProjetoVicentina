@@ -18,7 +18,7 @@ saida!: number;
 ContaCorrente!: ContaCorrente
 data: any;
 delcontcorModal: any;
-contcorModal: any;
+contcorrenteModal: any;
 valor = this.saida - this.entrada;
   constructor(private Http: HttpClient) { }
 
@@ -37,11 +37,11 @@ valor = this.saida - this.entrada;
 
 
     this.Http.post('https://localhost:7214/api/TabelaContaCorrente',ContaCorrente)
-              .subscribe(
-                resultado => {
-                  console.log(resultado)
-                  this.getContaCorrente();
-                },
+    .subscribe(
+      resultado => {
+        console.log(resultado)
+        this.getContaCorrente();
+      },
                 erro => {
                   if(erro.status == 400) {
                     console.log(erro);
@@ -74,7 +74,7 @@ valor = this.saida - this.entrada;
   this.ContaCorrente= contacorrente;
 }
 
-  alterarContaCapital(template:any) {
+  alterarContaCorrente(template:any) {
     console.log(this.contacorrente)
     var contacorrentes = {id:this.ContaCorrente.id, description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
 

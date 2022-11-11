@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
+    "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Ester\\.nuget\\packages\\",
-        "outputPath": "E:\\TCC\\ProjetoVicentina\\tcc_pv_back\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Ester\\Downloads\\githubdesatualizado\\ProjetoVicentina\\tcc_pv_back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ester\\AppData\\Roaming\\NuGet\\NuGet.Config"
