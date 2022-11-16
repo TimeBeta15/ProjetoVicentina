@@ -1,7 +1,7 @@
 using AutoMapper;
 using domain.Entity;
-using domain.Model;
 using domain.Interfaces;
+using domain.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
