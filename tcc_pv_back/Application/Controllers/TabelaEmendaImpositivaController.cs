@@ -53,7 +53,7 @@ namespace Application.Controllers
             this.Service.Add(tabelaemendaimpositiva1);
 
             if (await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{tabelaEmendaImpositivaModel.id}", tabelaEmendaImpositivaModel);
+                return Created($"api/Produto/{tabelaEmendaImpositivaModel.Id}", tabelaEmendaImpositivaModel);
             return BadRequest();
         }
 
@@ -79,7 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-            return Created($"api/tabelaemendaimpositiva/{model.id}", this.Mapper.Map<tabelaEmendaImpositivaModel>(entity));
+            return Created($"api/tabelaemendaimpositiva/{model.Id}", this.Mapper.Map<tabelaEmendaImpositivaModel>(entity));
             return BadRequest();
         }
     }

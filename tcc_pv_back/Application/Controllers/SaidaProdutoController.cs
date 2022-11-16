@@ -53,7 +53,7 @@ namespace Application.Controllers
             this.Service.Add(saidaprod1);
 
             if (await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{saidaprodutoModel.id}", saidaprodutoModel);
+                return Created($"api/Produto/{saidaprodutoModel.Id}", saidaprodutoModel);
             return BadRequest();
         }
 
@@ -79,7 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-            return Created($"api/saidaproduto/{model.id}", this.Mapper.Map<saidaProdutoModel>(entity));
+            return Created($"api/saidaproduto/{model.Id}", this.Mapper.Map<saidaProdutoModel>(entity));
             return BadRequest();
         }
     }

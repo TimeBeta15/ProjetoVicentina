@@ -2,9 +2,9 @@ namespace domain.Model
 {
     public class tabelaContaCapitalModel
     {
-        public string id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; set; } = Guid.NewGuid().ToString();
 
-        public string data { get; set; }
+        public string Data { get; set; } = "";
 
         public string Description { get; set; } = "";
 

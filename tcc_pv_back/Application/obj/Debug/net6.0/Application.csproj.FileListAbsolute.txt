@@ -938,3 +938,8 @@ C:\Users\Ester\Downloads\githubdesatualizado\ProjetoVicentina\tcc_pv_back\Applic
 C:\Users\Ester\Downloads\githubdesatualizado\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\Application.pdb
 C:\Users\Ester\Downloads\githubdesatualizado\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache
 C:\Users\Ester\Downloads\githubdesatualizado\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\ref\Application.dll
+D:\TCC\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\staticwebassets\msbuild.Application.Microsoft.AspNetCore.StaticWebAssets.props
+D:\TCC\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\staticwebassets\msbuild.build.Application.props
+D:\TCC\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Application.props
+D:\TCC\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Application.props
+D:\TCC\ProjetoVicentina\tcc_pv_back\Application\obj\Debug\net6.0\staticwebassets.pack.json

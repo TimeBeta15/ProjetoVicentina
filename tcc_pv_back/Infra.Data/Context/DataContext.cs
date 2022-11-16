@@ -32,5 +32,13 @@ namespace Infra.Data.Context
         public DbSet<tabelaVerbaEstadual> tabelaVerbaEstadual { get; set; }
 
         public DbSet<tabelaVerbaMucinipal> tabelaVerbaMunicipal { get; set; }
+
+        public DbSet<tabelaResidente> tabelaResidente { get; set; }
+
+        public DbSet<tabelaQuarto> tabelaQuarto { get; set; }
+
+        public DbSet<tabelaDoador> tabelaDoador { get; set; }
+
+        public DbSet<tabelaFornecedor> tabelaFornecedor { get; set; }
     }
 }

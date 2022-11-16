@@ -53,7 +53,7 @@ namespace Application.Controllers
             this.Service.Add(tabelaemendaparlamentar1);
 
             if (await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{tabelaEmendaParlamentarModel.id}", tabelaEmendaParlamentarModel);
+                return Created($"api/Produto/{tabelaEmendaParlamentarModel.Id}", tabelaEmendaParlamentarModel);
             return BadRequest();
         }
 
@@ -79,7 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-            return Created($"api/tabelaemendaparlamentar/{model.id}", this.Mapper.Map<tabelaEmendaParlamentarModel>(entity));
+            return Created($"api/tabelaemendaparlamentar/{model.Id}", this.Mapper.Map<tabelaEmendaParlamentarModel>(entity));
             return BadRequest();
         }
     }

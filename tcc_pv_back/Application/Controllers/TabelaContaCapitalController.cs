@@ -53,7 +53,7 @@ namespace Application.Controllers
             this.Service.Add(tabelacontacapital1);
 
             if (await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{tabelaContaCapitalModel.id}", tabelaContaCapitalModel);
+                return Created($"api/Produto/{tabelaContaCapitalModel.Id}", tabelaContaCapitalModel);
             return BadRequest();
         }
 
@@ -79,7 +79,7 @@ namespace Application.Controllers
             this.Service.Update(entity);
 
             if (await this.Service.SaveChangesAsync())
-            return Created($"api/tabelacontacapital/{model.id}", this.Mapper.Map<tabelaContaCapitalModel>(entity));
+            return Created($"api/tabelacontacapital/{model.Id}", this.Mapper.Map<tabelaContaCapitalModel>(entity));
             return BadRequest();
         }
     }
