@@ -1,4 +1,4 @@
-using domain.Interfaces;
+using Domain.Interfaces;
 using Infra.Data.Context;
 
 namespace Infra.Data.Repository

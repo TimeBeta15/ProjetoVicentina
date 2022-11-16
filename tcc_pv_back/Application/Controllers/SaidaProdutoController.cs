@@ -1,34 +1,33 @@
 using AutoMapper;
-using domain.Entity;
-using domain.Model;
-using domain.Interfaces;
+using Domain.Interfaces;
+using Domain.Model;
+using Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
     [Route("api/[controller]")]
-
     [ApiController]
-
     public class SaidaProdutoController : ControllerBase
     {
-        public IBaseService<saidaProduto> Service { get; }
+        private readonly IBaseService<saidaProduto> _service;
 
-        public IMapper Mapper { get; }
+        private readonly IMapper _mapper;
 
         public SaidaProdutoController(IBaseService<saidaProduto> service, IMapper mapper)
         {
-            this.Mapper = mapper;
-            this.Service = service;
+            _mapper = mapper;
+            _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                var entity = await this.Service.GetAll();
-                var results = this.Mapper.Map<saidaProdutoModel[]>(entity);
+                var entity = await _service.GetAll();
+                var results = _mapper.Map<saidaProdutoModel[]>(entity);
+
                 return Ok(results);
             }
             catch (Exception ex)
@@ -38,48 +37,59 @@ namespace Application.Controllers
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetById(string Id)
+        public async Task<IActionResult> GetById(
+            [FromRoute] string Id)
         {
-            var entity = await this.Service.GetById(Id);
-            var results = this.Mapper.Map<saidaProdutoModel>(entity);
+            var entity = await _service.GetById(Id);
+            var results = _mapper.Map<saidaProdutoModel>(entity);
+
             return Ok(results);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(saidaProdutoModel saidaprodutoModel)
+        public async Task<IActionResult> Post(
+            [FromBody] saidaProdutoModel saidaProdutoModel)
         {
-            var saidaprod1 = this.Mapper.Map<saidaProduto>(saidaprodutoModel);
+            var saidaprod1 = _mapper.Map<saidaProduto>(saidaProdutoModel);
 
-            this.Service.Add(saidaprod1);
+            _service.Add(saidaprod1);
 
-            if (await this.Service.SaveChangesAsync())
-                return Created($"api/Produto/{saidaprodutoModel.Id}", saidaprodutoModel);
+            if (await _service.SaveChangesAsync())
+                return Created($"api/Produto/{saidaProdutoModel.Id}", saidaProdutoModel);
+
             return BadRequest();
         }
 
-        [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete(string Id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(
+            [FromRoute] string id)
         {
-            var entity = await this.Service.GetById(Id);
+            var entity = await _service.GetById(id);
 
             if (entity == null) return NotFound();
-            this.Service.Delete(entity);
+            
+            _service.Delete(entity);
 
-            if (await this.Service.SaveChangesAsync()) return Ok();
+            if (await _service.SaveChangesAsync()) return Ok();
+            
             return BadRequest();
         }
 
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> Put(string Id, saidaProdutoModel model)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(
+            [FromRoute] string id,
+            [FromBody] saidaProdutoModel model)
         {
-            var entity = await this.Service.GetById(Id);
+            var entity = await _service.GetById(id);
 
             if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Service.Update(entity);
 
-            if (await this.Service.SaveChangesAsync())
-            return Created($"api/saidaproduto/{model.Id}", this.Mapper.Map<saidaProdutoModel>(entity));
+            _mapper.Map(model, entity);
+            _service.Update(entity);
+
+            if (await _service.SaveChangesAsync())
+                return Created($"api/saidaproduto/{model.Id}", _mapper.Map<saidaProdutoModel>(entity));
+
             return BadRequest();
         }
     }

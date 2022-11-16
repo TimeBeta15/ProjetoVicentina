@@ -1,7 +1,6 @@
 using AutoMapper;
 using Domain.Entity;
-using domain.Entity;
-using domain.Model;
+using Domain.Model;
 
 namespace Infra.Data.Mapping
 {
@@ -20,7 +19,7 @@ namespace Infra.Data.Mapping
             CreateMap<tabelaEmendaImpositiva, tabelaEmendaImpositivaModel>().ReverseMap();
             CreateMap<tabelaEmendaParlamentar, tabelaEmendaParlamentarModel>().ReverseMap();
             CreateMap<tabelaVerbaEstadual, tabelaVerbaEstadualModel>().ReverseMap();
-            CreateMap<tabelaVerbaMucinipal, tabelaVerbaMunicipalModel>().ReverseMap();
+            CreateMap<tabelaVerbaMunicipal, tabelaVerbaMunicipalModel>().ReverseMap();
             CreateMap<tabelaResidente, tabelaResidenteModel>().ReverseMap();
             CreateMap<tabelaQuarto, tabelaQuartoModel>().ReverseMap();
             CreateMap<tabelaDoador, tabelaDoadorModel>().ReverseMap();

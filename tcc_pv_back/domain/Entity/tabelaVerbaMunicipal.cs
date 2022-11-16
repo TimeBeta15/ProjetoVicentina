@@ -1,8 +1,6 @@
-using Domain;
-
-namespace domain.Entity
+namespace Domain.Entity
 {
-    public class tabelaVerbaMucinipal : EntityBase
+    public class tabelaVerbaMunicipal : EntityBase
     {
         
     }

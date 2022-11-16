@@ -1,17 +1,12 @@
-using domain.Entity;
 using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Data.Context
 {
-
     public class DataContext : DbContext
     {
         
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
-        {
-
-        }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Produto> Produto { get; set; }
 
@@ -31,7 +26,7 @@ namespace Infra.Data.Context
 
         public DbSet<tabelaVerbaEstadual> tabelaVerbaEstadual { get; set; }
 
-        public DbSet<tabelaVerbaMucinipal> tabelaVerbaMunicipal { get; set; }
+        public DbSet<tabelaVerbaMunicipal> tabelaVerbaMunicipal { get; set; }
 
         public DbSet<tabelaResidente> tabelaResidente { get; set; }
 

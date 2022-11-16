@@ -1,4 +1,4 @@
-namespace domain.Interfaces
+namespace Domain.Interfaces
 {
     public interface IBaseService<T> where T : class
     {

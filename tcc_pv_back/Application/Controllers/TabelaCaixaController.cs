@@ -1,85 +1,95 @@
 using AutoMapper;
-using domain.Entity;
-using domain.Model;
-using domain.Interfaces;
+using Domain.Interfaces;
+using Domain.Model;
+using Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
     [Route("api/[controller]")]
-
     [ApiController]
-
     public class TabelaCaixaController : ControllerBase
     {
-        public IBaseService<tabelaCaixa> Service { get; }
+        private readonly IBaseService<tabelaCaixa> _service;
 
-        public IMapper Mapper { get; }
+        private readonly IMapper _mapper;
 
         public TabelaCaixaController(IBaseService<tabelaCaixa> service, IMapper mapper)
         {
-            this.Mapper = mapper;
-            this.Service = service;
+            _mapper = mapper;
+            _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                var entity = await this.Service.GetAll();
-                var results = this.Mapper.Map<tabelaCaixaModel[]>(entity);
+                var entity = await _service.GetAll();
+                var results = _mapper.Map<tabelaCaixaModel[]>(entity);
+
                 return Ok(results);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetById(string Id)
+        public async Task<IActionResult> GetById(
+            [FromRoute] string Id)
         {
-            var entity = await this.Service.GetById(Id);
-            var results = this.Mapper.Map<tabelaCaixaModel>(entity);
+            var entity = await _service.GetById(Id);
+            var results = _mapper.Map<tabelaCaixaModel>(entity);
+
             return Ok(results);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(tabelaCaixaModel tabelaCaixaModel)
+        public async Task<IActionResult> Post(
+            [FromBody] tabelaCaixaModel tabelaCaixaModel)
         {
-            var tabelacaixa1 = this.Mapper.Map<tabelaCaixa>(tabelaCaixaModel);
+            var tabelacaixa1 = _mapper.Map<tabelaCaixa>(tabelaCaixaModel);
 
-            this.Service.Add(tabelacaixa1);
+            _service.Add(tabelacaixa1);
 
-            if (await this.Service.SaveChangesAsync())
+            if (await _service.SaveChangesAsync())
                 return Created($"api/Produto/{tabelaCaixaModel.Id}", tabelaCaixaModel);
+
             return BadRequest();
         }
 
-        [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete(string Id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(
+            [FromRoute] string id)
         {
-            var entity = await this.Service.GetById(Id);
+            var entity = await _service.GetById(id);
 
             if (entity == null) return NotFound();
-            this.Service.Delete(entity);
+            
+            _service.Delete(entity);
 
-            if (await this.Service.SaveChangesAsync()) return Ok();
+            if (await _service.SaveChangesAsync()) return Ok();
+            
             return BadRequest();
         }
 
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> Put(string Id, tabelaCaixaModel model)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(
+            [FromRoute] string id,
+            [FromBody] tabelaCaixaModel model)
         {
-            var entity = await this.Service.GetById(Id);
+            var entity = await _service.GetById(id);
 
             if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Service.Update(entity);
 
-            if (await this.Service.SaveChangesAsync())
-            return Created($"api/tabelacaixa/{model.Id}", this.Mapper.Map<tabelaCaixaModel>(entity));
+            _mapper.Map(model, entity);
+            _service.Update(entity);
+
+            if (await _service.SaveChangesAsync())
+                return Created($"api/tabelacaixa/{model.Id}", _mapper.Map<tabelaCaixaModel>(entity));
+
             return BadRequest();
         }
     }

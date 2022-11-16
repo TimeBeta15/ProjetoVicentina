@@ -1,85 +1,95 @@
 using AutoMapper;
-using domain.Entity;
-using domain.Interfaces;
-using domain.Model;
+using Domain.Interfaces;
+using Domain.Model;
+using Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
     [Route("api/[controller]")]
-
     [ApiController]
-
     public class TabelaFornecedorController : ControllerBase
     {
-        public IBaseService<tabelaFornecedor> Service { get; }
+        private readonly IBaseService<tabelaFornecedor> _service;
 
-        public IMapper Mapper { get; }
+        private readonly IMapper _mapper;
 
         public TabelaFornecedorController(IBaseService<tabelaFornecedor> service, IMapper mapper)
         {
-            this.Mapper = mapper;
-            this.Service = service;
+            _mapper = mapper;
+            _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                var entity = await this.Service.GetAll();
-                var results = this.Mapper.Map<tabelaFornecedorModel[]>(entity);
+                var entity = await _service.GetAll();
+                var results = _mapper.Map<tabelaFornecedorModel[]>(entity);
+
                 return Ok(results);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetById(string Id)
+        public async Task<IActionResult> GetById(
+            [FromRoute] string Id)
         {
-            var entity = await this.Service.GetById(Id);
-            var results = this.Mapper.Map<tabelaFornecedorModel>(entity);
+            var entity = await _service.GetById(Id);
+            var results = _mapper.Map<tabelaFornecedorModel>(entity);
+
             return Ok(results);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(tabelaFornecedorModel tabelaFornecedorModel)
+        public async Task<IActionResult> Post(
+            [FromBody] tabelaFornecedorModel tabelaFornecedorModel)
         {
-            var tabelafornecedor1 = this.Mapper.Map<tabelaFornecedor>(tabelaFornecedorModel);
+            var tabelafornecedor1 = _mapper.Map<tabelaFornecedor>(tabelaFornecedorModel);
 
-            this.Service.Add(tabelafornecedor1);
+            _service.Add(tabelafornecedor1);
 
-            if (await this.Service.SaveChangesAsync())
+            if (await _service.SaveChangesAsync())
                 return Created($"api/Produto/{tabelaFornecedorModel.Id}", tabelaFornecedorModel);
+
             return BadRequest();
         }
 
-        [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete(string Id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(
+            [FromRoute] string id)
         {
-            var entity = await this.Service.GetById(Id);
+            var entity = await _service.GetById(id);
 
             if (entity == null) return NotFound();
-            this.Service.Delete(entity);
+            
+            _service.Delete(entity);
 
-            if (await this.Service.SaveChangesAsync()) return Ok();
+            if (await _service.SaveChangesAsync()) return Ok();
+            
             return BadRequest();
         }
 
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> Put(string Id, tabelaFornecedorModel model)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(
+            [FromRoute] string id,
+            [FromBody] tabelaFornecedorModel model)
         {
-            var entity = await this.Service.GetById(Id);
+            var entity = await _service.GetById(id);
 
             if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Service.Update(entity);
 
-            if (await this.Service.SaveChangesAsync())
-            return Created($"api/tabelafornecedor/{model.Id}", this.Mapper.Map<tabelaFornecedorModel>(entity));
+            _mapper.Map(model, entity);
+            _service.Update(entity);
+
+            if (await _service.SaveChangesAsync())
+                return Created($"api/tabelafornecedor/{model.Id}", _mapper.Map<tabelaFornecedorModel>(entity));
+
             return BadRequest();
         }
     }

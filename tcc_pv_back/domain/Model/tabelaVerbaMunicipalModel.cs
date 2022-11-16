@@ -1,4 +1,4 @@
-namespace domain.Model
+namespace Domain.Model
 {
     public class tabelaVerbaMunicipalModel
     {

@@ -1,6 +1,4 @@
-using Domain;
-
-namespace domain.Entity
+namespace Domain.Entity
 {
     public class tabelaFornecedor : EntityBase
     {
