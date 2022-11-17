@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { produto } from 'src/app/models/Produto';
+import { TabelaCaixa } from 'src/app/models/TabelaCaixa';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tabela_caixa',
@@ -8,32 +9,40 @@ import { produto } from 'src/app/models/Produto';
   styleUrls: ['./tabela_caixa.component.css']
 })
 export class Tabela_caixaComponent implements OnInit {
-  produtos: any;
-  desc: any;
-  Produto!: produto
+  caixas: any;
+  caixa: any;
+  TabelaCaixa!: TabelaCaixa;
+  entrada!: number;
+  saida!: number;
+  valor = this.saida - this.entrada;
+  data: any;
+  description: any;
+  verbmunModal: any;
+  caixaModal: any;
+  delcaixaModal: any
   constructor(private http: HttpClient) { }
 
   ngOnInit(
   ) {
-    this.getProdutos();
+    this.getCaixa();
   }
 
 
-  getProdutos()
+  getCaixa()
   {
-    this.http.get('https://localhost:7214/api/Produto')
-    .subscribe(response =>{this.produtos = response
-    console.log(this.produtos)})
+    this.http.get('https://localhost:7214/api/TabelaCaixa')
+    .subscribe(response =>{this.caixa = response
+    console.log(this.caixas)})
   }
 
-  adicionarProduto() {
-    var produto = { description :this.desc};
+  adicionarCaixa() {
+    var TabelaCaixa = { description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
 
-    this.http.post('https://localhost:7214/api/Produto', produto)
+    this.http.post('https://localhost:7214/api/TabelaCaixa', TabelaCaixa)
               .subscribe(
                 resultado => {
                   console.log(resultado)
-                  this.getProdutos();
+                  this.getCaixa();
                 },
                 erro => {
                   if(erro.status == 400) {
@@ -42,19 +51,46 @@ export class Tabela_caixaComponent implements OnInit {
                 }
               );
   }
+  excluir(caixa: TabelaCaixa,template:any){
+    console.log(caixa);
+    this.TabelaCaixa=caixa;
+  }
+  excluirCaixa(template:any)
+  {
+    this.http.delete(`${environment.apibaseURL}api/Tabelacaixa/${this.TabelaCaixa.id}`).subscribe
+    (() => { this.getCaixa();
+    let ref = document.getElementById('cancel')
+  ref?.click();},
+  erro => {
+    if(erro.status == 404){
+      console.log('O item não foi localizado');
+    }
+  }
+  );
+  }
 
-  // excluirProduto('https://localhost:7214/api/Produto') {
-  //   this.http.delete()
-  //             .subscribe(
-  //               resultado => {
-  //                 console.log('Produto excluído com sucesso.');
-  //               },
-  //               erro => {
-  //                 if(erro.status == 404) {
-  //                   console.log('Produto não localizado.');
-  //                 }
-  //               }
-  //             );
-  // }
+  Alterar(caixa: TabelaCaixa,template:any)
+  {
+  console.log(caixa);
+  this.TabelaCaixa= caixa;
+}
+
+  alterarCaixa(template:any) {
+    console.log(this.caixa)
+    var caixas = {id:this.TabelaCaixa.id, description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
+
+    this.http.put(`${environment.apibaseURL}api/TabelaCaixa/${caixas.id}`, caixas)
+    .subscribe(
+      resultado => {
+        console.log(resultado)
+        this.getCaixa();
+      },
+      erro => {
+        if(erro.status == 400) {
+          console.log(erro);
+        }
+      }
+    );
+  }
 
 }

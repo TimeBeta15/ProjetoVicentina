@@ -40,25 +40,25 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+      <tbody *ngIf="verbamunicipal && verbamunicipal.length">
+        <tr *ngFor="let verbamunicipall of verbamunicipal">
+          <td>{{ verbamunicipall.data }}</td>
+          <td>{{ verbamunicipall.description }}</td>
+          <td>{{ verbamunicipall.entrada }}</td>
+          <td>{{ verbamunicipall.saida }}</td>
+          <td>{{ verbamunicipall.saida - verbamunicipall.entrada }}</td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar"  (click)="Alterar(verbamunicipall, verbmunModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editverbmunModal"
+              data-bs-target="#verbmunModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir"  (click)="excluir(verbamunicipall, delverbmunModal)"
               data-bs-toggle="modal"
               data-bs-target="#delverbmunModal"
             >
@@ -71,7 +71,7 @@
 
     <!-- Modal Verba Municipal -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="verbmunModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -88,46 +88,51 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
-              id="verbmundate"
+              id="verbesdate"
               required
             />
             <br />
             <legend>Descrição</legend>
             <br />
             <textarea
+            [(ngModel)]="description"
               cols="55"
               rows="5"
               class="form-control ifont"
-              id="verbmundesc"
+              id="verbedesc"
               required
             ></textarea>
             <br />
             <legend>Entradas</legend>
             <br />
             <input
+            [(ngModel)]="entrada"
               type="number"
               class="form-control ifont"
-              id="verbmunent"
+              id="verbesent"
               required
             />
             <br />
             <legend>Saídas</legend>
             <br />
             <input
+            [(ngModel)]="saida"
               type="number"
               class="form-control ifont"
-              id="verbmunsai"
+              id="verbessai"
               required
             />
             <br />
             <legend>Saldo</legend>
             <br />
             <input
+            [(ngModel)]="valor"
               type="number"
               class="form-control ifont"
-              id="verbmunsal"
+              id="verbessal"
               required
             />
             <br />
@@ -140,7 +145,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarVerba()">Salvar</button>
+            <button (click)="alterarVerba(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -225,7 +231,7 @@
 
     <!-- Modal Deletar Verba Municipal -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delverbmunModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -249,7 +255,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirVerba(confirm)">Sim</button>
           </div>
         </div>
       </div>

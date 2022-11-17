@@ -40,25 +40,25 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="edit">
-            <button
-              title="Editar"
-              data-bs-toggle="modal"
-              data-bs-target="#editemenparlModal"
-            >
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </button>
-          </td>
+      <tbody *ngIf="emendaparlamentar && emendaparlamentar.length">
+        <tr *ngFor="let emendaparlamentarl of emendaparlamentar">
+          <td>{{ emendaparlamentarl.data }}</td>
+          <td>{{ emendaparlamentarl.description }}</td>
+          <td>{{ emendaparlamentarl.entrada }}</td>
+          <td>{{ emendaparlamentarl.saida }}</td>
+          <td>{{ emendaparlamentarl.saida - emendaparlamentarl.entrada }}</td>
+          <td
+          class="add"
+          data-bs-toggle="modal"
+          data-bs-target="#emendaparlModal"
+        >
+          <button title="Editar" (click)="Alterar(emendaparlamentarl, emendaparlModal)">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+        </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(emendaparlamentarl, delemenparlModal)"
               data-bs-toggle="modal"
               data-bs-target="#delemenparlModal"
             >
@@ -71,8 +71,8 @@
 
     <!-- Modal Emenda Parlamentar -->
     <div
-      class="modal fade"
-      id="emenparlModal"
+      class="modal fade" #editar
+      id="emendaparlModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -88,46 +88,51 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
-              id="emenparldate"
+              id="emenimpdate"
               required
             />
             <br />
             <legend>Descrição</legend>
             <br />
             <textarea
+            [(ngModel)]="description"
               cols="55"
               rows="5"
               class="form-control ifont"
-              id="emenparldesc"
+              id="emenimpdesc"
               required
             ></textarea>
             <br />
             <legend>Entradas</legend>
             <br />
             <input
+            [(ngModel)]="entrada"
               type="number"
               class="form-control ifont"
-              id="emenparlent"
+              id="emenimpent"
               required
             />
             <br />
             <legend>Saídas</legend>
             <br />
             <input
+            [(ngModel)]="saida"
               type="number"
               class="form-control ifont"
-              id="emenparlsai"
+              id="emenimpsai"
               required
             />
             <br />
             <legend>Saldo</legend>
             <br />
             <input
+            [(ngModel)]="valor"
               type="number"
               class="form-control ifont"
-              id="emenparlsal"
+              id="emenimpsal"
               required
             />
             <br />
@@ -140,7 +145,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" (click)="adicionarEmendaParlamentar()"> Salvar</button>
+            <button (click)="alterarEmendaParlamentar(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -225,7 +231,7 @@
 
     <!-- Modal Deletar Emenda Parlamentar -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delemenparlModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -249,7 +255,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirEmenda(confirm);">Sim</button>
           </div>
         </div>
       </div>

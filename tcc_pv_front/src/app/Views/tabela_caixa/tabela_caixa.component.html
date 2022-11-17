@@ -40,24 +40,24 @@
         </tr>
       </thead>
 
-      <tbody *ngIf="produtos && produtos.length">
-        <tr *ngFor="let produto of produtos">
-          <td>{{ produto.id }}</td>
-          <td>{{ produto.description }}</td>
-          <td></td>
-          <td></td>
-          <td></td>
+      <tbody *ngIf="caixa && caixa.length">
+        <tr *ngFor="let caixas of caixa">
+          <td>{{ caixas.data }}</td>
+          <td>{{ caixas.description }}</td>
+          <td>{{ caixas.entrada }}</td>
+          <td>{{ caixas.saida }}</td>
+          <td>{{ caixas.entrada - caixas.saida }}</td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar" (click)="Alterar(caixas, caixaModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editcaixaModal"
+              data-bs-target="#caixaModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
-            <button
+            <button (click)="excluir(caixas, delcaixaModal)"
               title="Excluir"
               data-bs-toggle="modal"
               data-bs-target="#delcaixaModal"
@@ -71,7 +71,7 @@
 
     <!-- Modal caixa -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="caixaModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -88,6 +88,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="caidate"
@@ -97,7 +98,7 @@
             <legend>Descrição</legend>
             <br />
             <textarea
-              [(ngModel)]="desc"
+              [(ngModel)]="description"
               cols="55"
               rows="5"
               class="form-control ifont"
@@ -108,6 +109,7 @@
             <legend>Entradas</legend>
             <br />
             <input
+            [(ngModel)]="entrada"
               type="number"
               class="form-control ifont"
               id="caient"
@@ -117,6 +119,7 @@
             <legend>Saídas</legend>
             <br />
             <input
+            [(ngModel)]="saida"
               type="number"
               class="form-control ifont"
               id="caisai"
@@ -126,6 +129,7 @@
             <legend>Saldo</legend>
             <br />
             <input
+            [(ngModel)]="valor"
               type="number"
               class="form-control ifont"
               id="caisal"
@@ -144,9 +148,16 @@
             <button
               type="button"
               class="salvar btn btn-success" data-bs-dismiss="modal"
-              (click)="adicionarProduto()"
+              (click)="adicionarCaixa()"
             >
               Salvar
+            </button>
+            <button
+              type="button"
+              class="salvar btn btn-success" data-bs-dismiss="modal"
+              (click)="alterarCaixa(editar)"
+            >
+              Editar
             </button>
           </div>
         </div>
@@ -181,7 +192,7 @@
             <legend>Descrição</legend>
             <br />
             <textarea
-              [(ngModel)]="desc"
+
               cols="55"
               rows="5"
               class="form-control ifont"
@@ -233,7 +244,7 @@
 
     <!-- Modal Deletar caixa -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delcaixaModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -257,7 +268,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirCaixa(confirm)">Sim</button>
           </div>
         </div>
       </div>

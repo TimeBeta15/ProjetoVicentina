@@ -47,7 +47,7 @@
           <td>{{ verbaestaduall.entrada }}</td>
           <td>{{ verbaestaduall.saida }}</td>
           <td>{{ verbaestaduall.saida - verbaestaduall.entrada }}</td>
-         
+
 
           <td class="edit">
             <button
@@ -152,88 +152,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Modal Editar Verba Estadual -->
-    <div
-      class="modal fade" #editar
-      id="editverbesModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Editar Movimento de Verba Estadual
-            </h5>
-          </div>
-          <div class="modal-body">
-            <legend>Data</legend>
-            <br />
-            <input
-            [(ngModel)]="data"
-              type="date"
-              class="form-control ifont"
-              id="verbesdate"
-              required
-            />
-            <br />
-            <legend>Descrição</legend>
-            <br />
-            <textarea
-            [(ngModel)]="description"
-              cols="55"
-              rows="5"
-              class="form-control ifont"
-              id="verbedesc"
-              required
-            ></textarea>
-            <br />
-            <legend>Entradas</legend>
-            <br />
-            <input
-            [(ngModel)]="entrada"
-              type="number"
-              class="form-control ifont"
-              id="verbesent"
-              required
-            />
-            <br />
-            <legend>Saídas</legend>
-            <br />
-            <input
-            [(ngModel)]="saida"
-              type="number"
-              class="form-control ifont"
-              id="verbessai"
-              required
-            />
-            <br />
-            <legend>Saldo</legend>
-            <br />
-            <input
-            [(ngModel)]="valor"
-              type="number"
-              class="form-control ifont"
-              id="verbessal"
-              required
-            />
-            <br />
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="fechar btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Fechar
-            </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)=" alterarVerba(editar)">Editar</button>
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
 
     <!-- Modal Deletar Verba Estadual -->

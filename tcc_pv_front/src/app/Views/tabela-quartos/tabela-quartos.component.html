@@ -38,23 +38,23 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>Pedro</td>
-          <td>Quarto 03</td>
+      <tbody *ngIf="quartos && quartos">
+        <tr *ngFor="let quartosl of quartos">
+          <td>{{quartosl.data}}</td>
+          <td>{{quartosl.nome}}</td>
+          <td>{{quartosl.quantidade}}</td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar" (click)="Alterar(quartosl, quartosModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editquartosModal"
+              data-bs-target="#quartosModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(quartosl, delquartosModal)"
               data-bs-toggle="modal"
               data-bs-target="#delquartosModal"
             >
@@ -67,7 +67,7 @@
 
     <!-- Modal Cadastro de Quartos -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="quartosModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -82,6 +82,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="quartdate"
@@ -91,6 +92,7 @@
             <legend>Nome do Residente</legend>
             <br />
             <input
+            [(ngModel)]="nome"
               type="text"
               class="form-control ifont"
               id="quartnomeres"
@@ -100,6 +102,8 @@
             <legend>Número do Quarto</legend>
             <br />
             <input
+            [(ngModel)]="numeroQuartos"
+            ngModel
               type="number"
               class="form-control ifont"
               id="quartnum"
@@ -115,71 +119,19 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarQuartos()">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="alterarQuartos(editar)">Editar</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Modal Editar Quartos -->
-    <div
-      class="modal fade"
-      id="editquartosModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Editar Quarto</h5>
-          </div>
-          <div class="modal-body">
-            <legend>Data</legend>
-            <br />
-            <input
-              type="date"
-              class="form-control ifont"
-              id="quartdate"
-              required
-            />
-            <br />
-            <legend>Nome do Residente</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="quartnomeres"
-              required
-            />
-            <br />
-            <legend>Número do Quarto</legend>
-            <br />
-            <input
-              type="number"
-              class="form-control ifont"
-              id="quartnum"
-              required
-            />
-            <br />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="fechar btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Fechar
-            </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Modal Deletar Quartos -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delquartosModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -201,7 +153,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirQuartos(confirm)">Sim</button>
           </div>
         </div>
       </div>

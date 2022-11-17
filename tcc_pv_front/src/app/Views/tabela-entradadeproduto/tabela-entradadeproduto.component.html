@@ -40,18 +40,18 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>Arroz</td>
-          <td>3</td>
-          <td>23/09/22</td>
-          <td>Alimento</td>
+      <tbody *ngIf="entradaprodutos && entradaprodutos">
+        <tr *ngFor="let entradaprodutosl of entradaprodutos">
+          <td>{{entradaprodutosl.data}}</td>
+          <td>{{entradaprodutosl.nome}}</td>
+          <td>{{entradaprodutosl.quantidade}}</td>
+          <td>{{entradaprodutosl.validade}}</td>
+          <td>{{entradaprodutosl.Categoria}}</td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar"  (click)="Alterar(entradaprodutosl, entradaprodutosModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editentradaprodutosModal"
+              data-bs-target="#entradaprodutosModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
@@ -61,7 +61,7 @@
             data-bs-toggle="modal"
             data-bs-target="#delentradaprodutosModal"
           >
-            <button title="Excluir">
+            <button title="Excluir" (click)="excluir(entradaprodutosModal, delentradaprodutosModal)">
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>
@@ -71,7 +71,7 @@
 
     <!-- Modal Entrada de produto -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="entradaprodutosModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -88,6 +88,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="enprodate"
@@ -97,6 +98,7 @@
             <legend>Nome</legend>
             <br />
             <input
+            [(ngModel)]="nome"
               type="text"
               class="form-control ifont"
               id="enpronome"
@@ -106,6 +108,7 @@
             <legend>Quantidade</legend>
             <br />
             <input
+            [(ngModel)]="quantidade"
               type="number"
               class="form-control ifont"
               id="enproquant"
@@ -115,6 +118,7 @@
             <legend>Validade</legend>
             <br />
             <input
+            [(ngModel)]="validade"
               type="date"
               class="form-control ifont"
               id="enprovalidade"
@@ -123,7 +127,9 @@
             <br />
             <legend>Categoria</legend>
             <br />
-            <select name="enprocate" class="form-control ifont" required>
+            <select name="enprocate" class="form-control ifont" required
+
+            [(ngModel)]="categoria"  >
               <option>Enfermagem</option>
               <option>Alimentos</option>
               <option>Higiene</option>
@@ -139,7 +145,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarEntrada()" >Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="alterarEntrada(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -221,7 +228,7 @@
 
     <!-- Modal Deletar Entrada de produto -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delentradaprodutosModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -243,7 +250,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirEntrada(confirm)">Sim</button>
           </div>
         </div>
       </div>
