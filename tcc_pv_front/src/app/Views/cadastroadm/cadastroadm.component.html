@@ -1,22 +1,32 @@
-<div class="main-login">
-  <div class="left-login">
-    <h1>Cadastre-se na Vila Vicentina!!</h1>
-    <img src="assets/vovo e croche.svg" alt="" />
+<div class="main-cadastro">
+  <div class="left-cadastro">
+      <h1> Cadastre-se Na Vila Vicentina!! </h1>
+      <img src="assets/vovo e netinho.svg" class="left-cadastro-image"  alt="Animate" >
   </div>
 
-  <div class="right-login">
-    <div class="card-login">
-      <h1>Logar</h1>
-      <div class="textfield">
-        <label for="usuario">Nome:</label>
-        <input type="text" name="usuario" placeholder="Usuário" />
-      </div>
+  <div class="right-cadastro">
+      <form [formGroup]="cadastroForm" (ngSubmit)="signUp()">
+          <div class="card-cadastro">
+              <h1> Cadastro </h1>
+              <div class="textfield">
+                 <label for="name">Nome</label>
+                 <input formControlName="name" type="text" name="name" placeholder="Nome">
+                 <span class="text-danger" *ngIf="cadastroForm.controls['name'].dirty && cadastroForm.hasError('required','name')">*Nome usuário é obrigatório</span>
+              </div>
+              <div class="textfield">
+                  <label for="email">E-mail</label>
+                  <input formControlName="email" type="email" name="email" placeholder="E-mail"  ngModel email>
+                  <span class="text-danger" *ngIf="cadastroForm.controls['email'].dirty  && cadastroForm.hasError('required','email')">*E-mail é obrigatório</span>
+              </div>
+              <div class="textfield">
+                  <label for="senha">Senha</label>
+                  <input formControlName="password" type="password" name="senha" placeholder="Senha">
+                  <span class="text-danger" *ngIf="cadastroForm.controls['password'].dirty && cadastroForm.hasError('required','password')">*Senha é obrigatório</span>
+              </div>
 
-      <div class="textfield">
-        <label for="senha">Senha:</label>
-        <input type="password" name="senha" placeholder="Senha" />
-      </div>
-      <button class="btn-login">Entrar</button>
-    </div>
+              <button [disabled]="!cadastroForm.valid" class="btn-cadastrar">Cadastrar</button>
+           </div>
+      </form>
+
   </div>
 </div>

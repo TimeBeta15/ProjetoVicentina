@@ -1,23 +1,30 @@
+
 <div class="main-login">
   <div class="left-login">
-      <h1> Vila Vicentina!! </h1>
-      <img src="assets/vovo e sofa.svg" alt="">
+      <h1> Faça Login Na Vila Vicentina!! </h1>
+      <img src="assets/vovo e sofa.svg" class="left-login-image" alt="Animate" />
   </div>
 
   <div class="right-login">
+      <form [formGroup]="loginForm" (ngSubmit)="entrar()">
        <div class="card-login">
-          <h1> Logar </h1>
+          <h1> Login </h1>
           <div class="textfield">
              <label for="usuario">Usuário</label>
-             <input type="text" name="usuario" placeholder="Usuário">
+             <input formControlName="name" type="text" name="usuario" placeholder="Usuário" >
+             <span class="text-danger" *ngIf="loginForm.controls['name'].dirty  && loginForm.hasError('required','name')">*Nome usuário é obrigatório</span>
           </div>
 
           <div class="textfield">
               <label for="senha">Senha</label>
-              <input type="password" name="senha" placeholder="Senha">
+              <input formControlName="password" type="password" name="senha" placeholder="Senha">
+              <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Senha é obrigatório</span>
           </div>
-          <button class="btn-login">Entrar</button>
+
+          <button type="submit" [disabled]="!loginForm.valid" class="btn-login">Sign in</button>
+          <a href="cadastroadm">Cadastar-se</a>
        </div>
+      </form>
   </div>
 </div>
 
