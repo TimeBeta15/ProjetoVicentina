@@ -42,7 +42,7 @@
 
       <tbody *ngIf="verbaestadual && verbaestadual.length">
         <tr *ngFor="let verbaestaduall of verbaestadual">
-          <td>{{ verbaestaduall.data }}</td>
+          <td>{{ verbaestaduall.data | date:'dd/MM/y'}}</td>
           <td>{{ verbaestaduall.description }}</td>
           <td>{{ verbaestaduall.entrada }}</td>
           <td>{{ verbaestaduall.saida }}</td>

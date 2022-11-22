@@ -42,7 +42,7 @@
 
       <tbody *ngIf="contacorrente && contacorrente.length">
         <tr *ngFor="let contacorrentel of contacorrente">
-          <td>{{ contacorrentel.data }}</td>
+          <td>{{ contacorrentel.data | date:'dd/MM/y'}}</td>
           <td>{{ contacorrentel.description }}</td>
           <td>{{ contacorrentel.entrada }}</td>
           <td>{{ contacorrentel.saida }}</td>

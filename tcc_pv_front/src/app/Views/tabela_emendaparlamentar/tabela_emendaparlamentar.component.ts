@@ -30,6 +30,7 @@ getEmendaParlamentar()
   .subscribe(response =>{
     this.emendaparlamentar = response
   console.log(this.emendaparlamentar)});
+  return this.emendaparlamentar
 }
 adicionarEmendaParlamentar() {
   var EmendaParlamentar = { description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};

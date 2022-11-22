@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class TabelaQuartosComponent implements OnInit {
 nome: any
-numeroQuartos!: number
+numeroquarto: any
 data: any
 quartos: any
 Quartos!: Quartos
@@ -28,7 +28,7 @@ getQuartos()
     console.log(this.quartos)})
 }
 adicionarQuartos() {
-  var EntradaProduto = { nome :this.nome, data: this.data,quantidade: this.numeroQuartos};
+  var EntradaProduto = { nome :this.nome, data: this.data,numeroquarto: this.numeroquarto};
 
 
   this.http.post('https://localhost:7214/api/TabelaQuarto', EntradaProduto)
@@ -70,7 +70,7 @@ this.Quartos= quartos;
 
 alterarQuartos(template:any) {
   console.log(this.quartos)
-  var quartoss = {id:this.Quartos.id, nome :this.nome, data: this.data,quantidade: this.numeroQuartos};
+  var quartoss = {id:this.Quartos.id, nome :this.nome, data: this.data,numeroquarto: this.numeroquarto};
 
   this.http.put(`${environment.apibaseURL}api/TabelaQuartos/${this.quartos.id}`, quartoss)
   .subscribe(

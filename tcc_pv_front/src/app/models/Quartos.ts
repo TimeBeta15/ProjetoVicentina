@@ -1,7 +1,7 @@
 export class Quartos
 {
   id: string = '';
-  numeroquarto: number =0;
+  numeroquarto: string= '';
   nome: string= '';
   data: string='';
 

@@ -42,7 +42,7 @@
 
       <tbody *ngIf="caixa && caixa.length">
         <tr *ngFor="let caixas of caixa">
-          <td>{{ caixas.data }}</td>
+          <td>{{ caixas.data | date:'dd/MM/y'}}</td>
           <td>{{ caixas.description }}</td>
           <td>{{ caixas.entrada }}</td>
           <td>{{ caixas.saida }}</td>

@@ -39,7 +39,7 @@
 
       <tbody *ngIf="saidaproduto && saidaproduto.length">
         <tr *ngFor="let saidaprodutos of saidaproduto">
-          <td>{{ saidaprodutos.data }}</td>
+          <td>{{ saidaprodutos.data | date:'dd/MM/y' }}</td>
           <td>{{ saidaprodutos.description }}</td>
           <td
             class="add"
@@ -82,6 +82,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="saiprodate"

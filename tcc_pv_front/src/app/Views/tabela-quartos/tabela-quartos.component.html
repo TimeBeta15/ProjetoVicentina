@@ -40,9 +40,9 @@
 
       <tbody *ngIf="quartos && quartos">
         <tr *ngFor="let quartosl of quartos">
-          <td>{{quartosl.data}}</td>
+          <td>{{quartosl.data | date:'dd/MM/y'}}</td>
           <td>{{quartosl.nome}}</td>
-          <td>{{quartosl.quantidade}}</td>
+          <td>{{quartosl.numeroQuarto}}</td>
           <td class="edit">
             <button
               title="Editar" (click)="Alterar(quartosl, quartosModal)"
@@ -102,7 +102,7 @@
             <legend>Número do Quarto</legend>
             <br />
             <input
-            [(ngModel)]="numeroQuartos"
+            [(ngModel)]="numeroquarto"
             ngModel
               type="number"
               class="form-control ifont"

@@ -40,25 +40,25 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>Ester</td>
-          <td>992610641</td>
-          <td>Pix</td>
-          <td>71R$</td>
+      <tbody *ngIf="doadores && doadores.length">
+        <tr *ngFor="let doadoress of doadores">
+          <td>{{ doadoress.data | date:'dd/MM/y'}}</td>
+          <td>{{ doadoress.nome }}</td>
+          <td>{{ doadoress.telefone | phone}}</td>
+          <td>{{ doadoress.formaDoador }}</td>
+          <td>{{ doadoress.valor }}</td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar" (click)="Alterar(doadoress, doadoresModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editdoadoresModal"
+              data-bs-target="#doadoresModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(doadoress, deldoadoresModal)"
               data-bs-toggle="modal"
               data-bs-target="#deldoadoresModal"
             >
@@ -71,7 +71,7 @@
 
     <!-- Modal Doadores-->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="doadoresModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -86,6 +86,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="doadate"
@@ -95,6 +96,7 @@
             <legend>Nome</legend>
             <br />
             <input
+            [(ngModel)]="nome"
               type="text"
               class="form-control ifont"
               id="doanome"
@@ -104,6 +106,7 @@
             <legend>Telefone</legend>
             <br />
             <input
+            [(ngModel)]="telefone"
               type="text"
               class="form-control ifont"
               id="doatel"
@@ -112,7 +115,7 @@
             <br />
             <legend>Forma de Doação</legend>
             <br />
-            <select name="doaforma" class="form-control ifont" required>
+            <select    name="doaforma" class="form-control ifont"  [(ngModel)]="formaDoador" required>
               <option>Pix</option>
               <option>Boleto</option>
               <option>Dinheiro</option>
@@ -122,6 +125,7 @@
             <legend>Valor de Doação</legend>
             <br />
             <input
+            [(ngModel)]="valor"
               type="number"
               class="form-control ifont"
               id="doaval"
@@ -137,7 +141,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarDoador()">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="alterarDoador(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -145,7 +150,7 @@
 
     <!-- Modal deletar Doadores-->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="deldoadoresModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -167,7 +172,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal"  (click)="excluirDoador(confirm)">Sim</button>
           </div>
         </div>
       </div>
@@ -241,7 +246,7 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" >Salvar</button>
           </div>
         </div>
       </div>

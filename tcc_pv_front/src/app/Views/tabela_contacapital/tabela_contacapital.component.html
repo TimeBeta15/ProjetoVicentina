@@ -42,7 +42,7 @@
 
       <tbody *ngIf="contacapital && contacapital.length">
         <tr *ngFor="let contacapitall of contacapital">
-          <td>{{ contacapitall.data }}</td>
+          <td>{{ contacapitall.data | date:'dd/MM/y'}}</td>
           <td>{{ contacapitall.description }}</td>
           <td>{{ contacapitall.entrada }}</td>
           <td>{{ contacapitall.saida }}</td>

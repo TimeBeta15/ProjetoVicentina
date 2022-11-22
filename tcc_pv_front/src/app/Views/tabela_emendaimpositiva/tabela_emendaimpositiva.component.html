@@ -42,7 +42,7 @@
 
       <tbody *ngIf="emendaimpositiva && emendaimpositiva.length">
         <tr *ngFor="let emendaimpositival of emendaimpositiva">
-          <td>{{ emendaimpositival.data }}</td>
+          <td>{{ emendaimpositival.data | date:'dd/MM/y'}}</td>
           <td>{{ emendaimpositival.description }}</td>
           <td>{{ emendaimpositival.entrada }}</td>
           <td>{{ emendaimpositival.saida }}</td>

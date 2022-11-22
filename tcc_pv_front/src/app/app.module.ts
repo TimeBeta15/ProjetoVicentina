@@ -22,6 +22,7 @@ import { MenuComponent } from './Views/menu/menu.component';
 import { LoginComponent } from './Views/login/login.component';
 import { TabelaResidentesComponent } from './Views/tabela-residentes/tabela-residentes.component';
 import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component';
+import { PhonePipe } from './phone.pipe';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CadastroadmComponent } from './Views/cadastroadm/cadastroadm.component'
     LoginComponent,
     TabelaResidentesComponent,
     CadastroadmComponent,
+    PhonePipe,
   ],
 
   imports: [

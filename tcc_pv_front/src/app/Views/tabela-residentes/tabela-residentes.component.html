@@ -43,13 +43,14 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>Marcos</td>
-          <td>12/03/1954</td>
-          <td>Masculino</td>
-          <td>Sim</td>
+      <tbody *ngIf="residente && residente">
+        <tr *ngFor="let residentes  of residente">
+          <td>{{residentes.data | date:'dd/MM/y'}}</td>
+          <td>{{residentes.nome}}</td>
+          <td>{{residentes.DataNasc}}</td>
+          <td>{{residentes.genero}}</td>
+          <td>{{residentes.aposentado}}</td>
+
           <td class="showmore">
             <button
               title="Ver mais"
@@ -61,16 +62,16 @@
           </td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar" (click)="Alterar(residentes, residentesModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editresidentesModal"
+              data-bs-target="#residentesModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(residentes, delresidentesModal)"
               data-bs-toggle="modal"
               data-bs-target="#delresidentesModal"
             >
@@ -83,7 +84,7 @@
 
     <!-- Modal Residentes -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="residentesModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -100,6 +101,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="Dataregistro"
               type="date"
               class="form-control ifont"
               id="forndate"
@@ -109,6 +111,7 @@
             <legend>Nome</legend>
             <br />
             <input
+            [(ngModel)]="Nome"
               type="text"
               class="form-control ifont"
               id="fornnome"
@@ -117,7 +120,7 @@
             <br />
             <legend>Gênero</legend>
             <br />
-            <select name="forngenero" class="form-control ifont" required>
+            <select name="forngenero" class="form-control ifont"   [(ngModel)]="genero"  required>
               <option style="display: none"></option>
               <option>Masculino</option>
               <option>Feminino</option>
@@ -127,6 +130,7 @@
             <legend>Data de Nascimento</legend>
             <br />
             <input
+            [(ngModel)]="DataNasc"
               type="date"
               class="form-control ifont"
               id="forndatanasc"
@@ -136,6 +140,7 @@
             <legend>Endereço</legend>
             <br />
             <input
+            [(ngModel)]="endereco"
               type="text"
               class="form-control ifont"
               id="fornendereco"
@@ -144,7 +149,7 @@
             <br />
             <legend>Aposentado</legend>
             <br />
-            <select name="fornaposentado" class="form-control ifont" required>
+            <select name="fornaposentado" class="form-control ifont"  [(ngModel)]="aposentado"  required>
               <option style="display: none"></option>
               <option>Sim</option>
               <option>Não</option>
@@ -152,7 +157,7 @@
             <br />
             <legend>Empréstimo no nome</legend>
             <br />
-            <select name="fornemp" class="form-control ifont" required>
+            <select name="fornemp" class="form-control ifont"   [(ngModel)]="emprestimonome"    required>
               <option style="display: none"></option>
               <option>Sim</option>
               <option>Não</option>
@@ -160,11 +165,11 @@
             <br />
             <legend>Quem fez o empréstimo ?</legend>
             <br />
-            <input type="text" class="form-control ifont" id="fornquememp" />
+            <input  [(ngModel)]="emprestimonomepessoa"     type="text" class="form-control ifont" id="fornquememp" />
             <br />
             <legend>Grau de Dependência</legend>
             <br />
-            <select name="forngrau" class="form-control ifont" required>
+            <select name="forngrau" class="form-control ifont"  [(ngModel)]="grauldependencia"     required>
               <option style="display: none"></option>
               <option>Grau I</option>
               <option>Grau II</option>
@@ -174,40 +179,41 @@
             <br />
             <legend>Tem alguma deficiência ?</legend>
             <br />
-            <select name="forndef" class="form-control ifont" required>
+            <select name="forndef" class="form-control ifont"  [(ngModel)]="deficiencia"  required>
               <option style="display: none"></option>
               <option>Sim</option>
               <option>Não</option>
             </select>
             <br />
             <legend>Qual / Quais ?</legend>
-            <input type="text" class="form-control ifont" id="forndefqual" />
+            <input [(ngModel)]="deficiencianome"  type="text" class="form-control ifont" id="forndefqual" />
             <br />
             <legend>Tem alguma doença ?</legend>
             <br />
-            <select name="forndoe" class="form-control ifont" required>
+            <select   [(ngModel)]="doenca"     name="forndoe" class="form-control ifont" required>
               <option style="display: none"></option>
               <option>Sim</option>
               <option>Não</option>
             </select>
             <br />
             <legend>Qual / Quais ?</legend>
-            <input type="text" class="form-control ifont" id="forndoequal" />
+            <input [(ngModel)]="doencanome" type="text" class="form-control ifont" id="forndoequal" />
             <br />
             <legend>Toma remédios controlados ?</legend>
             <br />
-            <select name="fornrem" class="form-control ifont" required>
+            <select    [(ngModel)]="remediocontrol"     name="fornrem" class="form-control ifont" required>
               <option style="display: none"></option>
               <option>Sim</option>
               <option>Não</option>
             </select>
             <br />
             <legend>Qual / Quais ?</legend>
-            <input type="text" class="form-control ifont" id="fornremqual" />
+            <input  [(ngModel)]="remediocontrolnome"   type="text" class="form-control ifont" id="fornremqual" />
             <br />
             <legend>Motivo da procura pelo acolhimento</legend>
             <br />
             <textarea
+            [(ngModel)]="motivoprocura"
               cols="55"
               rows="5"
               class="form-control ifont"
@@ -218,6 +224,7 @@
             <legend>Nome da pessoa que procurou a instituição</legend>
             <br />
             <input
+            [(ngModel)]="nomeprocura"
               type="text"
               class="form-control ifont"
               id="fornnomeprocura"
@@ -227,6 +234,7 @@
             <legend>Grau de parentesco</legend>
             <br />
             <input
+            [(ngModel)]="grauldependencia"
               type="text"
               class="form-control ifont"
               id="forngrauparente"
@@ -236,6 +244,7 @@
             <legend>Endereço</legend>
             <br />
             <input
+            [(ngModel)]="endereco"
               type="text"
               class="form-control ifont"
               id="fornendprocura"
@@ -245,6 +254,7 @@
             <legend>Telefone</legend>
             <br />
             <input
+            [(ngModel)]="telefone"
               type="text"
               class="form-control ifont"
               id="forntelprocura"
@@ -259,8 +269,11 @@
               >
                 Fechar
               </button>
-              <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">
+              <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarresidente()">
                 Salvar
+              </button>
+              <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal"  (click)="alterarResidente(editar)">
+                Editar
               </button>
             </div>
           </div>
@@ -354,193 +367,11 @@
     </div>
 
     <!-- Modal editar Residentes -->
-    <div
-      class="modal fade"
-      id="editresidentesModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Editar Residentes
-            </h5>
-          </div>
-          <div class="modal-body">
-            <legend>Data</legend>
-            <br />
-            <input
-              type="date"
-              class="form-control ifont"
-              id="forndate"
-              required
-            />
-            <br />
-            <legend>Nome</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="fornnome"
-              required
-            />
-            <br />
-            <legend>Gênero</legend>
-            <br />
-            <select name="forngenero" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Masculino</option>
-              <option>Feminino</option>
-              <option>Outros</option>
-            </select>
-            <br />
-            <legend>Data de Nascimento</legend>
-            <br />
-            <input
-              type="date"
-              class="form-control ifont"
-              id="forndatanasc"
-              required
-            />
-            <br />
-            <legend>Endereço</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="fornendereco"
-              required
-            />
-            <br />
-            <legend>Aposentado</legend>
-            <br />
-            <select name="fornaposentado" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Sim</option>
-              <option>Não</option>
-            </select>
-            <br />
-            <legend>Empréstimo no nome</legend>
-            <br />
-            <select name="fornemp" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Sim</option>
-              <option>Não</option>
-            </select>
-            <br />
-            <legend>Quem fez o empréstimo ?</legend>
-            <br />
-            <input type="text" class="form-control ifont" id="fornquememp" />
-            <br />
-            <legend>Grau de Dependência</legend>
-            <br />
-            <select name="forngrau" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Grau I</option>
-              <option>Grau II</option>
-              <option>Grau III</option>
-              <option>Indivíduo Autônomo</option>
-            </select>
-            <br />
-            <legend>Tem alguma deficiência ?</legend>
-            <br />
-            <select name="forndef" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Sim</option>
-              <option>Não</option>
-            </select>
-            <br />
-            <legend>Qual / Quais ?</legend>
-            <input type="text" class="form-control ifont" id="forndefqual" />
-            <br />
-            <legend>Tem alguma doença ?</legend>
-            <br />
-            <select name="forndoe" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Sim</option>
-              <option>Não</option>
-            </select>
-            <br />
-            <legend>Qual / Quais ?</legend>
-            <input type="text" class="form-control ifont" id="forndoequal" />
-            <br />
-            <legend>Toma remédios controlados ?</legend>
-            <br />
-            <select name="fornrem" class="form-control ifont" required>
-              <option style="display: none"></option>
-              <option>Sim</option>
-              <option>Não</option>
-            </select>
-            <br />
-            <legend>Qual / Quais ?</legend>
-            <input type="text" class="form-control ifont" id="fornremqual" />
-            <br />
-            <legend>Motivo da procura pelo acolhimento</legend>
-            <br />
-            <textarea
-              cols="55"
-              rows="5"
-              class="form-control ifont"
-              id="fornmotivaco"
-              required
-            ></textarea>
-            <br />
-            <legend>Nome da pessoa que procurou a instituição</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="fornnomeprocura"
-              required
-            />
-            <br />
-            <legend>Grau de parentesco</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="forngrauparente"
-              required
-            />
-            <br />
-            <legend>Endereço</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="fornendprocura"
-              required
-            />
-            <br />
-            <legend>Telefone</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="forntelprocura"
-              required
-            />
-            <br />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="fechar btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Fechar
-            </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Modal deletar Residentes -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delresidentesModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -564,7 +395,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirResidente(confirm)" >Sim</button>
           </div>
         </div>
       </div>

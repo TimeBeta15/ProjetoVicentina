@@ -19,6 +19,7 @@
         title="Adicionar"
         data-bs-toggle="modal"
         data-bs-target="#emenparlModal"
+        
       >
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
@@ -42,11 +43,11 @@
 
       <tbody *ngIf="emendaparlamentar && emendaparlamentar.length">
         <tr *ngFor="let emendaparlamentarl of emendaparlamentar">
-          <td>{{ emendaparlamentarl.data }}</td>
+          <td>{{ emendaparlamentarl.data | date:'dd/MM/y'}}</td>
           <td>{{ emendaparlamentarl.description }}</td>
           <td>{{ emendaparlamentarl.entrada }}</td>
           <td>{{ emendaparlamentarl.saida }}</td>
-          <td>{{ emendaparlamentarl.saida - emendaparlamentarl.entrada }}</td>
+          <td>{{ emendaparlamentarl.entrada - emendaparlamentarl.saida }}</td>
           <td
           class="add"
           data-bs-toggle="modal"

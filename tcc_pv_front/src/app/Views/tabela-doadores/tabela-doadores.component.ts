@@ -12,15 +12,17 @@ export class TabelaDoadoresComponent implements OnInit {
 doadores: any
 Doador!:Doadores
 data: any
-formapagamento: any
+formaDoador: any
 valor!: number
 telefone: any
 nome: any
+doadoresModal: any
+deldoadoresModal: any
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getDoadores
+    this.getDoadores()
 
   }
 getDoadores()
@@ -32,6 +34,60 @@ getDoadores()
 }
 adicionarDoador()
 {
-var doadores
+var doadores = {data :this.data, nome :this.nome, telefone : this.telefone, formapagamento: this.formaDoador, valor : this.valor}
+
+this.http.post('https://localhost:7214/api/TabelaDoador', doadores)
+.subscribe(
+  resultado => {
+    console.log(resultado)
+    this.getDoadores();
+  },
+  erro => {
+    if(erro.status == 400) {
+      console.log(erro);
+    }
+  }
+);
+}
+excluir(doadores: Doadores,template:any){
+  console.log(doadores);
+  this.Doador=doadores;
+}
+excluirDoador(template:any)
+{
+  this.http.delete(`${environment.apibaseURL}api/TabelaDoador/${this.Doador.id}`).subscribe
+  (() => { this.getDoadores();
+  let ref = document.getElementById('cancel')
+ref?.click();},
+erro => {
+  if(erro.status == 404){
+    console.log('O item não foi localizado');
+  }
+}
+);
+}
+
+Alterar(doadores: Doadores,template:any)
+{
+console.log(doadores);
+this.Doador= doadores;
+}
+
+alterarDoador(template:any) {
+  console.log(this.doadores)
+  var doadoresl = {id:this.Doador.id, data :this.data, nome :this.nome, telefone : this.telefone, formapagamento: this.formaDoador, valor : this.valor};
+
+  this.http.put(`${environment.apibaseURL}api/TabelaDoador/${doadoresl.id}`, doadoresl)
+  .subscribe(
+    resultado => {
+      console.log(resultado)
+      this.getDoadores();
+    },
+    erro => {
+      if(erro.status == 400) {
+        console.log(erro);
+      }
+    }
+  );
 }
 }

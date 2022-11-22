@@ -42,11 +42,11 @@
 
       <tbody *ngIf="entradaprodutos && entradaprodutos">
         <tr *ngFor="let entradaprodutosl of entradaprodutos">
-          <td>{{entradaprodutosl.data}}</td>
+          <td>{{entradaprodutosl.data  | date:'dd/MM/y'}}</td>
           <td>{{entradaprodutosl.nome}}</td>
           <td>{{entradaprodutosl.quantidade}}</td>
           <td>{{entradaprodutosl.validade}}</td>
-          <td>{{entradaprodutosl.Categoria}}</td>
+          <td>{{entradaprodutosl.categoria}}</td>
           <td class="edit">
             <button
               title="Editar"  (click)="Alterar(entradaprodutosl, entradaprodutosModal)"
@@ -127,9 +127,9 @@
             <br />
             <legend>Categoria</legend>
             <br />
-            <select name="enprocate" class="form-control ifont" required
+            <select name="enprocate" class="form-control ifont"  [(ngModel)]="categoria" required
 
-            [(ngModel)]="categoria"  >
+             >
               <option>Enfermagem</option>
               <option>Alimentos</option>
               <option>Higiene</option>

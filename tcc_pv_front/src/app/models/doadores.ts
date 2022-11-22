@@ -3,9 +3,9 @@ export class Doadores
   id: string = '';
   data: string = '';
   nome: string = '';
-  telefone: number = 0;
+  telefone: string = '';
   descricao: number = 0;
-  formapagamento: string = "";
+  formaDoador: string = "";
   valordoacao: number = 0;
 
 

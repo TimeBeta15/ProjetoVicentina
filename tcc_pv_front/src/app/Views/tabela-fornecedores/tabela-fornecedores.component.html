@@ -38,33 +38,29 @@
           <th>Quantidade</th>
           <th></th>
           <th></th>
-          <th></th>
-          <th></th>
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>07/01/2022</td>
-          <td>João</td>
-          <td>992347896</td>
-          <td>Feijão</td>
-          <td>Alimento</td>
-          <td>5</td>
-          <td></td>
-          <td></td>
+      <tbody >
+        <tr *ngFor="let fornecedoress of fornecedores">
+          <td>{{ fornecedoress.data }}</td>
+          <td>{{ fornecedoress.nome }}</td>
+          <td>{{ fornecedoress.telefone | phone}}</td>
+          <td>{{ fornecedoress.nomeProduto }}</td>
+          <td>{{ fornecedoress.categoria }}</td>
+          <td>{{ fornecedoress.quantidade }}</td>
           <td class="edit">
             <button
-              title="Editar"
+              title="Editar" (click)="Alterar(fornecedoress, forenecedoresModal)"
               data-bs-toggle="modal"
-              data-bs-target="#editfornecedoresModal"
+              data-bs-target="#fornecedoresModal"
             >
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </td>
           <td class="delete">
             <button
-              title="Excluir"
+              title="Excluir" (click)="excluir(fornecedoress, delfornecedoresModal)"
               data-bs-toggle="modal"
               data-bs-target="#delfornecedoresModal"
             >
@@ -77,7 +73,7 @@
 
     <!-- Modal Fornecedores -->
     <div
-      class="modal fade"
+      class="modal fade" #editar
       id="fornecedoresModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -94,6 +90,7 @@
             <legend>Data</legend>
             <br />
             <input
+            [(ngModel)]="data"
               type="date"
               class="form-control ifont"
               id="forndate"
@@ -103,6 +100,7 @@
             <legend>Nome</legend>
             <br />
             <input
+            [(ngModel)]="nome"
               type="text"
               class="form-control ifont"
               id="fornnome"
@@ -112,6 +110,7 @@
             <legend>Telefone</legend>
             <br />
             <input
+            [(ngModel)]="telefone"
               type="text"
               class="form-control ifont"
               id="forntel"
@@ -121,6 +120,7 @@
             <legend>Nome do Produto</legend>
             <br />
             <input
+            [(ngModel)]="nomeproduto"
               type="text"
               class="form-control ifont"
               id="fornnomeprod"
@@ -129,7 +129,7 @@
             <br />
             <legend>Categoria</legend>
             <br />
-            <select name="forncat" class="form-control ifont" required>
+            <select name="forncat" class="form-control ifont" [(ngModel)]="categoria"required>
               <option>Alimento</option>
               <option>Higiene</option>
               <option>Enfermagem</option>
@@ -139,6 +139,7 @@
             <legend>Quantidade</legend>
             <br />
             <input
+            [(ngModel)]="quantidade"
               type="number"
               class="form-control ifont"
               id="fornquant"
@@ -154,92 +155,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal editar Fornecedores -->
-    <div
-      class="modal fade"
-      id="editfornecedoresModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Editar Fornecedor
-            </h5>
-          </div>
-          <div class="modal-body">
-            <legend>Data</legend>
-            <br />
-            <input
-              type="date"
-              class="form-control ifont"
-              id="forndate"
-              required
-            />
-            <br />
-            <legend>Nome</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="fornnome"
-              required
-            />
-            <br />
-            <legend>Telefone</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="forntel"
-              required
-            />
-            <br />
-            <legend>Nome do Produto</legend>
-            <br />
-            <input
-              type="text"
-              class="form-control ifont"
-              id="fornnomeprod"
-              required
-            />
-            <br />
-            <legend>Categoria</legend>
-            <br />
-            <select name="forncat" class="form-control ifont" required>
-              <option>Alimento</option>
-              <option>Higiene</option>
-              <option>Enfermagem</option>
-              <option>Doação</option>
-            </select>
-            <br />
-            <legend>Quantidade</legend>
-            <br />
-            <input
-              type="number"
-              class="form-control ifont"
-              id="fornquant"
-              required
-            />
-            <br />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="fechar btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Fechar
-            </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarFornecedor()">Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="alterarFornecedor(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -247,7 +164,7 @@
 
     <!-- Modal deletar Fornecedores -->
     <div
-      class="modal fade"
+      class="modal fade" #confirm
       id="delfornecedoresModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
@@ -271,7 +188,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal">Sim</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="excluirFornecedor(confirm)">Sim</button>
           </div>
         </div>
       </div>
