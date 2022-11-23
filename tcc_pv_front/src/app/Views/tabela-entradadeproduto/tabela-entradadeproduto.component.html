@@ -45,7 +45,7 @@
           <td>{{entradaprodutosl.data  | date:'dd/MM/y'}}</td>
           <td>{{entradaprodutosl.nome}}</td>
           <td>{{entradaprodutosl.quantidade}}</td>
-          <td>{{entradaprodutosl.validade}}</td>
+          <td>{{entradaprodutosl.validade | date:'dd/MM/y'}}</td>
           <td>{{entradaprodutosl.categoria}}</td>
           <td class="edit">
             <button
@@ -61,7 +61,7 @@
             data-bs-toggle="modal"
             data-bs-target="#delentradaprodutosModal"
           >
-            <button title="Excluir" (click)="excluir(entradaprodutosModal, delentradaprodutosModal)">
+            <button title="Excluir" (click)="excluir(entradaprodutosl, delentradaprodutosModal)">
               <i class="fa fa-times-circle" aria-hidden="true"></i>
             </button>
           </td>

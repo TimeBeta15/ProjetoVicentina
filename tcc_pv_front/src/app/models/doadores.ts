@@ -5,7 +5,7 @@ export class Doadores
   nome: string = '';
   telefone: string = '';
   descricao: number = 0;
-  formaDoador: string = "";
+  formaDoacao: string ='';
   valordoacao: number = 0;
 
 

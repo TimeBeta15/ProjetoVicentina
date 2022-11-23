@@ -12,7 +12,7 @@ export class TabelaDoadoresComponent implements OnInit {
 doadores: any
 Doador!:Doadores
 data: any
-formaDoador: any
+formaDoacao: any
 valor!: number
 telefone: any
 nome: any
@@ -22,7 +22,7 @@ deldoadoresModal: any
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getDoadores()
+    this.getDoadores();
 
   }
 getDoadores()
@@ -30,11 +30,12 @@ getDoadores()
   this.http.get('https://localhost:7214/api/TabelaDoador')
   .subscribe(response =>{
     this.doadores = response
-  console.log(this.doadores)});
+  console.log(this.doadores)
+  });
 }
 adicionarDoador()
 {
-var doadores = {data :this.data, nome :this.nome, telefone : this.telefone, formapagamento: this.formaDoador, valor : this.valor}
+var doadores = {data :this.data, nome :this.nome, telefone : this.telefone, formaDoacao :this.formaDoacao, valor : this.valor};
 
 this.http.post('https://localhost:7214/api/TabelaDoador', doadores)
 .subscribe(
@@ -75,7 +76,7 @@ this.Doador= doadores;
 
 alterarDoador(template:any) {
   console.log(this.doadores)
-  var doadoresl = {id:this.Doador.id, data :this.data, nome :this.nome, telefone : this.telefone, formapagamento: this.formaDoador, valor : this.valor};
+  var doadoresl = {id:this.Doador.id, data :this.data, nome :this.nome, telefone : this.telefone, formaDoacao: this.formaDoacao, valor : this.valor};
 
   this.http.put(`${environment.apibaseURL}api/TabelaDoador/${doadoresl.id}`, doadoresl)
   .subscribe(

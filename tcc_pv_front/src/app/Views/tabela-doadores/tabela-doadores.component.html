@@ -45,8 +45,8 @@
           <td>{{ doadoress.data | date:'dd/MM/y'}}</td>
           <td>{{ doadoress.nome }}</td>
           <td>{{ doadoress.telefone | phone}}</td>
-          <td>{{ doadoress.formaDoador }}</td>
-          <td>{{ doadoress.valor }}</td>
+          <td>{{ doadoress.formaDoacao }}</td>
+          <td>R${{ doadoress.valor }}</td>
           <td class="edit">
             <button
               title="Editar" (click)="Alterar(doadoress, doadoresModal)"
@@ -115,7 +115,7 @@
             <br />
             <legend>Forma de Doação</legend>
             <br />
-            <select    name="doaforma" class="form-control ifont"  [(ngModel)]="formaDoador" required>
+            <select name="doaforma" class="form-control ifont"  [(ngModel)]="formaDoacao" required>
               <option>Pix</option>
               <option>Boleto</option>
               <option>Dinheiro</option>
