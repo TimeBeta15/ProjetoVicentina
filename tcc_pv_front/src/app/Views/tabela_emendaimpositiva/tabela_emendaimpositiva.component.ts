@@ -19,6 +19,8 @@ EmendaImpositiva!: EmendaImpositiva
 data: any;
 delemenimpModal: any;
 emenimpModal: any;
+searchText: any;
+
 valor = this.saida - this.entrada;
 
   constructor(private http:HttpClient) { }

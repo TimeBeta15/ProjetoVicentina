@@ -11,7 +11,8 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Digite para pesquisar..."
+          placeholder="Pesquisar pela descrição..."
+          [(ngModel)] = "searchText"
         />
       </div>
       <button
@@ -42,7 +43,7 @@
       </thead>
 
       <tbody *ngIf="emendaparlamentar && emendaparlamentar.length">
-        <tr *ngFor="let emendaparlamentarl of emendaparlamentar">
+        <tr *ngFor="let emendaparlamentarl of emendaparlamentar | filter: searchText: 'description'">
           <td>{{ emendaparlamentarl.data | date:'dd/MM/y'}}</td>
           <td>{{ emendaparlamentarl.description }}</td>
           <td>{{ emendaparlamentarl.entrada }}</td>

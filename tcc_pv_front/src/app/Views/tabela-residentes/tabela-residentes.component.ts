@@ -32,6 +32,7 @@ export class TabelaResidentesComponent implements OnInit {
   telefone: any
   residentesModal: any
   delresidentesModal: any
+  searchText: any;
 
 
 

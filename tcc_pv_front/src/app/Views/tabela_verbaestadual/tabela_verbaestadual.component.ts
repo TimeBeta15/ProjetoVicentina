@@ -19,6 +19,7 @@ export class Tabela_verbaestadualComponent implements OnInit {
   verbesModal: any;
   delverbesModal: any;
   editverbesModal: any;
+  searchText: any;
 
   constructor(private Http :HttpClient) { }
 

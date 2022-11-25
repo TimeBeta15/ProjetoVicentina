@@ -21,6 +21,8 @@ data: any;
 delemenparlModal: any;
 emendaparlModal: any;
 valor = this.saida - this.entrada;
+searchText: any;
+
   ngOnInit() {
     this.getEmendaParlamentar();
   }

@@ -11,7 +11,8 @@
         <input
           type="text"
           class="input-search"
-          placeholder="Digite para pesquisar..."
+          placeholder="Pesquisar pelo nome..."
+          [(ngModel)] = "searchText"
         />
       </div>
       <button
@@ -42,7 +43,7 @@
       </thead>
 
       <tbody >
-        <tr *ngFor="let fornecedoress of fornecedores">
+        <tr *ngFor="let fornecedoress of fornecedores | filter: searchText:'nome'">
           <td>{{ fornecedoress.data | date:'dd/MM/y'}}</td>
           <td>{{ fornecedoress.nome }}</td>
           <td>{{ fornecedoress.telefone | phone}}</td>

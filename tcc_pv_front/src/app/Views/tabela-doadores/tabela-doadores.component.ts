@@ -18,6 +18,7 @@ telefone: any
 nome: any
 doadoresModal: any
 deldoadoresModal: any
+searchText: any;
 
   constructor(private http: HttpClient) { }
 

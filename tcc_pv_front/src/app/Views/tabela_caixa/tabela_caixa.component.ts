@@ -20,6 +20,8 @@ export class Tabela_caixaComponent implements OnInit {
   verbmunModal: any;
   caixaModal: any;
   delcaixaModal: any
+  searchText: any;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(
@@ -28,69 +30,70 @@ export class Tabela_caixaComponent implements OnInit {
   }
 
 
-  getCaixa()
-  {
+  getCaixa() {
     this.http.get('https://localhost:7214/api/TabelaCaixa')
-    .subscribe(response =>{this.caixa = response
-    console.log(this.caixas)})
+      .subscribe(response => {
+        this.caixa = response
+        console.log(this.caixas)
+      })
   }
 
   adicionarCaixa() {
-    var TabelaCaixa = { description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
+    var TabelaCaixa = { description: this.description, data: this.data, entrada: this.entrada, saida: this.saida, valor: this.valor };
 
     this.http.post('https://localhost:7214/api/TabelaCaixa', TabelaCaixa)
-              .subscribe(
-                resultado => {
-                  console.log(resultado)
-                  this.getCaixa();
-                },
-                erro => {
-                  if(erro.status == 400) {
-                    console.log(erro);
-                  }
-                }
-              );
+      .subscribe(
+        resultado => {
+          console.log(resultado)
+          this.getCaixa();
+        },
+        erro => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
+        }
+      );
   }
-  excluir(caixa: TabelaCaixa,template:any){
+  excluir(caixa: TabelaCaixa, template: any) {
     console.log(caixa);
-    this.TabelaCaixa=caixa;
+    this.TabelaCaixa = caixa;
   }
-  excluirCaixa(template:any)
-  {
+  excluirCaixa(template: any) {
     this.http.delete(`${environment.apibaseURL}api/Tabelacaixa/${this.TabelaCaixa.id}`).subscribe
-    (() => { this.getCaixa();
-    let ref = document.getElementById('cancel')
-  ref?.click();},
-  erro => {
-    if(erro.status == 404){
-      console.log('O item não foi localizado');
-    }
-  }
-  );
+      (() => {
+        this.getCaixa();
+        let ref = document.getElementById('cancel')
+        ref?.click();
+      },
+        erro => {
+          if (erro.status == 404) {
+            console.log('O item não foi localizado');
+          }
+        }
+      );
   }
 
-  Alterar(caixa: TabelaCaixa,template:any)
-  {
-  console.log(caixa);
-  this.TabelaCaixa= caixa;
-}
+  Alterar(caixa: TabelaCaixa, template: any) {
+    console.log(caixa);
+    this.TabelaCaixa = caixa;
+  }
 
-  alterarCaixa(template:any) {
+  alterarCaixa(template: any) {
     console.log(this.caixa)
-    var caixas = {id:this.TabelaCaixa.id, description :this.description, data: this.data,entrada: this.entrada,saida: this.saida, valor: this.valor};
+    var caixas = { id: this.TabelaCaixa.id, description: this.description, data: this.data, entrada: this.entrada, saida: this.saida, valor: this.valor };
 
     this.http.put(`${environment.apibaseURL}api/TabelaCaixa/${caixas.id}`, caixas)
-    .subscribe(
-      resultado => {
-        console.log(resultado)
-        this.getCaixa();
-      },
-      erro => {
-        if(erro.status == 400) {
-          console.log(erro);
+      .subscribe(
+        resultado => {
+          console.log(resultado)
+          this.getCaixa();
+        },
+        erro => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
         }
-      }
-    );
+      );
   }
 
 }

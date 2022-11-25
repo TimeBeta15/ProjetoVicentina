@@ -19,6 +19,7 @@ categoria: any
 forenecedoresModal: any
 delfornecedoresModal: any
 quantidade!: number
+searchText: any;
 
   constructor(private Http: HttpClient) { }
 

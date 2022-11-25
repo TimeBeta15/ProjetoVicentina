@@ -20,6 +20,8 @@ data: any;
 delcontcorModal: any;
 contcorrenteModal: any;
 valor = this.saida - this.entrada;
+searchText: any;
+
   constructor(private Http: HttpClient) { }
 
   ngOnInit(): void{

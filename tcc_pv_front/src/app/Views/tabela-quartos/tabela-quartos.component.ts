@@ -17,6 +17,8 @@ quartos: any
 Quartos!: Quartos
 delquartosModal: any
 quartosModal: any;
+searchText: any;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void { this.getQuartos()

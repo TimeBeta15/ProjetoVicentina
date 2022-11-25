@@ -10,81 +10,83 @@ import { environment } from 'src/environments/environment';
 })
 export class TabelaSaidadeprodutoComponent implements OnInit {
   editsaidaprodutosModal: any;
-  saidaproduto:any;
+  saidaproduto: any;
   data: any;
   saidaprodutosmodal: any;
   del: any;
   desc: any;
-SaidaProduto!: SaidaProduto
+  searchText: any;
+
+  SaidaProduto!: SaidaProduto
   constructor(private Http: HttpClient) { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.getSaidaProduto();
   }
-  getSaidaProduto()
-  {
+  getSaidaProduto() {
     this.Http.get('https://localhost:7214/api/SaidaProduto')
-    .subscribe(response =>{
-      this.saidaproduto = response
-    console.log(this.saidaproduto)});
+      .subscribe(response => {
+        this.saidaproduto = response
+        console.log(this.saidaproduto)
+      });
   }
   adicionarSaidaProduto() {
-    var saidaproduto = { description :this.desc, data: this.data};
+    var saidaproduto = { description: this.desc, data: this.data };
 
 
     this.Http.post('https://localhost:7214/api/SaidaProduto', saidaproduto)
-              .subscribe(
-                resultado => {
-                  console.log(resultado)
-                  this.getSaidaProduto();
-                },
-                erro => {
-                  if(erro.status == 400) {
-                    console.log(erro);
-                  }
-                }
-              );
+      .subscribe(
+        resultado => {
+          console.log(resultado)
+          this.getSaidaProduto();
+        },
+        erro => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
+        }
+      );
 
   }
-  excluir(saidaproduto: SaidaProduto,template:any){
+  excluir(saidaproduto: SaidaProduto, template: any) {
     console.log(saidaproduto);
-    this.SaidaProduto=saidaproduto;
+    this.SaidaProduto = saidaproduto;
   }
-  excluirSaidaProduto(template:any)
-  {
+  excluirSaidaProduto(template: any) {
     this.Http.delete(`${environment.apibaseURL}api/SaidaProduto/${this.SaidaProduto.id}`).subscribe
-    (() => { this.getSaidaProduto();
-    let ref = document.getElementById('cancel')
-  ref?.click();},
-  erro => {
-    if(erro.status == 404){
-      console.log('O item não foi localizado');
-    }
-  }
-  );
+      (() => {
+        this.getSaidaProduto();
+        let ref = document.getElementById('cancel')
+        ref?.click();
+      },
+        erro => {
+          if (erro.status == 404) {
+            console.log('O item não foi localizado');
+          }
+        }
+      );
   }
 
-  Alterar(saidaproduto: SaidaProduto,template:any)
-  {
-  console.log(saidaproduto);
-  this.SaidaProduto= saidaproduto;
-}
+  Alterar(saidaproduto: SaidaProduto, template: any) {
+    console.log(saidaproduto);
+    this.SaidaProduto = saidaproduto;
+  }
 
-  alterarSaidaProduto(template:any) {
+  alterarSaidaProduto(template: any) {
     console.log(this.SaidaProduto)
-    var saidaproduto = {id:this.SaidaProduto.id, description :this.desc, data: this.data};
+    var saidaproduto = { id: this.SaidaProduto.id, description: this.desc, data: this.data };
 
     this.Http.put(`${environment.apibaseURL}api/SaidaProduto/${this.SaidaProduto.id}`, saidaproduto)
-    .subscribe(
-      resultado => {
-        console.log(resultado)
-        this.getSaidaProduto();
-      },
-      erro => {
-        if(erro.status == 400) {
-          console.log(erro);
+      .subscribe(
+        resultado => {
+          console.log(resultado)
+          this.getSaidaProduto();
+        },
+        erro => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
         }
-      }
-    );
+      );
   }
 }

@@ -18,6 +18,8 @@ validade: any;
 categoria: any;
 entradaprodutosModal: any;
 delentradaprodutosModal: any;
+searchText: any;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
