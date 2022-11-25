@@ -146,8 +146,8 @@
             >
               Fechar
             </button>
-            <button type="button" class="salvar btn btn-success" (click)="adicionarEmendaImpositiva()"> Salvar</button>
-            <button class="salvar btn btn-success" (click)="alterarEmendaImpositiva(editar)">Editar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="adicionarEmendaImpositiva()"> Salvar</button>
+            <button type="button" class="salvar btn btn-success" data-bs-dismiss="modal" (click)="alterarEmendaImpositiva(editar)">Editar</button>
           </div>
         </div>
       </div>
@@ -260,7 +260,7 @@
             >
               Não
             </button>
-            <button type="button" class="salvar btn btn-success" (click)=" excluirEmenda(confirm)">Sim</button>
+            <button type="button" data-bs-dismiss="modal" class="salvar btn btn-success" (click)=" excluirEmenda(confirm)">Sim</button>
           </div>
         </div>
       </div>
