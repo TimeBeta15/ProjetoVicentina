@@ -34,9 +34,7 @@
 }
 
 .left-login-image {
-  width: 80%;
-  display: block;
-  margin: auto;
+  width: 180%;
 }
 
 .right-login {
@@ -48,7 +46,7 @@
 }
 
 .card-login {
-  width: 80%;
+  width: 150%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +59,7 @@
 
 .card-login > h1 {
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .textfield {
@@ -89,8 +87,9 @@
 }
 
 .textfield > label {
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .textfield > input ::placeholder {
@@ -102,7 +101,7 @@ a {
   text-decoration: none;
 }
 
-.btn-cadastrar{
+.btn-login{
   width: 100%;
   padding: 16px 0px;
   margin:  25px;

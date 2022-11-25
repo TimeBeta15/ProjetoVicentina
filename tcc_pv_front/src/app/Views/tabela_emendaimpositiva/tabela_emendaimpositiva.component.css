@@ -56,6 +56,7 @@ tr {
 .add {
   height: 40px;
   width: 50px;
+  background-color: #b04747;
   border-radius: 25px;
   border: 0px;
   padding: 8px;
@@ -68,7 +69,6 @@ tr {
   box-shadow: 0 4px #666;
   transform: translateY(2px);
 }
-
 .search-box {
   width: fit-content;
   height: fit-content;

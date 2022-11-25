@@ -42,7 +42,7 @@
           <td>{{ saidaprodutos.data | date:'dd/MM/y' }}</td>
           <td>{{ saidaprodutos.description }}</td>
           <td
-            class="add"
+            class="edit"
             data-bs-toggle="modal"
             data-bs-target="#saidaprodutosModal"
           >
@@ -116,9 +116,9 @@
             >
               Salvar
             </button>
-            <button (click)=" alterarSaidaProduto(editar)">
+            <button  class="salvar btn btn-success" (click)=" alterarSaidaProduto(editar)">
 
-              editar
+              Editar
             </button>
           </div>
         </div>
