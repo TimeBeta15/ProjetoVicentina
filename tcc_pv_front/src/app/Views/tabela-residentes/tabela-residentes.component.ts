@@ -11,10 +11,10 @@ export class TabelaResidentesComponent implements OnInit {
   residente: any
   Residente!: Residente
   Dataregistro: any
-  Nome: any
+  nome: any
   DataNasc: any
   genero: any
-  aposentado!: boolean
+  aposentado!: any
   endereco: any
   emprestimonome!: boolean
   emprestimonomepessoa: any
@@ -52,19 +52,15 @@ export class TabelaResidentesComponent implements OnInit {
       this.residente = response
     console.log(this.residente)});
   }
-  adicionarresidente() {
-    var residente = { Dataregistro: this.Dataregistro, nome: this.Nome, dataNasc : this.DataNasc, genero: this.genero, aposentado: this.aposentado,
-    endereco: this.endereco, emprestimonome: this.emprestimonome, emprestimonomepessoa: this.emprestimonomepessoa, grauldependencia: this.grauldependencia,
-  deficiencia: this.deficiencia, deficiencianome: this.deficiencianome, doenca: this.doenca, doencanome: this.doencanome, remediocontrol: this.remediocontrol,
-remediocontrolnome: this.remediocontrolnome, motivoprocura: this.motivoprocura, nomeprocura: this.nomeprocura, grauparente: this.grauparente,
-enderecoparente: this.enderecoparente, telefone: this.telefone};
+  adicionarResidente() {
+    var residente = { Dataregistro: this.Dataregistro, nome: this.nome, dataNasc : this.DataNasc, genero: this.genero,endereco :this.endereco, aposentado: this.aposentado};
 
 
     this.http.post('https://localhost:7214/api/TabelaResidente',residente)
               .subscribe(
                 resultado => {
                   console.log(resultado)
-                  this.adicionarresidente();
+                  this.getResidente();
                 },
                 erro => {
                   if(erro.status == 400) {
@@ -99,13 +95,9 @@ enderecoparente: this.enderecoparente, telefone: this.telefone};
 
   alterarResidente(template:any) {
     console.log(this.residente)
-    var residente = {id:this.Residente.id, Dataregistro: this.Dataregistro, nome: this.Nome, dataNasc : this.DataNasc, genero: this.genero, aposentado: this.aposentado,
-      endereco: this.endereco, emprestimonome: this.emprestimonome, emprestimonomepessoa: this.emprestimonomepessoa, grauldependencia: this.grauldependencia,
-    deficiencia: this.deficiencia, deficiencianome: this.deficiencianome, doenca: this.doenca, doencanome: this.doencanome, remediocontrol: this.remediocontrol,
-  remediocontrolnome: this.remediocontrolnome, motivoprocura: this.motivoprocura, nomeprocura: this.nomeprocura, grauparente: this.grauparente,
-  enderecoparente: this.enderecoparente, telefone: this.telefone};
+    var residente = {id:this.Residente.id, Dataregistro: this.Dataregistro, nome: this.nome, dataNasc : this.DataNasc, genero: this.genero, aposentado: this.aposentado};
 
-    this.http.put(`${environment.apibaseURL}api/Tabelaresidente/${residente.id}`, residente)
+    this.http.put(`${environment.apibaseURL}api/TabelaResidente/${residente.id}`, residente)
     .subscribe(
       resultado => {
         console.log(resultado)
